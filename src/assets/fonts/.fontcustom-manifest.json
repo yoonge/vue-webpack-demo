@@ -1,0 +1,136 @@
+{
+  "checksum": {
+    "previous": "ae7c30d42b57c5dbcae61ab802f27ac292adedcba6e29cb3613bb2325a36a8ab",
+    "current": "ae7c30d42b57c5dbcae61ab802f27ac292adedcba6e29cb3613bb2325a36a8ab"
+  },
+  "fonts": [
+    "./icons.ttf",
+    "./icons.svg",
+    "./icons.woff",
+    "./icons.eot"
+  ],
+  "glyphs": {
+    "arrow-down": {
+      "codepoint": 61708,
+      "source": "./svg/arrow-down.svg"
+    },
+    "arrow-left": {
+      "codepoint": 61706,
+      "source": "./svg/arrow-left.svg"
+    },
+    "arrow-right": {
+      "codepoint": 61707,
+      "source": "./svg/arrow-right.svg"
+    },
+    "bug": {
+      "codepoint": 61718,
+      "source": "./svg/bug.svg"
+    },
+    "cross": {
+      "codepoint": 61705,
+      "source": "./svg/cross.svg"
+    },
+    "edit": {
+      "codepoint": 61710,
+      "source": "./svg/edit.svg"
+    },
+    "eye": {
+      "codepoint": 61711,
+      "source": "./svg/eye.svg"
+    },
+    "file": {
+      "codepoint": 61697,
+      "source": "./svg/file.svg"
+    },
+    "folder": {
+      "codepoint": 61698,
+      "source": "./svg/folder.svg"
+    },
+    "globe": {
+      "codepoint": 61719,
+      "source": "./svg/globe.svg"
+    },
+    "grid": {
+      "codepoint": 61699,
+      "source": "./svg/grid.svg"
+    },
+    "info": {
+      "codepoint": 61700,
+      "source": "./svg/info.svg"
+    },
+    "map": {
+      "codepoint": 61701,
+      "source": "./svg/map.svg"
+    },
+    "plus": {
+      "codepoint": 61712,
+      "source": "./svg/plus.svg"
+    },
+    "reply": {
+      "codepoint": 61713,
+      "source": "./svg/reply.svg"
+    },
+    "search": {
+      "codepoint": 61709,
+      "source": "./svg/search.svg"
+    },
+    "settings": {
+      "codepoint": 61702,
+      "source": "./svg/settings.svg"
+    },
+    "stack": {
+      "codepoint": 61703,
+      "source": "./svg/stack.svg"
+    },
+    "tags": {
+      "codepoint": 61714,
+      "source": "./svg/tags.svg"
+    },
+    "tools": {
+      "codepoint": 61704,
+      "source": "./svg/tools.svg"
+    },
+    "trash": {
+      "codepoint": 61715,
+      "source": "./svg/trash.svg"
+    },
+    "users": {
+      "codepoint": 61716,
+      "source": "./svg/users.svg"
+    },
+    "wifi": {
+      "codepoint": 61717,
+      "source": "./svg/wifi.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": "./fontcustom.yml",
+    "css_selector": ".ui-icon--{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "icons",
+    "force": false,
+    "input": {
+      "templates": "./svg",
+      "vectors": "./svg"
+    },
+    "no_hash": true,
+    "output": {
+      "css": ".",
+      "fonts": ".",
+      "preview": "."
+    },
+    "preprocessor_path": null,
+    "quiet": false,
+    "templates": [
+      "css"
+    ]
+  },
+  "templates": [
+    "./icons.css"
+  ]
+}

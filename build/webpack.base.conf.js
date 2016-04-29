@@ -59,6 +59,10 @@ module.exports = {
         loader: 'vue-html'
       },
       {
+        test: /\.css$/,
+        loader: 'style!css'
+      },
+      {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url',
         query: {

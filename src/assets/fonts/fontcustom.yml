@@ -1,0 +1,9 @@
+font_name: icons
+css_selector: .ui-icon--{{glyph}}
+no_hash: true
+input:
+  vectors: ./svg
+output:
+  fonts: .
+templates:
+- css
