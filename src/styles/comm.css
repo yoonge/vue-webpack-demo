@@ -1,21 +1,6 @@
 @charset "utf-8";
-html {
-    overflow-y: scroll;
-    font-family: -apple-system,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,PingFang SC,PingFang TC,Hiragino Sans GB,Microsoft YaHei,Microsoft JhengHei,sans-serif;
-    font-size: 12px;
-    line-height: 1.5;
-    word-wrap: break-word;
-}
-body {
-	font-family: "微软雅黑", Arial, sans-serif;
-	font-weight: 300;
-	line-height: 24px;
-    color: #fff;
-    background-attachment: fixed;
-    background-color: #154165;
-    background-image: -webkit-linear-gradient(left top,#154165,#154165 30%,#597da5 70%,#7393bf);
-    background-image: linear-gradient(to right bottom,#154165,#154165 30%,#597da5 70%,#7393bf);
-}
+html { font-family: -apple-system,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,"PingFang SC","PingFang TC","Hiragino Sans GB","Microsoft YaHei","Microsoft JhengHei",sans-serif; font-size: 12px; line-height: 1.5; word-wrap: break-word; }
+body { font-family: "微软雅黑", Arial, sans-serif; font-weight: 300; line-height: 24px; color: #fff; background-attachment: fixed; background-color: #154165; background-image: -webkit-linear-gradient(left top,#154165,#154165 30%,#597da5 70%,#7393bf); background-image: linear-gradient(to right bottom,#154165,#154165 30%,#597da5 70%,#7393bf); }
 
 /* css reset */
 body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,figure,div{margin:0;padding:0;}
@@ -268,7 +253,7 @@ dl.ddmb15 dd{ margin-bottom: 15px;}
 .pd7 dd a{ color:#09ddce;}
 .pd4 span{ font-size: 38px; width: 158px; line-height: 48px; text-align: right; display: inline-block; vertical-align: middle;}
 .color1{ color: #27b8ff;} /*面板内字体颜色1*/
-.color2{ color: #09ddce;} 
+.color2{ color: #09ddce;}
 .color3{ color: #00d8c9;}
 .color4{ color: #0bbdff!important;}
 .color5{ background: #F3C34C;}

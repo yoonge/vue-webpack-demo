@@ -1,6 +1,5 @@
-import './styles/comm.css'
 import Vue from 'vue'
-import App from './App'
+import App from './App.vue'
 
 /* eslint-disable no-new */
 new Vue({
