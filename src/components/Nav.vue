@@ -5,7 +5,9 @@
         v-for="item in items"
         :item="item"
         :index="$index">
-        <a href="javascript:;"><span>{{item.text}}</span></a>
+        <a href="javascript:;">
+          <span>{{item.text}}</span>
+        </a>
       </li>
       <!--<li><a href="javascript:;">&lt;!&ndash;<div class="imgwrap"><img src="img/ic01.png" alt=""></div>&ndash;&gt;<span>服务概况</span></a></li>-->
       <!--<li><a href="javascript:;">&lt;!&ndash;<div class="imgwrap"><img src="img/ic02.png" alt=""></div>&ndash;&gt;<span>项目配置</span></a></li>-->
@@ -23,9 +25,7 @@
 export default {
   name: 'BurpNav',
   props: {
-    items: {
-      item: Object
-    }
+    items: {}
   }
 }
 </script>

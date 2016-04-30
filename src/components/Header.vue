@@ -5,14 +5,14 @@
       <div class="login_info">
         <a href="javascript:;" class="login-user"><i class="touxiang tx01"></i>李铁柱(测试组)</a>|<a href="login.html" class="outofsys">退出</a>
       </div>
-      <burp-nav :items></burp-nav>
+      <burp-nav :items="{{items}}"></burp-nav>
     </div>
   </div>
 </template>
 
 <script lang="babel">
 import BurpNav from './Nav.vue'
-import navData from '../constants/nav.js'
+import NavData from '../constants/nav.js'
 
 export default {
   name: 'BurpHeader',
@@ -21,7 +21,7 @@ export default {
   },
   data () {
     return {
-      items: navData
+      items: NavData
     }
   }
 }
