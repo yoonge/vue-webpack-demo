@@ -1,10 +1,17 @@
 import Vue from 'vue'
-import App from './App.vue'
+import VueRouter from 'vue-router'
+import VueApp from 'src/App.vue'
+import Routers from 'src/view/routers.js'
 
-/* eslint-disable no-new */
-new Vue({
-  el: 'body',
-  components: {
-    App
-  }
+const App = Vue.extend(VueApp)
+
+Vue.use(VueRouter)
+
+const router = new VueRouter({
+  hashbang: true,
+  linkActiveClass: 'cur'
 })
+
+Routers(router)
+
+router.start(App, '#app')

@@ -14,7 +14,7 @@ export default [
     icon: 'stack',
     sub: [
       {name: 'project.list', text: '项目管理', done: true, api: true, complete: true},
-      {name: 'project.add', text: '添加项目', done: true, api: true, bugs: ['text', 'picker', 'api.plugins']}
+      {name: 'project.add', text: '新增项目', done: true, api: true, bugs: ['text', 'picker']}
     ]
   },
   {
@@ -22,18 +22,10 @@ export default [
     text: '任务管理',
     icon: 'map',
     sub: [
-      {name: 'task.list', text: '任务列表'},
-      {name: 'task.add', text: '新增任务'},
-      {name: 'task.regression', text: '回归测试'},
-      {name: 'task.bug', text: '风险检索'}
-    ]
-  },
-  {
-    name: 'tools',
-    text: '调试工具',
-    icon: 'tools',
-    sub: [
-      {name: 'tools.debug', text: '在线调试'}
+      {name: 'task.list', text: '任务列表', done: 'part'},
+      {name: 'task.add', text: '新增任务', done: true, api: true, complete: true},
+      {name: 'task.regression', text: '回归测试', done: true, api: true, complete: true},
+      {name: 'task.bug', text: '风险检索', done: true, api: true, complete: true}
     ]
   },
   {
@@ -48,7 +40,7 @@ export default [
       {name: 'system.settings', text: '系统设置'},
       {name: 'system.status', text: '系统配额', done: true, api: true, bugs: ['api:time', 'api:current']},
       {name: 'system.network', text: '网络设置'},
-      {name: 'system.block', text: '黑名单配置'},
+      {name: 'system.block', text: '黑名单配置', done: true, api: true, complete: true},
       {name: 'system.password', text: '密码修改', done: true, api: true}
     ]
   },
@@ -57,7 +49,7 @@ export default [
     text: '项目管理',
     icon: 'folder',
     sub: [
-      {name: 'admin.project', text: '全局项目概览'},
+      {name: 'admin.project', text: '全局项目概览', done: 'part'},
       {name: 'admin.task', text: '全局任务管理'}
     ]
   },
