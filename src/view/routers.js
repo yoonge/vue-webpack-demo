@@ -1,5 +1,5 @@
 import App from 'src/App.vue'
-import Home from 'pages/Home.vue'
+import Overview from 'pages/Overview.vue'
 import Project from 'pages/Project.vue'
 import Task from 'pages/Task.vue'
 import System from 'pages/System.vue'
@@ -15,7 +15,7 @@ const Routers = function (router) {
     },
     '/overview': {
       name: 'overview',
-      component: Home
+      component: Overview
     },
     '/project': {
       name: 'project',

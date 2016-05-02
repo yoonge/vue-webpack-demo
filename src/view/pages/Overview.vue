@@ -1,11 +1,11 @@
 <template>
   <div>
-    <h1>Admin</h1>
+    <h1>Overview</h1>
   </div>
 </template>
 
 <script lang="babel">
 export default {
-  name: 'Admin'
+  name: 'Overview'
 }
 </script>

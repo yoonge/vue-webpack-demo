@@ -2,7 +2,9 @@
   <ul :class="{'cur': isCur}">
     <li
       v-for="sub in item.sub"
-      :index="$index"><a href="#">{{sub.text}}</a></li>
+      :index="$index">
+      <a href="#">{{sub.text}}</a>
+    </li>
   </ul>
 </template>
 

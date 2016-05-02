@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import VueApp from 'src/App.vue'
+import App from 'src/App.vue'
 import Routers from 'src/view/routers.js'
 
-const App = Vue.extend(VueApp)
+const VueApp = Vue.extend(App)
 
 Vue.use(VueRouter)
 
@@ -14,4 +14,4 @@ const router = new VueRouter({
 
 Routers(router)
 
-router.start(App, '#app')
+router.start(VueApp, '#app')
