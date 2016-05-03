@@ -11,12 +11,14 @@
 
 <script lang="babel">
 import BurpHeader from 'components/BurpHeader.vue'
+import store from 'src/vuex/store.js'
 
 export default {
   name: 'App',
   components: {
     BurpHeader
-  }
+  },
+  store
 }
 </script>
 
@@ -24,12 +26,12 @@ export default {
 @import 'styles/comm.css';
 body { overflow-x: hidden; }
 h1 { font-size: 48px; font-weight: bold; text-align: center; padding: 48px 0; }
-.view {
+.v-transition {
   transition: all .3s ease;
 }
 .v-enter{
  opacity: 1;
- transform: translate3d(100%, 0, 0);
+ transform: translate3d(0, 40%, 0);
 }
 .v-leave {
   opacity: 0;

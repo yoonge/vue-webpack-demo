@@ -3,7 +3,7 @@
     <li
       v-for="sub in item.sub"
       :index="$index">
-      <a href="#">{{sub.text}}</a>
+      <a v-link="{name: sub.name}">{{sub.text}}</a>
     </li>
   </ul>
 </template>
