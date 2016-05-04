@@ -23,17 +23,25 @@ export default {
 </script>
 
 <style>
-@import 'styles/comm.css';
-body { overflow-x: hidden; }
-h1 { font-size: 48px; font-weight: bold; text-align: center; padding: 48px 0; }
+@import 'styles/comm.css?v=201605042115';
+
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  padding: 48px 0;
+}
+
 .v-transition {
   transition: all .3s ease;
   overflow: hidden;
 }
-.v-enter{
+
+.v-enter {
   opacity: 1;
   transform: translate3d(0, 20%, 0);
 }
+
 .v-leave {
   opacity: 0;
   transform: translate3d(0, 10%, 0);
