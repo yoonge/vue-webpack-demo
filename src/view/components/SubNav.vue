@@ -1,5 +1,5 @@
 <template>
-  <ul :class="{'cur': isCur}">
+  <ul :class="{'cur': isCurrent}">
     <li
       v-for="sub in item.sub"
       :index="$index">
@@ -16,7 +16,7 @@ export default {
   },
   data () {
     return {
-      isCur: true
+      isCurrent: true
     }
   }
 }

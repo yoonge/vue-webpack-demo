@@ -3,7 +3,8 @@
     <ul id="navList">
       <li
         v-for="item in items"
-        :index="$index">
+        :index="$index"
+        track-by="$index">
         <a v-link="'/' + item.name">
           <div class="imgwrap">
             <i class="icons icon-{{item.icon}}"></i>

@@ -1,5 +1,5 @@
 export const mutations = {
-  NEW_NAV_NAME (state, newNavName) {
-    state.currentNavName = newNavName
+  NEW_INDEX (state, newIndex) {
+    state.currentIndex = newIndex
   }
 }

@@ -1,3 +1,2 @@
-export function getCurrent ( state ) {
-  return state.currentNavName
-}
+export const getCurrent = state => state.currentIndex
+

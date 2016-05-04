@@ -5,7 +5,7 @@
         <sub-nav
           v-for="item in items"
           :item="item"
-          :index="$index">
+          track-by="$index">
         </sub-nav>
       </nav>
       <search></search>

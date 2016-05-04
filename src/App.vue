@@ -28,14 +28,14 @@ body { overflow-x: hidden; }
 h1 { font-size: 48px; font-weight: bold; text-align: center; padding: 48px 0; }
 .v-transition {
   transition: all .3s ease;
+  overflow: hidden;
 }
 .v-enter{
- opacity: 1;
- transform: translate3d(0, 40%, 0);
+  opacity: 1;
+  transform: translate3d(0, 20%, 0);
 }
 .v-leave {
   opacity: 0;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 10%, 0);
 }
 </style>

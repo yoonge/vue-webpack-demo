@@ -1,21 +1,23 @@
 html {
-  font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "PingFang TC", "Hiragino Sans GB", "Microsoft YaHei", "Microsoft JhengHei", sans-serif;
+  font-family: -apple-system, "Segoe UI", "Roboto", "Helvetica Neue", "Helvetica", "Arial", "PingFang SC", "PingFang TC", "Hiragino Sans GB", "Microsoft YaHei", "Microsoft JhengHei", sans-serif;
   font-size: 12px;
   line-height: 1.5;
   word-wrap: break-word;
 }
 
 body {
-  font-family: "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
-  font-weight: 300;
-  line-height: 24px;
+  min-height: 100%;
   color: #fff;
   background-attachment: fixed;
   background-color: #154165;
-  background-image: -webkit-linear-gradient(left top, #154165, #154165 30%, #597da5 70%, #7393bf);
-  background-image: linear-gradient(to right bottom, #154165, #154165 30%, #597da5 70%, #7393bf);
+  background-image: linear-gradient(to right bottom, #154165 0%, #154165 30%, #597da5 70%, #7393bf 100%);
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* css reset */
 body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td, figure, div {
   margin: 0;
   padding: 0;
@@ -110,10 +112,6 @@ button, html input[type=button], input[type=reset], input[type=submit] {
   cursor: pointer
 }
 
-button[disabled], html input[disabled] {
-  cursor: not-allowed
-}
-
 button {
   overflow: visible
 }
@@ -139,6 +137,7 @@ form {
   box-sizing: border-box;
 }
 
+/* .site-login-main */
 .site-login-main {
   position: absolute;
   top: 35%;
@@ -219,6 +218,7 @@ form {
   background: #218DD6;
 }
 
+/*Demo头部 css*/
 .site-header-main {
   background: rgba(0, 0, 0, 0.2);
   -pie-background: rgba(0, 0, 0, .2);
@@ -306,6 +306,7 @@ form {
   text-align: center;
   height: 25px;
   width: 100%;
+  line-height: 25px;
 }
 
 .b-nav li a.cur {
@@ -415,6 +416,7 @@ form {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
+/* 树状记录样式 */
 .update_log {
   position: relative;
 }
@@ -487,8 +489,9 @@ form {
   border-radius: 50%;
 }
 
+/*通用的样式类型*/
 .temp_top {
-  line-height: 34px;
+  line-height: 42px;
   padding-left: 20px;
   background: rgba(0, 0, 0, 0.1);
   font-size: 12px;
@@ -507,7 +510,7 @@ form {
 .temp_top .rightWrap {
   position: absolute;
   top: 0px;
-  right: 15px;
+  right: 10px;
 }
 
 .mybtnpic {
@@ -560,16 +563,17 @@ form {
 }
 
 .mybtn {
-  padding: 0 5px;
-  height: 20px;
+  padding: 0 6px;
+  height: 2em;
+  line-height: 2em;
   font-size: 10px;
   color: #00d8c9;
   background: rgba(0, 216, 201, 0.12);
   display: inline-block;
-  margin-top: 7px;
+  margin-top: 10px;
+  margin-right: 6px;
   margin-left: 6px;
   text-align: center;
-  line-height: 20px;
   -webkit-transition: background-color 0.2s;
   -o-transition: background-color 0.2s;
   transition: background-color 0.2s;
@@ -713,6 +717,7 @@ button.green {
   color: #fff;
 }
 
+/* 服务器管理 css */
 .myprogress {
   height: 4px;
   width: 400px;
@@ -820,6 +825,7 @@ button.green {
   color: #ee5327;
 }
 
+/*个别样式处理*/
 ol.upsp li {
   list-style: inside url(../assets/img/li.png);
   cursor: pointer;
@@ -885,17 +891,18 @@ ol.upsp li.upsp_in {
 }
 
 .mybtnpic .tishi {
+  transition: visibility .3s, opacity .3s;
   position: absolute;
   border-radius: 4px;
   word-break: keep-all;
-  height: 22px;
+  height: 24px;
   padding: 0 10px;
   background: #000;
-  top: -29px;
+  top: -31px;
   display: inline-block;
   font-size: 10px;
   color: #fff;
-  line-height: 22px;
+  line-height: 24px;
   text-align: center;
 }
 
@@ -1012,6 +1019,27 @@ ol.upsp li.upsp_in {
   line-height: 18px;
 }
 
+.my_rwlb {
+  overflow: hidden;
+  width: auto;
+  margin-bottom: 30px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0px;
+  font-size: 12px;
+  line-height: 24px;
+  word-break: break-all;
+  clear: both;
+  zoom: 1;
+}
+
+.tablecheck {
+  height: 24px;
+  background: rgba(0, 0, 0, .1);
+  line-height: 24px;
+  padding-left: 2em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
 .jr_tag {
   display: none;
 }
@@ -1093,6 +1121,7 @@ dl.ddmb15 dd {
   height: 300px;
 }
 
+/* mytemplist css */
 .mytemplist .temp_top {
   line-height: 44px;
 }
@@ -1136,6 +1165,10 @@ dl.ddmb15 dd {
   font-size: 14px;
   display: inline-block;
   color: rgba(255, 255, 255, 0.4);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 300px;
 }
 
 .my_rwlb .my_rwpercent {
@@ -1203,6 +1236,14 @@ dl.ddmb15 dd {
 
 .zdy_linehead span.zdy_mh {
   margin-right: 15px;
+}
+
+.fz36 {
+  font-size: 36px;
+  vertical-align: middle;
+  text-align: right;
+  width: 148px;
+  display: inline-block;
 }
 
 .ft14 {
@@ -1278,6 +1319,7 @@ dl.ddmb15 dd {
   width: 580px;
 }
 
+/*二分等间距*/
 .w586 {
   width: 586px;
 }
@@ -1343,10 +1385,12 @@ dl.ddmb15 dd {
   padding: 30px 43px !important;
 }
 
+/*面板缩进样式1*/
 .pd2 {
   padding: 10px 43px !important;
 }
 
+/*面板缩进样式2*/
 .pd3 {
   padding: 35px 65px !important;
 }
@@ -1385,6 +1429,7 @@ dl.ddmb15 dd {
   color: #27b8ff;
 }
 
+/*面板内字体颜色1*/
 .color2 {
   color: #09ddce;
 }
@@ -1408,10 +1453,10 @@ dl.ddmb15 dd {
 .ic_demo {
   width: 60px;
   height: 48px;
+  font-size: 48px;
+  color: hsla(0, 0%, 100%, .5);
   display: inline-block;
-  background: url(../assets/img/ic_demo.png) no-repeat;
   vertical-align: middle;
-  margin-left: 6px;
 }
 
 .ic_demo1 {
@@ -1436,6 +1481,82 @@ dl.ddmb15 dd {
 
 .bold {
   font-weight: bold;
+}
+
+.ui-list__footer {
+  padding: 1em 2em;
+  background-color: rgba(0, 0, 0, .1);
+  height: 58px;
+}
+
+.ui-list__footer .ui-paginationCount {
+  float: left;
+  margin: .5em 0
+}
+
+.ui-list__footer .ui-pagination {
+  float: right;
+  margin: 0 -1em
+}
+
+.ui-list__loader {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .2);
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s
+}
+
+.ui-list__loader.ui--appear, .ui-list__loader.ui--enter {
+  opacity: 0
+}
+
+.ui-list__loader.ui--appearActive, .ui-list__loader.ui--enterActive {
+  opacity: 1
+}
+
+.ui-list__loader.ui--leave {
+  opacity: 1;
+  pointer-events: none
+}
+
+.ui-list__loader.ui--leaveActive {
+  opacity: 0
+}
+
+.ui-list__loader .ui-loader {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.ui-paginationCount__number {
+  color: #09ddce;
+}
+
+.ui-pagination li {
+  display: inline-block;
+}
+
+.ui-pagination button {
+  padding: .5em 1em;
+  border: none;
+  color: inherit;
+  background-color: transparent
+}
+
+.ui-pagination button.ui--active {
+  background-color: rgba(0, 0, 0, .2)
+}
+
+.ui-pagination button .ui-icon {
+  color: hsla(0, 0%, 100%, .5)
 }
 
 .ui--enter {
@@ -1470,6 +1591,92 @@ dl.ddmb15 dd {
   -webkit-transform: translateY(2em);
   transform: translateY(2em)
 }
+
+.ui-table {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.ui-table__content {
+  min-height: 21em;
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.ui-table table {
+  width: 100%;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+.ui-table table tr {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.ui-table table td, .ui-table table th {
+  min-height: 2.5em;
+  padding: 1em;
+}
+
+.ui-table table th {
+  text-align: left;
+  font-weight: 400;
+}
+
+.ui-table--strip table td, .ui-table--strip table th {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ui-table table td:first-child, .ui-table table th:first-child {
+  padding-left: 2em;
+}
+
+.ui-table table tbody tr:nth-child(2n+1) {
+  background-color: rgba(0, 0, 0, .2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.ui-table--strip tr td {
+  cursor: pointer;
+}
+
+.zdwrap .zdcon {
+  margin-right: 2em;
+  padding: 1em 0 1em 0;
+  opacity: 0.8;
+  line-height: 24px;
+  font-size: 12px;
+  cursor: default;
+}
+
+.zdwrap .zdcon_top {
+  color: #41cfd1;
+}
+
+.zdwrap .zdcon_dis {
+  border: solid #586E8C;
+  border-width: 1px 0;
+  padding: 1em 2em;
+}
+
+.zdwrap .zdcon_dis span {
+  display: inline-block;
+}
+
+.zdcon_dis .zdcon_t {
+  width: 15%;
+  text-align: right;
+  vertical-align: top;
+}
+
+.zdcon_dis .zdcon_v {
+  width: 80%;
+  word-break: break-word;
+  margin-left: 5%;
+  white-space: normal;
+}
+
 
 /* Add By Yoonge
 ------------------------------------------------------------*/

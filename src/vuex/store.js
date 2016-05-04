@@ -6,7 +6,7 @@ import mutations from './mutations.js'
 Vue.use(Vuex)
 
 const state = {
-  currentNavName: 'overview'
+  currentIndex: 0
 }
 
 const store = new Vuex.Store({
@@ -15,15 +15,15 @@ const store = new Vuex.Store({
   mutations
 })
 
-if (module.hot) {
-  module.hot.accept(['./actions', './mutations'], () => {
-    const newActions = require('./actions').default
-    const newMutations = require('./mutations').default
-    store.hotUpdate({
-      actions: newActions,
-      mutations: newMutations
-    })
-  })
-}
+// if (module.hot) {
+//   module.hot.accept(['./actions', './mutations'], () => {
+//     const newActions = require('./actions').default
+//     const newMutations = require('./mutations').default
+//     store.hotUpdate({
+//       actions: newActions,
+//       mutations: newMutations
+//     })
+//   })
+// }
 
 export default store
