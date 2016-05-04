@@ -3,12 +3,12 @@
     <table>
       <thead>
         <tr>
-          <th></th>
+          <th>test</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th></th>
+          <th>test</th>
         </tr>
       </tbody>
     </table>
@@ -17,9 +17,6 @@
 
 <script lang="babel">
 export default {
-  name: 'Table',
-  props: {
-    data: {}
-  }
+  name: 'TableComponent'
 }
 </script>

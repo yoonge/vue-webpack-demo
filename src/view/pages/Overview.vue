@@ -63,6 +63,7 @@
           </div>
         </div>
         <div class="ui-table ui-table--hasData">
+          <table-component></table-component>
         </div>
       </div>
       <div class="mytemp w586 fr">
@@ -70,6 +71,7 @@
           <h3>风险动态</h3>
         </div>
         <div class="ui-table ui-table--hasData">
+          <table-component></table-component>
         </div>
       </div>
     </section>
@@ -77,7 +79,12 @@
 </template>
 
 <script lang="babel">
+import TableComponent from 'components/TableComponent.vue'
+
 export default {
-  name: 'Overview'
+  name: 'Overview',
+  components: {
+    TableComponent
+  }
 }
 </script>
