@@ -8,7 +8,7 @@
       </thead>
       <tbody>
         <tr v-for="tr in table_data.tbody_data">
-          <th v-for="td in tr">{{td}}</th>
+          <th v-for="(key, td) in tr | colFilter key keys">{{td}}</th>
         </tr>
       </tbody>
     </table>
@@ -16,9 +16,16 @@
 </template>
 
 <script lang="babel">
+import Vue from 'vue'
+
+Vue.filter('colFilter', function (val, k, ks) {
+  if (ks.findIndex(item => item === k) > -1) return val
+})
+
 export default {
   name: 'TableComponent',
   props: {
+    keys: [],
     table_data: {}
   }
 }
