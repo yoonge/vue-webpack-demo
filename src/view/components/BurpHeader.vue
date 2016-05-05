@@ -9,13 +9,12 @@
         <burp-nav :items="items"></burp-nav>
       </div>
     </div>
-    <sub-container :items="items"></sub-container>
   </header>
 </template>
 
 <script lang="babel">
 import BurpNav from './BurpNav.vue'
-import SubContainer from './SubContainer.vue'
+import SubContainer from './SubNav.vue'
 import nav from 'constants/nav.js'
 
 export default {

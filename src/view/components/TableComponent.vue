@@ -3,12 +3,12 @@
     <table>
       <thead>
         <tr>
-          <th>test</th>
+          <th v-for="th in table_data.thead_data">{{th}}</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th>test</th>
+        <tr v-for="tr in table_data.tbody_data">
+          <th v-for="td in tr">{{td}}</th>
         </tr>
       </tbody>
     </table>
@@ -17,6 +17,9 @@
 
 <script lang="babel">
 export default {
-  name: 'TableComponent'
+  name: 'TableComponent',
+  props: {
+    table_data: {}
+  }
 }
 </script>

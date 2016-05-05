@@ -1,10 +1,21 @@
 import Overview from 'pages/Overview.vue'
+import OverviewService from 'pages/OverviewService.vue'
+import OverviewSetup from 'pages/OverviewSetup.vue'
+
 import Project from 'pages/Project.vue'
+import ProjectList from 'pages/ProjectList.vue'
+import ProjectAdd from 'pages/ProjectAdd.vue'
+
 import Task from 'pages/Task.vue'
+
 import System from 'pages/System.vue'
+
 import Admin from 'pages/Admin.vue'
+
 import Documents from 'pages/Documents.vue'
+
 import About from 'pages/About.vue'
+import Production from 'pages/Production.vue'
 
 const Routers = function (router) {
   router.map({
@@ -14,11 +25,11 @@ const Routers = function (router) {
       subRoutes: {
         '/service': {
           name: 'overview.service',
-          component: Overview
+          component: OverviewService
         },
         '/setup': {
           name: 'overview.setup',
-          component: Overview
+          component: OverviewSetup
         }
       }
     },
@@ -28,11 +39,11 @@ const Routers = function (router) {
       subRoutes: {
         '/list': {
           name: 'project.list',
-          component: Project
+          component: ProjectList
         },
         '/add': {
           name: 'project.add',
-          component: Project
+          component: ProjectAdd
         }
       }
     },
@@ -124,9 +135,15 @@ const Routers = function (router) {
         }
       }
     },
-    '/about/production': {
-      name: 'about.production',
-      component: About
+    '/about': {
+      name: 'about',
+      component: About,
+      subRoutes: {
+        '/production': {
+          name: 'about.production',
+          component: Production
+        }
+      }
     }
   })
   router.redirect({

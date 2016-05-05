@@ -1,20 +1,27 @@
 <template>
   <div>
-    <section class="bd1200">
-      <div class="mytemp">
-        <div class="temp_top noselect">
-          <h3>产品介绍</h3>
-        </div>
-        <div class="temp_con">
-          暂无内容...
-        </div>
-      </div>
-    </section>
+    <sub-nav :item="items[6]"></sub-nav>
+    <router-view
+      class="main"
+      :transition="effect"
+      transition-mode="out-in">
+    </router-view>
   </div>
 </template>
 
 <script lang="babel">
+import SubNav from 'components/SubNav.vue'
+import nav from 'constants/nav.js'
+
 export default {
-  name: 'About'
+  name: 'About',
+  components: {
+    SubNav
+  },
+  data () {
+    return {
+      items: nav
+    }
+  }
 }
 </script>
