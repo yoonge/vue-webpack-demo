@@ -1,6 +1,9 @@
-import 'babel-polyfill'
 import Vue from 'vue'
 
-export default Vue.filter('colFilter', function (val, k, ks) {
-  if (ks.findIndex(item => item === k) > -1) return val
+Vue.filter('colFilter', function (value, ks) {
+  for (const k in ks) {
+    if (ks[k] === value) {
+      return true
+    }
+  }
 })

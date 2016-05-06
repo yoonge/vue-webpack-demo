@@ -63,7 +63,7 @@
           </div>
         </div>
         <div class="ui-table ui-table--hasData">
-          <table-component :table_data="table_data" :keys="keys"></table-component>
+          <table-component :table_data="table_data"></table-component>
         </div>
       </div>
       <div class="mytemp w586 fr">
@@ -71,7 +71,7 @@
           <h3>风险动态</h3>
         </div>
         <div class="ui-table ui-table--hasData">
-          <table-component :table_data="table_data1" :keys="keys1"></table-component>
+          <table-component :table_data="table_data1"></table-component>
         </div>
       </div>
     </section>
@@ -140,7 +140,7 @@ export default {
         ]
       },
       table_data1: {
-        keys1: [
+        keys: [
           'id',
           'target',
           'count'
