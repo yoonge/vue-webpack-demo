@@ -8,7 +8,7 @@
       </thead>
       <tbody>
         <tr v-for="tr in table_data.tbody_data">
-          <th v-for="(key, td) in tr" v-show="key | colFilter table_data.keys">{{td}}</th>
+          <td v-for="(key, td) in tr" v-if="key | colFilter table_data.keys">{{td}}</td>
         </tr>
       </tbody>
     </table>
