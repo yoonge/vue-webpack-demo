@@ -1106,7 +1106,7 @@ dl.ddmb15 dd {
 .my_rwlb .my_rwmarks .rwmark-mk {
   margin-right: 0;
   float: right;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
 .rwmark-n {
@@ -1383,7 +1383,7 @@ dl.ddmb15 dd {
 }
 
 .pd1 {
-  padding: 30px 43px !important;
+  padding: 30px 24px !important;
 }
 
 /*面板缩进样式1*/
@@ -1638,8 +1638,8 @@ dl.ddmb15 dd {
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.ui-table--strip tr td {
-  cursor: pointer;
+.ui-table input[type=checkbox] {
+  vertical-align: -2px;
 }
 
 .zdwrap .zdcon {
@@ -1677,7 +1677,6 @@ dl.ddmb15 dd {
   margin-left: 5%;
   white-space: normal;
 }
-
 
 /* Add By Yoonge
 ------------------------------------------------------------*/
