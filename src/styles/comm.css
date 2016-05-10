@@ -227,9 +227,6 @@ form {
   min-width: 1200px;
 }
 
-.site-header-bd {
-}
-
 .site-header-bd .logo_part {
   width: 96px;
   height: 59px;
@@ -246,11 +243,11 @@ form {
   color: rgba(255, 255, 255, 0.1);
 }
 
-.login_info > a {
+.site-header-bd a {
   color: #fff;
 }
 
-.login_info > a:hover {
+.site-header-bd a:hover {
   color: #09ddce;
   text-decoration: none;
 }
