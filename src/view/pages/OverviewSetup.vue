@@ -3,24 +3,24 @@
     <div class="mytemp">
       <div class="temp_con pd7">
         <div class="linewrap1 noselect">
-          <div class="jieru_tag cur" @click="switchTab">
+          <div class="jieru_tag" :class="{'cur': current==0}" @click="switchTab">
             <div class="tag_in"></div>
             <div>WiFi 接入</div>
           </div>
-          <div class="jieru_tag" @click="switchTab">
+          <div class="jieru_tag" :class="{'cur': current==1}" @click="switchTab">
             <div class="tag_in tag_in1"></div>
             <div>代理 接入</div>
           </div>
         </div>
 
-        <div class="jr_tag cur">
+        <div class="jr_tag" :class="{'cur': current==0}">
           <div class="linewrap1">
             <dl>
               <dt>1. 连接 WiFi</dt>
               <dd>
                 1. 将您的测试设备，如您的电脑，手机，智能设备连接至以下配置的 WiFi 中
                 <div class="temp_con1 color1">
-                  Wi-Fi名称：测试 <br>
+                  WiFi 名称：测试 <br>
                   连接密码：ABC123456 <br>
                 </div>
               </dd>
@@ -58,7 +58,7 @@
           </div>
         </div>
 
-        <div class="jr_tag">
+        <div class="jr_tag" :class="{'cur': current==1}">
           <div class="linewrap1">
             <dl>
               <dt>1. 连接代理</dt>
@@ -115,13 +115,15 @@ export default {
   components: {
     TableComponent
   },
+  data () {
+    return {
+      current: 0
+    }
+  },
   methods: {
     switchTab: function () {
-      console.log(this.$els)
-//      const i = $(el).index()
-//      console.log(i)
-//      $(el).addClass('cur').siblings('div.jieru_tag').removeClass('cur')
-//      $('div.jr_tag').eq(i).addClass('cur').siblings('div.jr_tag').removeClass('cur')
+      if (this.current === 0) this.current = 1
+      else this.current = 0
     }
   }
 }

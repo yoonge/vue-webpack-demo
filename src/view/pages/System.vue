@@ -1,6 +1,6 @@
 <template>
   <div>
-    <sub-nav :item="items[3]"></sub-nav>
+    <sub-nav :item="items[4]"></sub-nav>
     <router-view
       class="main"
       :transition="effect"

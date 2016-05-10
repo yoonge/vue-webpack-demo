@@ -1,12 +1,11 @@
 <template>
   <div>
-    <sub-nav :item="items[5]"></sub-nav>
+    <sub-nav :item="items[3]"></sub-nav>
     <router-view
       class="main"
       :transition="effect"
       transition-mode="out-in">
     </router-view>
-    <h1>Admin</h1>
   </div>
 </template>
 
@@ -15,7 +14,7 @@ import SubNav from 'components/SubNav.vue'
 import nav from 'constants/nav.js'
 
 export default {
-  name: 'Admin',
+  name: 'Tools',
   components: {
     SubNav
   },

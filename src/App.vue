@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style>
-@import 'styles/comm.css?v=201605101747';
+@import 'styles/comm.css?v=201605102328';
 
 h1 {
   font-size: 48px;

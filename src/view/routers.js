@@ -8,6 +8,9 @@ import ProjectAdd from 'pages/ProjectAdd.vue'
 
 import Task from 'pages/Task.vue'
 
+import Tools from 'pages/Tools.vue'
+import ToolsDebug from 'pages/ToolsDebug.vue'
+
 import System from 'pages/System.vue'
 
 import Admin from 'pages/Admin.vue'
@@ -69,6 +72,16 @@ const Routers = function (router) {
         }
       }
     },
+    'tools': {
+      name: 'tools',
+      component: Tools,
+      subRoutes: {
+        '/debug': {
+          name: 'tools.debug',
+          component: ToolsDebug
+        }
+      }
+    },
     '/system': {
       name: 'system',
       component: System,
@@ -97,12 +110,12 @@ const Routers = function (router) {
           name: 'system.status',
           component: System
         },
-        '/block': {
-          name: 'system.block',
-          component: System
-        },
         '/network': {
           name: 'system.network',
+          component: System
+        },
+        '/block': {
+          name: 'system.block',
           component: System
         },
         '/password': {
@@ -129,8 +142,8 @@ const Routers = function (router) {
       name: 'documents',
       component: Documents,
       subRoutes: {
-        '/sql': {
-          name: 'documents.sql',
+        '/index': {
+          name: 'documents.index',
           component: Documents
         }
       }
@@ -152,9 +165,10 @@ const Routers = function (router) {
     '/overview': '/overview/service',
     '/project': '/project/list',
     '/task': '/task/list',
+    '/tools': '/tools/debug',
     '/system': '/system/users',
     '/admin': '/admin/project',
-    '/documents': '/documents/sql',
+    '/documents': '/documents/index',
     '/about': '/about/production'
   })
 }
