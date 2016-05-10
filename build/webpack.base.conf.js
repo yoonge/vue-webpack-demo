@@ -6,6 +6,7 @@ var projectRoot = path.resolve(__dirname, '../')
 
 module.exports = {
   entry: {
+    vendor: ['jquery'],
     app: './src/main.js'
   },
   output: {
@@ -28,6 +29,17 @@ module.exports = {
   resolveLoader: {
     fallback: [path.join(__dirname, '../node_modules')]
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery',
+      $: 'jquery',
+      'window.jQuery': 'jquery'
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: Infinity
+    })
+  ],
   module: {
     preLoaders: [
       {

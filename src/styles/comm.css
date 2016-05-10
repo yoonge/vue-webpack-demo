@@ -320,7 +320,7 @@ form {
   background: rgba(0, 0, 0, 0.05);
   clear: both;
   zoom: 1;
-  margin-bottom: 50px;
+  margin-bottom: 24px;
   min-width: 1200px;
 }
 
@@ -437,7 +437,7 @@ form {
 }
 
 .update_log dl dd {
-  padding: 0 10px 30px 40px;
+  padding: 0 10px 16px 40px;
   position: relative;
 }
 
@@ -450,7 +450,12 @@ form {
   margin-right: 10px;
 }
 
+.update_log dl dd ul {
+  margin-top: 6px;
+}
+
 .update_log dl dd li {
+  line-height: 16px;
   list-style: outside none;
   margin-left: 23px;
   overflow: hidden;
@@ -1004,7 +1009,7 @@ ol.upsp li.upsp_in {
 }
 
 .linewrap1 dl dd {
-  padding: 0 54px;
+  padding: 0 24px;
   line-height: 28px;
 }
 
@@ -1410,7 +1415,7 @@ dl.ddmb15 dd {
 }
 
 .pd7 {
-  padding: 20px 50px 40px 50px !important;
+  padding: 20px 24px 40px 24px !important;
 }
 
 .pd7 dd a {

@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style>
-@import 'styles/comm.css?v=201605042115';
+@import 'styles/comm.css?v=201605101747';
 
 h1 {
   font-size: 48px;
@@ -58,10 +58,10 @@ h1 {
 }
 .v-enter {
   opacity: 1;
-  transform: translate3d(0, 20%, 0);
+  transform: translate3d(0, 10%, 0);
 }
 .v-leave {
   opacity: 0;
-  transform: translate3d(0, 10%, 0);
+  transform: translate3d(0, 5%, 0);
 }
 </style>

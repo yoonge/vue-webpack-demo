@@ -1,27 +1,110 @@
 <template>
-  <div>
-    <h1>Setup</h1>
-
-    <section class="bd1200">
-      <div class="mytemp w586 fl">
-        <div class="temp_top noselect">
-          <h3>近期任务</h3>
-          <div class="rightWrap">
-            <a class="mybtn" href="javascript:;">任务管理</a>
+  <section class="bd1200">
+    <div class="mytemp">
+      <div class="temp_con pd7">
+        <div class="linewrap1 noselect">
+          <div class="jieru_tag cur" @click="switchTab">
+            <div class="tag_in"></div>
+            <div>WiFi 接入</div>
+          </div>
+          <div class="jieru_tag" @click="switchTab">
+            <div class="tag_in tag_in1"></div>
+            <div>代理 接入</div>
           </div>
         </div>
-        <div class="ui-table ui-table--hasData">
+
+        <div class="jr_tag cur">
+          <div class="linewrap1">
+            <dl>
+              <dt>1. 连接 WiFi</dt>
+              <dd>
+                1. 将您的测试设备，如您的电脑，手机，智能设备连接至以下配置的 WiFi 中
+                <div class="temp_con1 color1">
+                  Wi-Fi名称：测试 <br>
+                  连接密码：ABC123456 <br>
+                </div>
+              </dd>
+            </dl>
+          </div>
+
+          <div class="linewrap1">
+            <dl>
+              <dt>2. 测试连接</dt>
+              <dd>
+                1. 打开已连接 WiFi 的客户端，访问
+                <a href="javascript:;" taget="_blank">http://192.168.1.199/iai299a92x91k</a>
+              </dd>
+              <dd>
+                2. 我已访问。
+                <a href="javascript:;">点击测试</a>
+                <span class="btnstyle2">连接成功</span>
+              </dd>
+              <dd>3. 如果您是智能设备，无法发送指定请求，可以跳过这一步</dd>
+            </dl>
+          </div>
+
+          <div class="linewrap1">
+            <dl>
+              <dt>3. 创建项目</dt>
+              <dd>1. 点击<a href="tjxm.html">创建项目</a></dd>
+            </dl>
+          </div>
+
+          <div class="linewrap1 noborder">
+            <dl>
+              <dt>4. 启动测试任务</dt>
+              <dd>1. 点击<a href="rwlb.html">启动测试任务</a></dd>
+            </dl>
+          </div>
+        </div>
+
+        <div class="jr_tag">
+          <div class="linewrap1">
+            <dl>
+              <dt>1. 连接代理</dt>
+              <dd>
+                1. 将您的测试设备，如您的电脑，手机，智能设备配置以下代理访问互联网
+                <div class="temp_con1 color1">
+                  代理地址：192.168.11.11 <br>
+                  用户名：ABC123456 <br>
+                  连接密码：ABC123456
+                </div>
+              </dd>
+            </dl>
+          </div>
+
+          <div class="linewrap1">
+            <dl>
+              <dt>2. 测试连接</dt>
+              <dd>
+                1. 打开已连接代理的客户端，访问
+                <a href="javascript:;" taget="_blank">http://192.168.1.199/iai299a92x91k</a>
+              </dd>
+              <dd>
+                2. 我已访问。
+                <a href="javascript:;">点击测试</a>
+                <button class="btnstyle1 color2">连接成功</button>
+              </dd>
+            </dl>
+          </div>
+
+          <div class="linewrap1">
+            <dl>
+              <dt>3. 创建项目</dt>
+              <dd>1. 点击<a href="tjxm.html">创建项目</a></dd>
+            </dl>
+          </div>
+
+          <div class="linewrap1 noborder">
+            <dl>
+              <dt>4. 启动测试任务</dt>
+              <dd>1. 点击<a href="rwlb.html">启动测试任务</a></dd>
+            </dl>
+          </div>
         </div>
       </div>
-      <div class="mytemp w586 fr">
-        <div class="temp_top noselect">
-          <h3>风险动态</h3>
-        </div>
-        <div class="ui-table ui-table--hasData">
-        </div>
-      </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </template>
 
 <script lang="babel">
@@ -31,6 +114,15 @@ export default {
   name: 'OverviewSetup',
   components: {
     TableComponent
+  },
+  methods: {
+    switchTab: function () {
+      console.log(this.$els)
+//      const i = $(el).index()
+//      console.log(i)
+//      $(el).addClass('cur').siblings('div.jieru_tag').removeClass('cur')
+//      $('div.jr_tag').eq(i).addClass('cur').siblings('div.jr_tag').removeClass('cur')
+    }
   }
 }
 </script>
