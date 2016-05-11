@@ -4,7 +4,7 @@
       <div class="site-header-bd bd1200">
         <a v-link="'/'" class="logo_part noselect">云智测</a>
         <div class="login_info">
-          <a v-link="'/'" class="login-user"><i class="touxiang tx01"></i>李铁柱(测试组)</a>|<a v-link="'/'" class="outofsys">退出</a>
+          李铁柱（测试组）|<a v-link="'/'" class="outofsys">退出</a>
         </div>
         <burp-nav :items="items"></burp-nav>
       </div>

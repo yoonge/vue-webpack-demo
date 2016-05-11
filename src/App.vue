@@ -22,7 +22,8 @@ export default {
 </script>
 
 <style>
-@import 'styles/comm.css?v=201605102328';
+@import 'styles/bootstrap.min.css?v=201605111407';
+@import 'styles/comm.css?v=201605111844';
 
 h1 {
   font-size: 48px;
@@ -54,14 +55,13 @@ h1 {
 
 .v-transition {
   transition: all .3s ease;
-  overflow: hidden;
 }
 .v-enter {
   opacity: 1;
-  transform: translate3d(0, 10%, 0);
+  transform: translate3d(0, 4%, 0);
 }
 .v-leave {
   opacity: 0;
-  transform: translate3d(0, 5%, 0);
+  transform: translate3d(0, 2%, 0);
 }
 </style>

@@ -41,7 +41,9 @@ a {
 }
 
 a:active, a:focus, a:hover {
-  outline: 0 none
+  color: #09ddce;
+  text-decoration: none;
+  outline: 0 none;
 }
 
 a:hover {
@@ -240,7 +242,6 @@ form {
   float: right;
   height: 59px;
   line-height: 59px;
-  color: rgba(255, 255, 255, 0.1);
 }
 
 .site-header-bd a {
@@ -303,6 +304,7 @@ form {
 }
 
 .b-nav li a:hover {
+  color: #fff;
   text-decoration: none;
 }
 
@@ -323,7 +325,7 @@ form {
 }
 
 .b-nav li a.cur {
-  background: rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.2);
   width: 72px;
 }
 
@@ -390,42 +392,43 @@ form {
 }
 
 .form-control {
+  color: #555;
+  font-size: 13px;
   display: block;
   width: 100%;
   height: 30px;
-  padding: 5px 12px;
-  font-size: 13px;
   line-height: 1.428571429;
-  color: #555;
+  border: 1px solid #ccc;
+  border-radius: 1px;
   background-color: #fff;
   background-image: none;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  padding: 5px 12px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  -webkit-transition: border-color ease-in-out 0.3s, box-shadow ease-in-out 0.3s;
+  transition: border-color ease-in-out 0.3s, box-shadow ease-in-out 0.3s;
 }
 
 .search-query {
-  border-radius: 3px;
-  line-height: 18px;
   color: #f8f8f8;
-  border: none;
-  background: url(../assets/img/search-white.png) 5px 5px no-repeat rgba(0, 0, 0, 0.2);
-  padding-left: 26px;
-  -webkit-transition: width 0.2s;
-  -o-transition: width 0.2s;
-  transition: width 0.2s;
+  font-size: 13px;
   width: 180px;
-  vertical-align: middle;
-  -webkit-appearance: none;
+  height: 30px;
+  line-height: 1.428571429;
   box-sizing: border-box;
+  border: none;
+  border-radius: 1px;
+  background: url(../assets/img/search-white.png) 5px 7px no-repeat rgba(0, 0, 0, .2);
+  padding: 5px 12px 5px 26px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: width 0.3s, background-color 0.3s, border-color ease-in-out 0.3s, box-shadow ease-in-out 0.3s;
+  transition: width 0.3s, background-color 0.3s, border-color ease-in-out 0.3s, box-shadow ease-in-out 0.3s;
 }
 
 .search-query:focus {
-  width: 220px;
+  width: 240px;
+  background-color: rgba(0, 0, 0, .4);
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
@@ -450,7 +453,7 @@ form {
 }
 
 .update_log dl dd {
-  padding: 0 10px 16px 40px;
+  padding: 0 10px 20px 40px;
   position: relative;
 }
 
@@ -468,7 +471,7 @@ form {
 }
 
 .update_log dl dd li {
-  line-height: 16px;
+  line-height: 18px;
   list-style: outside none;
   margin-left: 23px;
   overflow: hidden;
@@ -510,10 +513,10 @@ form {
 
 /*通用的样式类型*/
 .temp_top {
-  line-height: 42px;
-  padding-left: 20px;
-  background: rgba(0, 0, 0, 0.1);
   font-size: 12px;
+  height: 42px;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 11px 18px 11px 24px;
   position: relative;
 }
 
@@ -522,38 +525,40 @@ form {
 }
 
 .temp_top h3 {
-  font-weight: 300;
-  display: inline-block;
+  float: left;
+  font-weight: bold;
+  line-height: 20px;
 }
 
 .temp_top .rightWrap {
   position: absolute;
-  top: 0px;
-  right: 10px;
+  top: 0;
+  right: 12px;
 }
 
 .mybtnpic {
-  position: relative;
+  float: right;
+  display: inline-block;
   width: 20px;
   height: 20px;
-  display: inline-block;
-  vertical-align: middle;
+  line-height: 20px;
   background: url(../assets/img/btnpic.png) no-repeat;
+  margin-left: 6px;
 }
 
-.rightWrap .mybtnpic1 {
+.mybtnpic1 {
   background: url(../assets/img/btnpic1.png) no-repeat;
 }
 
-.rightWrap .mybtnpic2 {
+.mybtnpic2 {
   background: url(../assets/img/btnpic2.png) no-repeat;
 }
 
-.rightWrap .mybtnpic3 {
+.mybtnpic3 {
   background: url(../assets/img/btnpic3.png) no-repeat;
 }
 
-.rightWrap .mybtnpic4 {
+.mybtnpic4 {
   background: url(../assets/img/btnpic4.png) no-repeat;
 }
 
@@ -908,32 +913,6 @@ ol.upsp li.upsp_in {
   padding: 3px 6px;
   background: rgba(255, 255, 255, 0.06);
   margin: 0 3px;
-}
-
-.mybtnpic .tishi {
-  transition: visibility .3s, opacity .3s;
-  position: absolute;
-  border-radius: 4px;
-  word-break: keep-all;
-  height: 24px;
-  padding: 0 10px;
-  background: #000;
-  top: -31px;
-  display: inline-block;
-  font-size: 10px;
-  color: #fff;
-  line-height: 24px;
-  text-align: center;
-}
-
-.mybtnpic .arrow-down {
-  width: 9px;
-  height: 9px;
-  display: inline-block;
-  background: url(../assets/img/tishi.png) -16px -18px no-repeat;
-  position: absolute;
-  left: 5px;
-  top: -7px;
 }
 
 .lfname {
@@ -1618,7 +1597,7 @@ dl.ddmb15 dd {
 }
 
 .ui-table__content {
-  min-height: 21em;
+  min-height: 8em;
   background-color: rgba(0, 0, 0, .1);
 }
 
@@ -1659,6 +1638,50 @@ dl.ddmb15 dd {
 
 .ui-table input[type=checkbox] {
   vertical-align: -2px;
+}
+
+.ui-pagination {
+  margin: 0;
+  padding: 0;
+  list-style: none
+}
+
+.ui-pagination li {
+  display: inline-block
+}
+
+.ui-pagination button {
+  padding: .5em 1em;
+  border: none;
+  color: inherit;
+  background-color: transparent
+}
+
+.ui-pagination button.ui--active {
+  background-color: rgba(0, 0, 0, .2)
+}
+
+.ui-pagination button .ui-icon {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+.ui-paginationCount__number {
+  color: #09ddce
+}
+
+.ui-table__footer {
+  padding: 1em 2em;
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.ui-table__footer .ui-paginationCount {
+  float: left;
+  margin: .5em 0
+}
+
+.ui-table__footer .ui-pagination {
+  float: right;
+  margin: 0 -1em
 }
 
 .zdwrap .zdcon {

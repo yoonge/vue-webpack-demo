@@ -3,12 +3,20 @@
     <section class="bd1200">
       <div class="mytemp">
         <div class="mytemp w252 fl mr64">
-          <div class="temp_top noselect">
+          <div class="temp_top noselect clearfix">
             <h3>项目配置</h3>
-            <div class="rightWrap">
-              <a class="mybtnpic mybtnpic2" href="javascript:;" dis="新增"></a>
-              <a class="mybtnpic mybtnpic3" href="javascript:;" dis="设置"></a>
-            </div>
+            <tooltip
+              effect="scale"
+              placement="top"
+              content="设置">
+              <a class="mybtnpic mybtnpic3" href="javascript:;"></a>
+            </tooltip>
+            <tooltip
+              effect="scale"
+              placement="top"
+              content="新增">
+              <a class="mybtnpic mybtnpic2" href="javascript:;"></a>
+            </tooltip>
           </div>
           <div class="temp_con">
             <i class="ic_demo ic_demo1 ui-icon--stack"></i>
@@ -16,11 +24,14 @@
           </div>
         </div>
         <div class="mytemp w252 fl mr64">
-          <div class="temp_top noselect">
+          <div class="temp_top noselect clearfix">
             <h3>任务数</h3>
-            <div class="rightWrap">
-              <a class="mybtnpic mybtnpic2" href="javascript:;" dis="新增"></a>
-            </div>
+            <tooltip
+              effect="scale"
+              placement="top"
+              content="新增">
+              <a class="mybtnpic mybtnpic2" href="javascript:;"></a>
+            </tooltip>
           </div>
           <div class="temp_con">
             <i class="ic_demo ic_demo2 ui-icon--map"></i>
@@ -28,11 +39,8 @@
           </div>
         </div>
         <div class="mytemp w252 fl">
-          <div class="temp_top noselect">
+          <div class="temp_top noselect clearfix">
             <h3>测试请求数</h3>
-            <div class="rightWrap">
-              <a class="mybtnpic mybtnpic3" href="javascript:;" dis="设置"></a>
-            </div>
           </div>
           <div class="temp_con">
             <i class="ic_demo ic_demo3 ui-icon--globe"></i>
@@ -40,11 +48,14 @@
           </div>
         </div>
         <div class="mytemp w252 fr">
-          <div class="temp_top noselect">
+          <div class="temp_top noselect clearfix">
             <h3>发现问题数</h3>
-            <div class="rightWrap">
-              <a class="mybtnpic mybtnpic3" href="javascript:;" dis="设置"></a>
-            </div>
+            <tooltip
+              effect="scale"
+              placement="top"
+              content="设置">
+              <a class="mybtnpic mybtnpic3" href="javascript:;"></a>
+            </tooltip>
           </div>
           <div class="temp_con">
             <i class="ic_demo ic_demo4 ui-icon--bug"></i>
@@ -62,17 +73,13 @@
             <a class="mybtn" href="javascript:;">任务管理</a>
           </div>
         </div>
-        <div class="ui-table ui-table--hasData ui-table--strip">
-          <table-component :table_data="table_data"></table-component>
-        </div>
+        <table-component :table_data="table_data"></table-component>
       </div>
       <div class="mytemp w586 fr">
         <div class="temp_top noselect">
           <h3>风险动态</h3>
         </div>
-        <div class="ui-table ui-table--hasData ui-table--strip">
-          <table-component :table_data="table_data1"></table-component>
-        </div>
+        <table-component :table_data="table_data1"></table-component>
       </div>
     </section>
 
@@ -197,20 +204,24 @@
 </template>
 
 <script lang="babel">
+import { tooltip } from 'vue-strap'
 import TableComponent from 'components/TableComponent.vue'
 
 export default {
   name: 'OverviewService',
   components: {
+    tooltip,
     TableComponent
   },
   data () {
     return {
       table_data: {
+        select_able: false,
+        pagination: false,
         cols: [
           'id',
           'target',
-          'count',
+          'bugs',
           'time',
           'status'
         ],
@@ -225,41 +236,43 @@ export default {
           {
             id: '123456',
             target: 'sangebaimao.com',
-            count: '2',
+            bugs: '2',
             time: '2016-05-01',
             status: '运行中'
           },
           {
             id: '123',
             target: '5',
-            count: '6',
+            bugs: '6',
             time: '2016-05-01',
             status: '已完成'
           },
           {
             id: '123456',
             target: '1',
-            count: '2',
+            bugs: '2',
             time: '2016-05-01',
             status: '已完成'
           },
           {
             id: '123',
             target: '5',
-            count: '6',
+            bugs: '6',
             time: '2016-05-01',
             status: '运行中'
           },
           {
             id: '123456',
             target: '1',
-            count: '2',
+            bugs: '2',
             time: '2016-05-01',
             status: '运行中'
           }
         ]
       },
       table_data1: {
+        select_able: false,
+        pagination: false,
         cols: [
           'id',
           'target',

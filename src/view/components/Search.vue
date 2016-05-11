@@ -1,6 +1,6 @@
 <template>
   <form id="search-form" class="navbar-form fr" role="search">
-    <input type="search" class="form-control search-query" placeholder="{{keyword}}">
+    <input type="search" class="search-query" placeholder="{{keyword}}">
   </form>
 </template>
 
