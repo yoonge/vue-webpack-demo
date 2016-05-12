@@ -1715,7 +1715,7 @@ dl.ddmb15 dd {
 
 .zdcon_dis .zdcon_v {
   width: 80%;
-  word-break: break-word;
+  word-break: break-all;
   margin-left: 5%;
   white-space: normal;
 }

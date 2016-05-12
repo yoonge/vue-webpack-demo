@@ -3,7 +3,8 @@
     <div class="mytemp">
       <div class="temp_con pd1 clear">
         <dl class="ddmb15">
-          <dd><span class="tmp-colname">任务类型</span>
+          <dd>
+            <span class="tmp-colname">任务类型</span>
             <select class="lfselect jr_select" v-model="task_type">
               <option value="0" selected>域名任务</option>
               <option value="1">多域名任务</option>
@@ -12,7 +13,8 @@
               <option value="4">目录模块任务</option>
               <option value="5">多目录模块任务</option>
             </select>
-            <span class="tmp-notice">会对该域名及该域名的子域名相关业务流量进行分析和风险检测</span></dd>
+            <span class="tmp-notice">会对该域名及该域名的子域名相关业务流量进行分析和风险检测</span>
+          </dd>
           <dd>
             <span class="tmp-colname">目标地址</span><input type="text" class="inputControl w270"><span class="tmp-notice">与任务类型相匹配的目标地址</span>
           </dd>
@@ -32,7 +34,6 @@
               <span class="myrediowrap">
                 <span class="myredio" rel="1"><i class="ic_kuang"></i>是</span>
                 <span class="myredio" rel="0"><i class="ic_kuang"></i>否</span>
-                <input type="hidden">
               </span>
             </dd>
             <dd>
@@ -47,12 +48,11 @@
             <dd>
               <span class="tmp-colname">选择插件</span>
               <span class="mycheckwrap">
-                  <span class="myredio1" rel="全选"><i class="ic_kuang"></i>全选</span>
-                  <span class="myredio" rel="SQL注入检测"><i class="ic_kuang"></i>SQL注入检测</span>
-                  <span class="myredio" rel="XSS漏洞检测"><i class="ic_kuang"></i>XSS漏洞检测</span>
-                  <span class="myredio" rel="命令执行漏洞"><i class="ic_kuang"></i>命令执行漏洞</span>
-                  <span class="myredio" rel="其他第三方漏洞"><i class="ic_kuang"></i>其他第三方漏洞</span>
-                  <input type="hidden">
+                  <span class="myredio1"><i class="ic_kuang"></i>全选</span>
+                  <span class="myredio"><i class="ic_kuang"></i>SQL注入检测</span>
+                  <span class="myredio"><i class="ic_kuang"></i>XSS漏洞检测</span>
+                  <span class="myredio"><i class="ic_kuang"></i>命令执行漏洞</span>
+                  <span class="myredio"><i class="ic_kuang"></i>其他第三方漏洞</span>
               </span>
             </dd>
             <dd class="zdy_wrap fl ld">
