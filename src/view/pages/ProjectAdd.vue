@@ -30,10 +30,12 @@
         <div class="linewrap2" v-if="scan_mode=='1'">
           <dl class="ddmb15">
             <dd>
-              <span class="tmp-colname">开启COOKIE</span>
+              <span class="tmp-colname">开启 COOKIE</span>
               <span class="myrediowrap">
-                <span class="myredio" rel="1"><i class="ic_kuang"></i>是</span>
-                <span class="myredio" rel="0"><i class="ic_kuang"></i>否</span>
+                <label><input type="radio" name="cookie" value="0" checked>是</label>
+                <label><input type="radio" name="cookie" value="1">否</label>
+                <!--<span class="myredio" rel="1"><i class="ic_kuang"></i>是</span>-->
+                <!--<span class="myredio" rel="0"><i class="ic_kuang"></i>否</span>-->
               </span>
             </dd>
             <dd>
@@ -48,20 +50,23 @@
             <dd>
               <span class="tmp-colname">选择插件</span>
               <span class="mycheckwrap">
-                  <span class="myredio1"><i class="ic_kuang"></i>全选</span>
-                  <span class="myredio"><i class="ic_kuang"></i>SQL注入检测</span>
-                  <span class="myredio"><i class="ic_kuang"></i>XSS漏洞检测</span>
-                  <span class="myredio"><i class="ic_kuang"></i>命令执行漏洞</span>
-                  <span class="myredio"><i class="ic_kuang"></i>其他第三方漏洞</span>
+                <label><input type="checkbox">全选</label>
+                <label><input type="checkbox" v-model="checkedBoxes">SQL 注入检测</label>
+                <label><input type="checkbox" v-model="checkedBoxes">XSS 漏洞检测</label>
+                <label><input type="checkbox" v-model="checkedBoxes">命令执行漏洞</label>
+                <label><input type="checkbox" v-model="checkedBoxes">其他第三方漏洞</label>
+                <!--<span class="myredio1"><i class="ic_kuang"></i>全选</span>-->
+                <!--<span class="myredio"><i class="ic_kuang"></i>SQL注入检测</span>-->
+                <!--<span class="myredio"><i class="ic_kuang"></i>XSS漏洞检测</span>-->
+                <!--<span class="myredio"><i class="ic_kuang"></i>命令执行漏洞</span>-->
+                <!--<span class="myredio"><i class="ic_kuang"></i>其他第三方漏洞</span>-->
               </span>
             </dd>
             <dd class="zdy_wrap fl ld">
               <span class="tmp-colname fl">自定义请求头</span>
               <dl class="fl wrapper_xz">
                 <dd class="zdy_linehead">
-                  <input type="text" class="inputControl inputstyle" placeholder="字段名">
-                  <span class="zdy_mh">:</span>
-                  <input type="text" class="inputControl inputstyle w160" placeholder="内容">
+                  <input type="text" class="inputControl inputstyle" placeholder="字段名"><span class="zdy_mh">:</span><input type="text" class="inputControl inputstyle w160" placeholder="内容">
                 </dd>
               </dl>
               <button class="xz_btn color2 addyx">+ 新增一项</button>
@@ -85,7 +90,8 @@ export default {
     return {
       task_type: '',
       scan_mode: '',
-      start_time: ''
+      start_time: '',
+      checkedBoxes: []
     }
   }
 }
