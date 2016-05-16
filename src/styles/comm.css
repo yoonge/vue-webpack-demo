@@ -392,21 +392,34 @@ form {
 }
 
 .form-control {
-  color: #555;
-  font-size: 13px;
-  display: block;
+  color: #f8f8f8;
+  font-size: 12px;
+  font-family: -apple-system, "Segoe UI", "Roboto", "Helvetica Neue", "Helvetica", "Arial", "PingFang SC", "PingFang TC", "Hiragino Sans GB", "Microsoft YaHei", "Microsoft JhengHei", sans-serif;
+  display: inline-block;
   width: 100%;
   height: 30px;
   line-height: 1.428571429;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 1px;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, .2);
   background-image: none;
   padding: 5px 12px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out 0.3s, box-shadow ease-in-out 0.3s;
   transition: border-color ease-in-out 0.3s, box-shadow ease-in-out 0.3s;
+}
+
+.form-control:focus {
+  border: none;
+  background-color: rgba(0, 0, 0, .4);
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+textarea.form-control {
+  height: auto;
 }
 
 .search-query {
@@ -587,17 +600,16 @@ form {
 }
 
 .mybtn {
-  padding: 0 6px;
+  color: #00d8c9;
+  font-size: 10px;
+  display: inline-block;
   height: 2em;
   line-height: 2em;
-  font-size: 10px;
-  color: #00d8c9;
+  text-align: center;
   background: rgba(0, 216, 201, 0.12);
-  display: inline-block;
   margin-top: 10px;
   margin-right: 6px;
-  margin-left: 6px;
-  text-align: center;
+  padding: 0 8px;
   -webkit-transition: background-color 0.2s;
   -o-transition: background-color 0.2s;
   transition: background-color 0.2s;
@@ -609,60 +621,66 @@ form {
 }
 
 button {
-  border-color: #28a4c9;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
   color: #fff;
-  background: rgba(9, 221, 206, .1);
   display: inline-block;
-  padding: 0px 8px;
-  margin-bottom: 0;
   font-size: 12px;
   font-weight: 300;
   line-height: 22px;
   text-align: center;
-  white-space: nowrap;
   vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
+  border: 1px solid transparent;
+  border-radius: 0;
+  background-color: rgba(9, 221, 206, .1);
+  background-image: none;
+  white-space: nowrap;
   cursor: pointer;
+  margin-right: 10px;
+  margin-bottom: 0;
+  padding: 0px 8px;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 0px;
-  margin-right: 10px;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
 
 button.blue {
-  background: #009EEB;
+  background-color: #009EEB;
 }
 
 button.green {
-  background: #00B682;
+  background-color: #00B682;
 }
 
 .temp_con .tmp-colname {
   font-size: 14px;
+  float: left;
   display: inline-block;
   width: 96px;
   line-height: 30px;
   text-align: right;
   vertical-align: middle;
-  margin-right: 16px;
+  margin-right: 12px;
 }
 
 .inputControl {
+  color: #fff;
+  font-size: 12px;
   width: 175px;
   height: 30px;
-  font-size: 12px;
-  background: rgba(0, 0, 0, 0.2);
   border: 0;
-  color: #fff;
+  background: rgba(0, 0, 0, 0.2);
   padding-left: 5px;
-  margin-right: 15px;
-  vertical-align: middle;
+  padding-right: 5px;
+}
+
+.temp_con .form-control,
+.temp_con .lfselect {
+  float: left;
+  width: 220px;
+  margin-right: 12px;
 }
 
 .linewrap {
@@ -722,7 +740,8 @@ button.green {
   background-position: 0 -8px;
 }
 
-.myrediowrap span, .mycheckwrap span {
+.myrediowrap span,
+.mycheckwrap span {
   margin-right: 25px;
   display: inline-block;
   cursor: pointer;
@@ -861,7 +880,7 @@ ol.upsp li.upsp_in {
 }
 
 .btn-div {
-  margin: 24px 0 20px 0;
+  margin: 24px 0 20px 108px;
   clear: both;
   zoom: 1;
 }
@@ -924,21 +943,22 @@ ol.upsp li.upsp_in {
 }
 
 .lfselect {
-  margin-right: 40px;
-  font-size: 12px;
-  background: rgba(0, 0, 0, 0.2);
-  vertical-align: middle;
   color: rgba(255, 255, 255, 0.7);
-  line-height: 28px;
-  border: 0;
+  font-size: 12px;
+  width: 220px;
   height: 28px;
+  line-height: 28px;
+  vertical-align: middle;
+  border: 0;
+  background: rgba(0, 0, 0, 0.2);
+  margin-right: 40px;
   padding: 0 6px;
-  width: 200px;
 }
 
-.lfselect:hover, .lfselect:focus {
-  background: #0F204D;
+.lfselect:hover,
+.lfselect:focus {
   color: #fff;
+  background: #122638;
 }
 
 .lfinput {
@@ -1064,17 +1084,16 @@ ol.upsp li.upsp_in {
 }
 
 .lfselect.jr_select {
-  width: 275px;
-  margin-right: 12px;
+  width: 220px;
   height: 30px;
   line-height: 30px;
-  margin-left: -3px;
+  margin-right: 12px;
 }
 
 .lfselect.zy_select {
   height: 30px;
   width: auto;
-  margin-right: 8px;
+  margin-right: 12px;
 }
 
 .lfselect.cs_select {
@@ -1089,11 +1108,13 @@ dl.ddmb15 dd {
 
 .ddmb15 dd label {
   font-weight: normal;
+  margin-bottom: 0;
+  padding-top: 5px;
   cursor: pointer;
 }
 
 .ddmb15 dd label + label {
-  margin-left: 12px;
+  margin-left: 16px;
 }
 
 .ddmb15 dd label > input[type="radio"],
@@ -1108,12 +1129,6 @@ dl.ddmb15 dd {
 
 .inputstyle:focus {
   color: rgba(255, 255, 255, 1);
-}
-
-.xz_btn {
-  position: absolute;
-  bottom: 18px;
-  left: 430px;
 }
 
 .my_rwlb .my_rwmarks .rwmark-mk {
@@ -1233,13 +1248,13 @@ dl.ddmb15 dd {
 }
 
 .ld .ld_notice {
-  position: absolute;
-  bottom: -30px;
-  left: 0;
   font-size: 12px;
-  text-align: center;
   line-height: 30px;
+  text-align: center;
   background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 0;
+  bottom: -30px;
 }
 
 .zdy_wrap .inputControl {
@@ -1249,7 +1264,9 @@ dl.ddmb15 dd {
 }
 
 .zdy_linehead span.zdy_mh {
-  margin-right: 15px;
+  float: left;
+  line-height: 30px;
+  margin-right: 12px;
 }
 
 .fz36 {
