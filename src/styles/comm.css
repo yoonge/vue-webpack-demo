@@ -679,7 +679,7 @@ button.green {
 .temp_con .form-control,
 .temp_con .lfselect {
   float: left;
-  width: 220px;
+  width: 240px;
   margin-right: 12px;
 }
 
@@ -700,12 +700,12 @@ button.green {
 }
 
 .linewrap2 {
+  font-size: 12px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 40px 0 0px 0;
+  margin-top: 24px;
+  padding: 24px 0 0 0;
   clear: both;
   zoom: 1;
-  font-size: 12px;
-  margin-top: 40px;
 }
 
 .noborder {
@@ -880,7 +880,7 @@ ol.upsp li.upsp_in {
 }
 
 .btn-div {
-  margin: 24px 0 20px 108px;
+  margin: 20px 0 20px 108px;
   clear: both;
   zoom: 1;
 }
@@ -1084,7 +1084,7 @@ ol.upsp li.upsp_in {
 }
 
 .lfselect.jr_select {
-  width: 220px;
+  width: 240px;
   height: 30px;
   line-height: 30px;
   margin-right: 12px;
@@ -1102,7 +1102,7 @@ ol.upsp li.upsp_in {
   margin-right: 0px;
 }
 
-dl.ddmb15 dd {
+dl.ddmb15 > dd {
   margin-bottom: 15px;
 }
 
@@ -1121,6 +1121,10 @@ dl.ddmb15 dd {
 .ddmb15 dd label > input[type="checkbox"] {
   vertical-align: -2px;
   margin-right: 6px;
+}
+
+.ddmb15 .mybtn {
+  margin-top: 3px;
 }
 
 .inputstyle {

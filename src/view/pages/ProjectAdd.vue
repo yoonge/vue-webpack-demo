@@ -13,7 +13,9 @@
               <option value="4">目录模块任务</option>
               <option value="5">多目录模块任务</option>
             </select>
-            <span class="tmp-notice">会对该域名及该域名的子域名相关业务流量进行分析和风险检测</span>
+            <span class="tmp-notice" v-if="task_type=='0' || task_type=='1'">会对该域名及该域名的子域名相关业务流量进行分析和风险检测</span>
+            <span class="tmp-notice" v-if="task_type=='2' || task_type=='3'">会对该网站相关的流量进行分析和风险检测</span>
+            <span class="tmp-notice" v-if="task_type=='4'">会对该网站的该目录及子目录进行风险检测</span>
           </dd>
           <dd class="clearfix">
             <span class="tmp-colname">目标地址</span>
@@ -49,7 +51,7 @@
                 <option value="0" selected>立即启动</option>
                 <option value="1">定时启动</option>
               </select>
-              <input type="text" class="form-control" placeholder="2015-01-02  12:22:11" v-if="start_time=='1'">
+              <input type="text" class="form-control" placeholder="2016-03-14 05:45:37" v-if="start_time=='1'">
               <span class="tmp-notice">您可以先启动任务来记录流量，基于流量的风险检测会在设置的时间开始进行检测</span>
             </dd>
             <dd class="clearfix">
