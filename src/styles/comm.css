@@ -1108,13 +1108,10 @@ dl.ddmb15 > dd {
 
 .ddmb15 dd label {
   font-weight: normal;
+  margin-right: 16px;
   margin-bottom: 0;
   padding-top: 5px;
   cursor: pointer;
-}
-
-.ddmb15 dd label + label {
-  margin-left: 16px;
 }
 
 .ddmb15 dd label > input[type="radio"],

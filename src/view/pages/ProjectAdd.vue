@@ -93,19 +93,51 @@ export default {
       checkBoxes: [
         {
           name: 'SQL 注入检测',
-          checked: false
+          checked: true
         },
         {
           name: 'XSS 漏洞检测',
-          checked: false
+          checked: true
         },
         {
           name: '命令执行漏洞',
-          checked: false
+          checked: true
         },
         {
           name: '其他第三方漏洞',
-          checked: false
+          checked: true
+        },
+        {
+          name: 'SQL 注入检测',
+          checked: true
+        },
+        {
+          name: 'XSS 漏洞检测',
+          checked: true
+        },
+        {
+          name: '命令执行漏洞',
+          checked: true
+        },
+        {
+          name: '其他第三方漏洞',
+          checked: true
+        },
+        {
+          name: 'SQL 注入检测',
+          checked: true
+        },
+        {
+          name: 'XSS 漏洞检测',
+          checked: true
+        },
+        {
+          name: '命令执行漏洞',
+          checked: true
+        },
+        {
+          name: '其他第三方漏洞',
+          checked: true
         }
       ]
     }
