@@ -6,7 +6,6 @@
       :transition="effect"
       transition-mode="out-in">
     </router-view>
-    <h1>Task</h1>
   </div>
 </template>
 

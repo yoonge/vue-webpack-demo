@@ -7,6 +7,9 @@ import ProjectList from 'pages/ProjectList.vue'
 import ProjectAdd from 'pages/ProjectAdd.vue'
 
 import Task from 'pages/Task.vue'
+import TaskList from 'pages/TaskList.vue'
+import RegressionTest from 'pages/RegressionTest.vue'
+import RiskRetrieval from 'pages/RiskRetrieval.vue'
 
 import Tools from 'pages/Tools.vue'
 import ToolsDebug from 'pages/ToolsDebug.vue'
@@ -56,7 +59,7 @@ const Routers = function (router) {
       subRoutes: {
         '/list': {
           name: 'task.list',
-          component: Task
+          component: TaskList
         },
         '/add': {
           name: 'task.add',
@@ -64,11 +67,11 @@ const Routers = function (router) {
         },
         '/regression': {
           name: 'task.regression',
-          component: Task
+          component: RegressionTest
         },
         '/bug': {
           name: 'task.bug',
-          component: Task
+          component: RiskRetrieval
         }
       }
     },
@@ -165,6 +168,7 @@ const Routers = function (router) {
     '/overview': '/overview/service',
     '/project': '/project/list',
     '/task': '/task/list',
+    '/task/add': '/project/add',
     '/tools': '/tools/debug',
     '/system': '/system/users',
     '/admin': '/admin/project',

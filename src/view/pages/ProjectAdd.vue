@@ -15,16 +15,12 @@
             </select>
             <span class="tmp-notice" v-if="task_type=='0' || task_type=='1'">会对该域名及该域名的子域名相关业务流量进行分析和风险检测</span>
             <span class="tmp-notice" v-if="task_type=='2' || task_type=='3'">会对该网站相关的流量进行分析和风险检测</span>
-            <span class="tmp-notice" v-if="task_type=='4'">会对该网站的该目录及子目录进行风险检测</span>
+            <span class="tmp-notice" v-if="task_type=='4' || task_type=='5'">会对该网站的该目录及子目录进行风险检测</span>
           </dd>
           <dd class="clearfix">
             <span class="tmp-colname">目标地址</span>
-            <input type="text" class="form-control" v-if="task_type=='0'">
-            <textarea class="form-control" rows="5" v-if="task_type=='1'"></textarea>
-            <input type="text" class="form-control" v-if="task_type=='2'">
-            <textarea class="form-control" rows="5" v-if="task_type=='3'"></textarea>
-            <input type="text" class="form-control" v-if="task_type=='4'">
-            <textarea class="form-control" rows="5" v-if="task_type=='5'"></textarea>
+            <input type="text" class="form-control" v-if="task_type=='0' || task_type=='2' || task_type=='4'" v-model="task_target">
+            <textarea class="form-control" rows="5" v-if="task_type=='1' || task_type=='3' || task_type=='5'" placeholder="每行一条" v-model="task_target"></textarea>
             <span class="tmp-notice">与任务类型相匹配的目标地址</span>
           </dd>
           <dd class="clearfix">
@@ -47,11 +43,11 @@
             </dd>
             <dd class="clearfix">
               <span class="tmp-colname">扫描启动时间</span>
-              <select class="lfselect jr_select" v-model="start_time">
+              <select class="lfselect jr_select" v-model="start_time.status">
                 <option value="0" selected>立即启动</option>
                 <option value="1">定时启动</option>
               </select>
-              <input type="text" class="form-control" placeholder="2016-03-14 05:45:37" v-if="start_time=='1'">
+              <input type="text" class="form-control" placeholder="2016-03-14 05:45:37" v-if="start_time.status=='1'" v-model="start_time.time">
               <span class="tmp-notice">您可以先启动任务来记录流量，基于流量的风险检测会在设置的时间开始进行检测</span>
             </dd>
             <dd class="clearfix">
@@ -64,11 +60,11 @@
             <dd class="zdy_wrap fl ld clearfix">
               <span class="tmp-colname fl">自定义请求头</span>
               <dl class="fl">
-                <dd class="zdy_linehead clearfix">
-                  <input type="text" class="form-control" placeholder="字段名"><span class="zdy_mh">:</span><input type="text" class="form-control" placeholder="内容">
+                <dd class="zdy_linehead clearfix" v-for="header in headers">
+                  <input type="text" class="form-control" placeholder="字段名" v-model="header.name"><span class="zdy_mh">:</span><input type="text" class="form-control" placeholder="内容" v-model="header.content">
                 </dd>
               </dl>
-              <a href="javascript:;" class="mybtn">+ 新增一项</a>
+              <a href="javascript:;" class="mybtn" @click="addHeader">+ 新增一项</a>
             </dd>
           </dl>
         </div>
@@ -87,9 +83,13 @@ export default {
   name: 'ProjectAdd',
   data () {
     return {
-      task_type: '',
-      scan_mode: '',
-      start_time: '',
+      task_type: '0',
+      task_target: '',
+      scan_mode: '0',
+      start_time: {
+        status: '0',
+        time: ''
+      },
       checkBoxes: [
         {
           name: 'SQL 注入检测',
@@ -139,6 +139,12 @@ export default {
           name: '其他第三方漏洞',
           checked: true
         }
+      ],
+      headers: [
+        {
+          name: '',
+          content: ''
+        }
       ]
     }
   },
@@ -162,6 +168,12 @@ export default {
         })
         return i
       }
+    }
+  },
+  methods: {
+    addHeader: function () {
+      const header = {name: '', content: ''}
+      this.headers.push(header)
     }
   }
 }

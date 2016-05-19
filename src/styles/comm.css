@@ -431,7 +431,7 @@ textarea.form-control {
   box-sizing: border-box;
   border: none;
   border-radius: 1px;
-  background: url(../assets/img/search-white.png) 5px 7px no-repeat rgba(0, 0, 0, .2);
+  background: rgba(0, 0, 0, .2) url(../assets/img/search-white.png) 5px 7px no-repeat;
   padding: 5px 12px 5px 26px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -952,7 +952,7 @@ ol.upsp li.upsp_in {
   border: 0;
   background: rgba(0, 0, 0, 0.2);
   margin-right: 40px;
-  padding: 0 6px;
+  padding: 0 8px;
 }
 
 .lfselect:hover,
@@ -1151,31 +1151,19 @@ dl.ddmb15 > dd {
   height: 300px;
 }
 
-/* mytemplist css */
-.mytemplist .temp_top {
-  line-height: 44px;
-}
-
 .mytemplist .temp_top .mybtn {
-  height: 23px;
-  line-height: 23px;
-  padding: 0 8px;
-  margin: 11px 10px 0 0;
+  margin-top: 0;
 }
 
 .mytemplist .list_search {
-  margin: 11px 10px 0 0;
+  margin: 0 0 0 0;
 }
 
 .mytemplist .search-query {
-  color: rgba(255, 255, 255, 0.3);
-  font-size: 12px;
   height: 24px;
-  background: url(../assets/img/search-white.png) 5px 3px no-repeat rgba(0, 0, 0, 0.1);
-}
-
-.mytemplist .search-query:focus {
-  color: rgba(255, 255, 255, 1);
+  background-position: 5px 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .my_rwlb dd {
@@ -1258,10 +1246,19 @@ dl.ddmb15 > dd {
   bottom: -30px;
 }
 
-.zdy_wrap .inputControl {
-  text-align: center;
-  width: 90px;
-  padding: 0;
+.zdy_wrap {
+  padding-right: 81px;
+  position: relative;
+}
+
+.zdy_wrap > .mybtn {
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+}
+
+.zdy_linehead + .zdy_linehead {
+  margin-top: 12px;
 }
 
 .zdy_linehead span.zdy_mh {
