@@ -2,9 +2,9 @@
   <section class="bd1200">
     <div class="mytemp w400 mytemplist fl noselect">
       <div class="temp_top">
-        <a href="javascript:;" class="mybtn">+&nbsp;新增任务</a>
+        <a v-link="'/project/add'" class="mybtn">+&nbsp;新增任务</a>
         <form id="search-form1" class="navbar-form fr list_search" role="search">
-          <input type="search" class="form-control search-query" placeholder="在 239 个任务中搜索">
+          <input type="search" class="search-query" placeholder="在下列任务中搜索">
         </form>
       </div>
       <div class="my_rwlb">

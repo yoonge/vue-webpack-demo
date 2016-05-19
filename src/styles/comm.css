@@ -1160,6 +1160,7 @@ dl.ddmb15 > dd {
 }
 
 .mytemplist .search-query {
+  font-size: 12px;
   height: 24px;
   background-position: 5px 4px;
   padding-top: 2px;
