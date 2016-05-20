@@ -124,10 +124,6 @@ em, i {
   font-style: normal
 }
 
-input {
-  font: 12px/150% "微软雅黑";
-}
-
 input:disabled {
   color: rgba(255, 255, 255, 0.3);
   background: rgba(0, 0, 0, 0.08);
@@ -1039,13 +1035,13 @@ ol.upsp li.upsp_in {
 }
 
 .my_rwlb {
-  overflow: hidden;
-  width: auto;
-  margin-bottom: 30px;
-  background: rgba(0, 0, 0, 0.2);
-  padding: 0px;
   font-size: 12px;
+  width: auto;
+  max-height: 600px;
   line-height: 24px;
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  margin-bottom: 30px;
+  padding: 0;
   word-break: break-all;
   clear: both;
   zoom: 1;
