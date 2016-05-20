@@ -2,7 +2,6 @@
   <div>
     <sub-nav :item="items[2]"></sub-nav>
     <router-view
-      keep-alive
       class="main"
       :transition="effect"
       transition-mode="out-in">
