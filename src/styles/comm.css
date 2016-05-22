@@ -1037,12 +1037,15 @@ ol.upsp li.upsp_in {
 .my_rwlb {
   font-size: 12px;
   width: auto;
-  max-height: 600px;
+  height: 600px;
   line-height: 24px;
+  word-break: break-all;
   background-color: rgba(0, 0, 0, 0.2) !important;
+  overflow-x: hidden;
+  overflow-y: auto;
   margin-bottom: 30px;
   padding: 0;
-  word-break: break-all;
+  position: relative;
   clear: both;
   zoom: 1;
 }
@@ -1161,6 +1164,10 @@ dl.ddmb15 > dd {
   background-position: 5px 4px;
   padding-top: 2px;
   padding-bottom: 2px;
+}
+
+.my_rwlb dl {
+  min-height: 600px;
 }
 
 .my_rwlb dd {
@@ -1787,5 +1794,34 @@ dl.ddmb15 > dd {
 
 .icon-info {
   background-image: url(../assets/img/icon-info.png);
+}
+
+.spinner-wrapper {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .2);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.v-spinner {
+  margin-top: -16px;
+  margin-left: -16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.v-spinner .v-clip {
+  border-color: rgba(255, 255, 255, 0.8) rgba(255, 255, 255, 0.8) transparent !important;
+}
+
+.show {
+  display: block !important;
 }
 
