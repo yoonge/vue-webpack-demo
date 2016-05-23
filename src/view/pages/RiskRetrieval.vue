@@ -41,6 +41,7 @@
 </template>
 
 <script lang="babel">
+import config from 'constants/config.js'
 import TableComponent from 'components/TableComponent.vue'
 
 export default {
@@ -90,7 +91,7 @@ export default {
   methods: {
     fetchRiskRetrieval () {
       this.$http({
-        url: 'http://192.168.40.131:3000/riskRetrieval',
+        url: config.apiPrefix + '/riskRetrieval',
         method: 'GET',
         beforeSend: function () {
           this.$set('table_data.loading', true)

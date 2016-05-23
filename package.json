@@ -17,6 +17,7 @@
     "vue": "^1.0.24",
     "vue-resource": "^0.7.0",
     "vue-router": "^0.7.13",
+    "vue-scrollbar": "^1.0.4",
     "vue-spinner": "^1.0.2",
     "vue-strap": "^1.0.7",
     "vuex": "^0.6.3"

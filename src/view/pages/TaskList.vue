@@ -330,6 +330,7 @@
 </template>
 
 <script lang="babel">
+import config from 'constants/config.js'
 import { tooltip } from 'vue-strap'
 import ClipLoader from 'vue-spinner/src/ClipLoader.vue'
 
@@ -354,7 +355,7 @@ export default {
   methods: {
     fetchTasks () {
       this.$http({
-        url: 'http://192.168.40.131:3000/taskList',
+        url: config.apiPrefix + '/taskList',
         method: 'GET',
         beforeSend: function () {
           this.$set('loading', true)
@@ -368,7 +369,7 @@ export default {
     },
     fetchTaskBasicInfo () {
       this.$http({
-        url: 'http://192.168.40.131:3000/taskBasicInfo',
+        url: config.apiPrefix + '/taskBasicInfo',
         method: 'GET'
       }).then(res => {
         this.$set('taskBasicInfo', res.data)
