@@ -48,17 +48,17 @@
       </div>
       <div class="temp_con pd2 ld">
         <dl>
-          <dd>测试目标：<a href="javascript:;" target="_blank">http://www.baidu.com</a></dd>
-          <dd>任务类型：网站任务</dd>
-          <dd>任务归属：李铁柱</dd>
+          <dd>测试目标：<a href="javascript:;" target="_blank">{{taskBasicInfo.target}}</a></dd>
+          <dd>任务类型：{{taskBasicInfo.type}}</dd>
+          <dd>任务归属：{{taskBasicInfo.user}}</dd>
           <dd>
-            开始时间：2016-01-01  17:22:19
+            开始时间：{{taskBasicInfo.startTime}}
             <div class="my_rwmarks fr">
               <div>
-                <span><i class="ic_bug "></i>16</span>&nbsp;
-                <span><i class="ic_bug ic_bug1"></i>11</span>&nbsp;
-                <span><i class="ic_bug ic_bug2"></i>11</span>&nbsp;
-                <span><i class="ic_bug ic_bug3"></i>22</span>
+                <span><i class="ic_bug "></i>{{taskBasicInfo.high}}</span>&nbsp;
+                <span><i class="ic_bug ic_bug1"></i>{{taskBasicInfo.middle}}</span>&nbsp;
+                <span><i class="ic_bug ic_bug2"></i>{{taskBasicInfo.low}}</span>&nbsp;
+                <span><i class="ic_bug ic_bug3"></i>{{taskBasicInfo.hint}}</span>
               </div>
             </div>
           </dd>
@@ -343,22 +343,39 @@ export default {
     return {
       searchText: '',
       spinner: false,
-      tasks: []
+      tasks: [],
+      taskBasicInfo: {}
+    }
+  },
+  methods: {
+    fetchTasks: function () {
+      this.$http({
+        url: 'http://192.168.129.128:3000/taskList',
+        method: 'GET',
+        beforeSend: function () {
+          this.$set('spinner', true)
+        }
+      }).then(res => {
+        this.$set('tasks', res.data)
+        this.$set('spinner', false)
+      }).catch(err => {
+        console.error(err.data)
+      })
+    },
+    fetchTaskBasicInfo: function () {
+      this.$http({
+        url: 'http://192.168.129.128:3000/taskBasicInfo',
+        method: 'GET'
+      }).then(res => {
+        this.$set('taskBasicInfo', res.data)
+      }).catch(err => {
+        console.error(err.data)
+      })
     }
   },
   ready () {
-    this.$http({
-      url: 'http://192.168.129.128:3000/taskList',
-      method: 'GET',
-      beforeSend: function () {
-        this.$set('spinner', true)
-      }
-    }).then(res => {
-      this.$set('tasks', res.data)
-      this.$set('spinner', false)
-    }).catch(err => {
-      console.error(err.data)
-    })
+    fetchTasks()
+    fetchTaskBasicInfo()
   }
 }
 </script>
