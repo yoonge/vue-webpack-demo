@@ -8,7 +8,7 @@
         </form>
       </div>
       <div class="my_rwlb">
-        <div class="spinner-wrapper" :class="{'show': spinner}">
+        <div class="spinner-wrapper" :class="{'show': loading}">
           <clip-loader></clip-loader>
         </div>
         <dl>
@@ -342,29 +342,33 @@ export default {
   data () {
     return {
       searchText: '',
-      spinner: false,
+      loading: false,
       tasks: [],
       taskBasicInfo: {}
     }
   },
+  ready () {
+    this.fetchTasks()
+    this.fetchTaskBasicInfo()
+  },
   methods: {
-    fetchTasks: function () {
+    fetchTasks () {
       this.$http({
-        url: 'http://192.168.129.128:3000/taskList',
+        url: 'http://192.168.40.131:3000/taskList',
         method: 'GET',
         beforeSend: function () {
-          this.$set('spinner', true)
+          this.$set('loading', true)
         }
       }).then(res => {
         this.$set('tasks', res.data)
-        this.$set('spinner', false)
+        this.$set('loading', false)
       }).catch(err => {
         console.error(err.data)
       })
     },
-    fetchTaskBasicInfo: function () {
+    fetchTaskBasicInfo () {
       this.$http({
-        url: 'http://192.168.129.128:3000/taskBasicInfo',
+        url: 'http://192.168.40.131:3000/taskBasicInfo',
         method: 'GET'
       }).then(res => {
         this.$set('taskBasicInfo', res.data)
@@ -372,10 +376,6 @@ export default {
         console.error(err.data)
       })
     }
-  },
-  ready () {
-    fetchTasks()
-    fetchTaskBasicInfo()
   }
 }
 </script>

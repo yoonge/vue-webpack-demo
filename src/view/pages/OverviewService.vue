@@ -216,63 +216,37 @@ export default {
   data () {
     return {
       table_data: {
+        limit: [5, 0],
+        loading: false,
         select_able: false,
         pagination: false,
+        link_field: [
+          'target'
+        ],
         cols: [
           'id',
           'target',
-          'bugs',
-          'time',
+          'highNum',
+          'createTime',
           'status'
         ],
         thead_data: {
-          '任务 ID': '96',
+          '任务 ID': '80',
           '任务目标': '',
-          '漏洞数': '160',
-          '启动时间': '96',
-          '状态': ''
+          '漏洞数': '144',
+          '启动时间': '88',
+          '状态': '72'
         },
-        tbody_data: [
-          {
-            id: '123456',
-            target: 'sangebaimao.com',
-            bugs: '2',
-            time: '2016-05-01',
-            status: '运行中'
-          },
-          {
-            id: '123',
-            target: '5',
-            bugs: '6',
-            time: '2016-05-01',
-            status: '已完成'
-          },
-          {
-            id: '123456',
-            target: '1',
-            bugs: '2',
-            time: '2016-05-01',
-            status: '已完成'
-          },
-          {
-            id: '123',
-            target: '5',
-            bugs: '6',
-            time: '2016-05-01',
-            status: '运行中'
-          },
-          {
-            id: '123456',
-            target: '1',
-            bugs: '2',
-            time: '2016-05-01',
-            status: '运行中'
-          }
-        ]
+        tbody_data: []
       },
       table_data1: {
+        limit: [5, 0],
+        loading: false,
         select_able: false,
         pagination: false,
+        link_field: [
+          'target'
+        ],
         cols: [
           'id',
           'target',
@@ -318,6 +292,25 @@ export default {
           }
         ]
       }
+    }
+  },
+  ready () {
+    this.fetchTaskListAll()
+  },
+  methods: {
+    fetchTaskListAll () {
+      this.$http({
+        url: 'http://192.168.40.131:3000/taskListAll',
+        method: 'GET',
+        beforeSend: function () {
+          this.$set('table_data.loading', true)
+        }
+      }).then(res => {
+        this.$set('table_data.tbody_data', res.data)
+        this.$set('table_data.loading', false)
+      }).catch(err => {
+        console.error(err.data)
+      })
     }
   }
 }

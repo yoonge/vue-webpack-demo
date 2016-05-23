@@ -1,6 +1,9 @@
 <template>
   <div class="ui-table ui-table--hasData ui-table--strip">
     <div class="ui-table__content">
+      <div class="spinner-wrapper" :class="{'show': table_data.loading}">
+        <clip-loader></clip-loader>
+      </div>
       <table>
         <thead>
           <tr>
@@ -9,16 +12,16 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="tr in table_data.tbody_data">
+          <tr v-for="tr in table_data.tbody_data | limitBy table_data.limit[0] table_data.limit[1]">
             <td v-if="table_data.select_able"><input type="checkbox"></td>
-            <td v-for="(key, val) in tr" v-if="key | colFilter table_data.cols">
-              <div v-if="key == 'bugs'">
-                <span><i class="ic_bug"></i>16</span>
-                <span><i class="ic_bug ic_bug1"></i>11</span>
-                <span><i class="ic_bug ic_bug2"></i>11</span>
-                <span><i class="ic_bug ic_bug3"></i>22</span>
+            <td v-for="(key, val) in tr | orderBy orderField" v-if="key | colFilter table_data.cols">
+              <div v-if="key == 'highNum'">
+                <span><i class="ic_bug"></i>{{val}}</span>
+                <span><i class="ic_bug ic_bug1"></i>{{val}}</span>
+                <span><i class="ic_bug ic_bug2"></i>{{val}}</span>
+                <span><i class="ic_bug ic_bug3"></i>{{val}}</span>
               </div>
-              <span v-else>{{{val | isLink 'target' key}}}</span>
+              <template v-else>{{{val | isLink key table_data.link_field}}}</template>
             </td>
           </tr>
         </tbody>
@@ -26,7 +29,7 @@
     </div>
     <div class="ui-table__footer clearfix" v-if="table_data.pagination">
       <div class="ui-paginationCount">
-        <span>共 </span><span class="ui-paginationCount__number">16</span><span> 条记录</span>
+        <span>共 </span><span class="ui-paginationCount__number" @click="orderField()">16</span><span> 条记录</span>
       </div>
       <ul class="ui-pagination">
         <li class="ui-pagination__previous">
@@ -44,11 +47,27 @@
 
 <script lang="babel">
 import 'src/view/filters.js'
+import ClipLoader from 'vue-spinner/src/ClipLoader.vue'
 
 export default {
   name: 'TableComponent',
+  components: {
+    ClipLoader
+  },
   props: {
     table_data: {}
+  },
+  methods: {
+    orderField (a, b) {
+      const cols = this.table_data.cols
+      console.info(a.key)
+      console.info(b.key)
+      for (const c in cols) {
+        if a.key === cols[c] return let ai = c
+        if b.key === cols[c] return let bi = c
+      }
+      return ai - bi
+    }
   }
 }
 </script>

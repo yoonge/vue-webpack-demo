@@ -24,8 +24,13 @@ export default {
   data () {
     return {
       table_data: {
+        limit: [5, 0],
+        loading: false,
         select_able: true,
         pagination: true,
+        link_field: [
+          'target'
+        ],
         cols: [
           'id',
           'target',

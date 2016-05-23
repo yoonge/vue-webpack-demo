@@ -584,13 +584,13 @@ textarea.form-control {
 }
 
 .temp_content {
-  min-height: 185px;
-  margin-bottom: 30px;
-  background: rgba(0, 0, 0, 0.2);
-  padding: 0px;
   font-size: 12px;
+  min-height: 185px;
   line-height: 24px;
   word-break: break-all;
+  background: rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  padding: 0px;
   clear: both;
   zoom: 1;
 }
@@ -674,7 +674,6 @@ button.green {
 
 .temp_con .form-control,
 .temp_con .lfselect {
-  float: left;
   width: 240px;
   margin-right: 12px;
 }
@@ -969,12 +968,12 @@ ol.upsp li.upsp_in {
 }
 
 .searchbtn {
+  display: inline-block;
   width: 28px;
   height: 28px;
-  margin-left: -25px;
+  border: 0;
   background: #1171A7 url(../assets/img/search.png) no-repeat;
-  display: inline-block;
-  border: 0px;
+  margin-top: -3px;
 }
 
 .pd6 dl dd {
@@ -1083,6 +1082,7 @@ ol.upsp li.upsp_in {
 }
 
 .lfselect.jr_select {
+  float: left;
   width: 240px;
   height: 30px;
   line-height: 30px;
@@ -1241,7 +1241,7 @@ dl.ddmb15 > dd {
 }
 
 .ld > dl > dd {
-  line-height: 1.6;
+  line-height: 2;
 }
 
 .ld .ld_notice {
@@ -1270,7 +1270,6 @@ dl.ddmb15 > dd {
 }
 
 .zdy_linehead span.zdy_mh {
-  float: left;
   line-height: 30px;
   margin-right: 12px;
 }
@@ -1631,11 +1630,10 @@ dl.ddmb15 > dd {
 
 .ui-table {
   position: relative;
-  margin-bottom: 30px;
 }
 
 .ui-table__content {
-  min-height: 8em;
+  min-height: 240px;
   background-color: rgba(0, 0, 0, .1);
 }
 
