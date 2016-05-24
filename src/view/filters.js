@@ -1,8 +1,9 @@
 import Vue from 'vue'
 
-Vue.filter('colFilter', function (val, ks) {
+Vue.filter('colFilter', function (val, key, ks) {
+  console.log(key)
   for (const k in ks) {
-    if (ks[k] === val) return true
+    if (ks[k] === key) return val
   }
 })
 
