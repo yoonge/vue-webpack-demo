@@ -14,12 +14,12 @@
         <tbody>
           <tr v-for="tr in table_data.tbody_data | limitBy table_data.limit[0] table_data.limit[1]">
             <td v-if="table_data.select_able"><input type="checkbox"></td>
-            <td v-for="(key, val) in tr | colFilter table_data.cols" track-by="$index">
-              <div v-if="key == 'highNum'">
-                <span><i class="ic_bug"></i>{{val}}</span>
-                <span><i class="ic_bug ic_bug1"></i>{{val}}</span>
-                <span><i class="ic_bug ic_bug2"></i>{{val}}</span>
-                <span><i class="ic_bug ic_bug3"></i>{{val}}</span>
+            <td v-for="(key, val) in tr | formatCol | colFilter table_data.cols" track-by="$index">
+              <div v-if="key == 'bugs'">
+                <span><i class="ic_bug"></i>{{val.highNum}}</span>
+                <span><i class="ic_bug ic_bug1"></i>{{val.midNum}}</span>
+                <span><i class="ic_bug ic_bug2"></i>{{val.lowNum}}</span>
+                <span><i class="ic_bug ic_bug3"></i>{{val.riskNum}}</span>
               </div>
               <template v-else>{{{val | isLink key table_data.link_field}}}</template>
             </td>

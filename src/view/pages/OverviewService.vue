@@ -227,7 +227,7 @@ export default {
         cols: [
           'id',
           'target',
-          'highNum',
+          'bugs',
           'createTime',
           'status'
         ],
