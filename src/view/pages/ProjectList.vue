@@ -26,9 +26,9 @@ export default {
       table_data: {
         limit: [5, 0],
         loading: false,
-        select_able: true,
+        selectAble: true,
         pagination: true,
-        link_field: [
+        linkField: [
           'target'
         ],
         cols: [
@@ -37,13 +37,13 @@ export default {
           'type',
           'count'
         ],
-        thead_data: {
+        theadData: {
           '项目 ID': '96',
           '项目目标': '48%',
           '项目类型': '',
           '已测试次数': ''
         },
-        tbody_data: [
+        tbodyData: [
           {
             id: '123456',
             target: 'sangebaimao.com',

@@ -5,25 +5,25 @@
         <dl class="clearfix">
           <dd>
             <span class="lfname">风险级别</span>
-            <select class="lfselect" v-model="risk_level">
+            <select class="lfselect" v-model="riskLevel">
               <option value="0">高危</option>
               <option value="1">中危</option>
               <option value="2">低危</option>
               <option value="3">无风险</option>
             </select>
             <span class="lfname">风险类型</span>
-            <select class="lfselect" v-model="risk_type">
+            <select class="lfselect" v-model="riskType">
               <option value="0">SQL 注入漏洞</option>
               <option value="1">服务允许匿名登录</option>
             </select>
             <span class="lfname">请求 ID</span>
-            <input type="text" class="form-control" v-model="req_id">
+            <input type="text" class="form-control" v-model="reqId">
           </dd>
           <dd>
             <span class="lfname">开始时间</span>
-            <input type="text" class="form-control" v-model="start_time">
+            <input type="text" class="form-control" v-model="startTime">
             <span class="lfname">结束时间</span>
-            <input type="text" class="form-control" v-model="end_time">
+            <input type="text" class="form-control" v-model="endTime">
             <form role="search">
               <span class="lfname">关键词</span>
               <input type="text" class="form-control" v-model="keyword">
@@ -51,18 +51,18 @@ export default {
   },
   data () {
     return {
-      risk_level: '0',
-      risk_type: '0',
-      req_id: '',
-      start_time: '',
-      end_time: '',
+      riskLevel: '0',
+      riskType: '0',
+      reqId: '',
+      startTime: '',
+      endTime: '',
       keyword: '',
       table_data: {
         limit: [10, 0],
         loading: false,
-        select_able: false,
+        selectAble: false,
         pagination: true,
-        link_field: [
+        linkField: [
           'url'
         ],
         cols: [
@@ -73,15 +73,15 @@ export default {
           'addTime',
           'taskid'
         ],
-        thead_data: {
+        theadData: {
           '漏洞 ID': '96',
           '风险地址': '45%',
-          '风险级别': '48',
+          '风险级别': '80',
           '风险类型': '',
           '发现时间': '180',
           '任务 ID': '96'
         },
-        tbody_data: []
+        tbodyData: []
       }
     }
   },
@@ -97,7 +97,7 @@ export default {
           this.$set('table_data.loading', true)
         }
       }).then(res => {
-        this.$set('table_data.tbody_data', res.data)
+        this.$set('table_data.tbodyData', res.data)
         this.$set('table_data.loading', false)
       }).catch(err => {
         console.error(err.data)

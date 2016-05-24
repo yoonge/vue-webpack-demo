@@ -219,9 +219,9 @@ export default {
       table_data: {
         limit: [5, 0],
         loading: false,
-        select_able: false,
+        selectAble: false,
         pagination: false,
-        link_field: [
+        linkField: [
           'target'
         ],
         cols: [
@@ -231,21 +231,21 @@ export default {
           'createTime',
           'status'
         ],
-        thead_data: {
+        theadData: {
           '任务 ID': '80',
           '任务目标': '',
           '漏洞数': '144',
           '启动时间': '88',
           '状态': '72'
         },
-        tbody_data: []
+        tbodyData: []
       },
       table_data1: {
         limit: [5, 0],
         loading: false,
-        select_able: false,
+        selectAble: false,
         pagination: false,
-        link_field: [
+        linkField: [
           'target'
         ],
         cols: [
@@ -254,13 +254,13 @@ export default {
           'type',
           'time'
         ],
-        thead_data: {
+        theadData: {
           '风险 ID': '96',
           '目标地址': '',
           '漏洞类型': '',
           '发现时间': '96'
         },
-        tbody_data: [
+        tbodyData: [
           {
             id: '123456',
             target: 'http://burp.wooyun.org/#/task/bug/572c22fd1d41c8127b914a7a',
@@ -307,7 +307,7 @@ export default {
           this.$set('table_data.loading', true)
         }
       }).then(res => {
-        this.$set('table_data.tbody_data', res.data)
+        this.$set('table_data.tbodyData', res.data)
         this.$set('table_data.loading', false)
       }).catch(err => {
         console.error(err.data)
