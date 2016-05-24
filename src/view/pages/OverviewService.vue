@@ -204,7 +204,7 @@
 </template>
 
 <script lang="babel">
-import config from 'constants/config.js'
+import * as api from 'src/api.js'
 import { tooltip } from 'vue-strap'
 import TableComponent from 'components/TableComponent.vue'
 
@@ -301,7 +301,7 @@ export default {
   methods: {
     fetchTaskListAll () {
       this.$http({
-        url: config.apiPrefix + '/taskListAll',
+        url: api.taskListAll,
         method: 'GET',
         beforeSend: function () {
           this.$set('table_data.loading', true)

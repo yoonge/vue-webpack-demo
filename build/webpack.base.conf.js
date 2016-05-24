@@ -6,8 +6,7 @@ var projectRoot = path.resolve(__dirname, '../')
 
 module.exports = {
   entry: {
-    vendor: ['jquery'],
-    app: './src/main.js'
+    app: ['babel-polyfill', './src/main.js']
   },
   output: {
     path: config.build.assetsRoot,
@@ -30,11 +29,11 @@ module.exports = {
     fallback: [path.join(__dirname, '../node_modules')]
   },
   plugins: [
-    new webpack.ProvidePlugin({
-      jQuery: 'jquery',
-      $: 'jquery',
-      'window.jQuery': 'jquery'
-    }),
+    // new webpack.ProvidePlugin({
+    //   jQuery: 'jquery',
+    //   $: 'jquery',
+    //   'window.jQuery': 'jquery'
+    // }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: Infinity
@@ -77,6 +76,10 @@ module.exports = {
       {
         test: /\.css$/,
         loader: 'style!css'
+      },
+      {
+        test: /\.sass$/,
+        loader: 'style!css!sass'
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
