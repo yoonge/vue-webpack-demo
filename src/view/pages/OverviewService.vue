@@ -1,72 +1,70 @@
 <template>
   <div>
     <section class="bd1200 clearfix">
-      <div class="mytemp">
-        <div class="mytemp w252 fl mr64">
-          <div class="temp_top noselect clearfix">
-            <h3>项目配置</h3>
-            <tooltip
-              effect="scale"
-              placement="top"
-              content="设置">
-              <a class="mybtnpic mybtnpic3" href="javascript:;"></a>
-            </tooltip>
-            <tooltip
-              effect="scale"
-              placement="top"
-              content="新增">
-              <a class="mybtnpic mybtnpic2" href="javascript:;"></a>
-            </tooltip>
-          </div>
-          <div class="temp_con">
-            <i class="ic_demo ic_demo1 ui-icon--stack"></i>
-            <span class="fz36">86</span>
-          </div>
+      <div class="w252 fl mr64">
+        <div class="temp_top noselect clearfix">
+          <h3>项目配置</h3>
+          <tooltip
+            effect="scale"
+            placement="top"
+            content="设置">
+            <a class="mybtnpic mybtnpic3" href="javascript:;"></a>
+          </tooltip>
+          <tooltip
+            effect="scale"
+            placement="top"
+            content="新增">
+            <a class="mybtnpic mybtnpic2" href="javascript:;"></a>
+          </tooltip>
         </div>
-        <div class="mytemp w252 fl mr64">
-          <div class="temp_top noselect clearfix">
-            <h3>任务数</h3>
-            <tooltip
-              effect="scale"
-              placement="top"
-              content="新增">
-              <a class="mybtnpic mybtnpic2" href="javascript:;"></a>
-            </tooltip>
-          </div>
-          <div class="temp_con">
-            <i class="ic_demo ic_demo2 ui-icon--map"></i>
-            <span class="fz36">86</span>
-          </div>
+        <div class="temp_con">
+          <i class="ic_demo ui-icon--stack"></i>
+          <span class="fz36">86</span>
         </div>
-        <div class="mytemp w252 fl">
-          <div class="temp_top noselect clearfix">
-            <h3>测试请求数</h3>
-          </div>
-          <div class="temp_con">
-            <i class="ic_demo ic_demo3 ui-icon--globe"></i>
-            <span class="fz36">86</span>
-          </div>
+      </div>
+      <div class="w252 fl mr64">
+        <div class="temp_top noselect clearfix">
+          <h3>任务数</h3>
+          <tooltip
+            effect="scale"
+            placement="top"
+            content="新增">
+            <a class="mybtnpic mybtnpic2" href="javascript:;"></a>
+          </tooltip>
         </div>
-        <div class="mytemp w252 fr">
-          <div class="temp_top noselect clearfix">
-            <h3>发现问题数</h3>
-            <tooltip
-              effect="scale"
-              placement="top"
-              content="设置">
-              <a class="mybtnpic mybtnpic3" href="javascript:;"></a>
-            </tooltip>
-          </div>
-          <div class="temp_con">
-            <i class="ic_demo ic_demo4 ui-icon--bug"></i>
-            <span class="fz36">86</span>
-          </div>
+        <div class="temp_con">
+          <i class="ic_demo ui-icon--map"></i>
+          <span class="fz36">86</span>
+        </div>
+      </div>
+      <div class="w252 fl">
+        <div class="temp_top noselect clearfix">
+          <h3>测试请求数</h3>
+        </div>
+        <div class="temp_con">
+          <i class="ic_demo ui-icon--globe"></i>
+          <span class="fz36">86</span>
+        </div>
+      </div>
+      <div class="w252 fr">
+        <div class="temp_top noselect clearfix">
+          <h3>发现问题数</h3>
+          <tooltip
+            effect="scale"
+            placement="top"
+            content="设置">
+            <a class="mybtnpic mybtnpic3" href="javascript:;"></a>
+          </tooltip>
+        </div>
+        <div class="temp_con">
+          <i class="ic_demo ui-icon--bug"></i>
+          <span class="fz36">86</span>
         </div>
       </div>
     </section>
 
-    <section class="bd1200 clearfix">
-      <div class="mytemp w586 fl">
+    <section class="bd1200 mb30 clearfix">
+      <div class="w586 fl">
         <div class="temp_top noselect">
           <h3>近期任务</h3>
           <div class="rightWrap">
@@ -75,7 +73,7 @@
         </div>
         <table-component :table_data="table_data"></table-component>
       </div>
-      <div class="mytemp w586 fr">
+      <div class="w586 fr">
         <div class="temp_top noselect">
           <h3>风险动态</h3>
         </div>
@@ -84,7 +82,7 @@
     </section>
 
     <section class="bd1200 clearfix">
-      <div class="mytemp w586 fl">
+      <div class="w586 fl">
         <div class="temp_top noselect">
           <h3>动态</h3>
         </div>
@@ -144,7 +142,7 @@
           </div>
         </div>
       </div>
-      <div class="mytemp w586 fr">
+      <div class="w586 fr">
         <div class="temp_top noselect">
           <h3>产品更新</h3>
           <div class="rightWrap">
@@ -221,9 +219,6 @@ export default {
         loading: false,
         selectAble: false,
         pagination: false,
-        linkField: [
-          'target'
-        ],
         cols: [
           'id',
           'target',
@@ -231,6 +226,9 @@ export default {
           'createTime',
           'status'
         ],
+        linkField: {
+          'target': ''
+        },
         theadData: {
           '任务 ID': '80',
           '任务目标': '',

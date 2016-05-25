@@ -1,12 +1,14 @@
 <template>
-  <section class="bd1200">
-    <div class="temp_top noselect">
-      <h3>任务列表</h3>
-    </div>
-    <div class="temp_content">
-      <table-component :table_data="table_data"></table-component>
-    </div>
-  </section>
+  <div>
+    <section class="bd1200 clearfix">
+      <div class="temp_top noselect">
+        <h3>任务列表</h3>
+      </div>
+      <div class="temp_content">
+        <table-component :table_data="table_data"></table-component>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script lang="babel">
@@ -37,13 +39,13 @@ export default {
           'target': ''
         },
         manipulate: {
-          '查看': 'ui-icon--eye'
+          'lookOver': 'ui-icon--eye'
         },
         theadData: {
           '漏洞 ID': '96',
           '漏洞地址': '',
-          '漏洞类型': '80',
-          '启动时间': '180',
+          '漏洞类型': '180',
+          '启动时间': '96',
           '检测状态': '80',
           '操作': '96'
         },

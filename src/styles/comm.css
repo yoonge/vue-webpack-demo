@@ -1484,22 +1484,6 @@ dl.ddmb15 > dd {
   vertical-align: middle;
 }
 
-.ic_demo1 {
-  background: url(../assets/img/ic_demo1.png) no-repeat;
-}
-
-.ic_demo2 {
-  background: url(../assets/img/ic_demo2.png) no-repeat;
-}
-
-.ic_demo3 {
-  background: url(../assets/img/ic_demo3.png) no-repeat;
-}
-
-.ic_demo4 {
-  background: url(../assets/img/ic_demo4.png) no-repeat;
-}
-
 .ic_demo5 {
   background: url(../assets/img/ic_demo5.png) no-repeat;
 }
@@ -1819,15 +1803,17 @@ dl.ddmb15 > dd {
 }
 
 .v-transition {
-  transition: all .3s ease;
-}
-.v-enter {
   opacity: 1;
-  transform: translate3d(0, 4%, 0);
+  position: relative;
+  transition: all .3s ease;
 }
 .v-leave {
   opacity: 0;
   transform: translate3d(0, 2%, 0);
+}
+.v-enter {
+  opacity: 0;
+  transform: translate3d(0, 3%, 0);
 }
 
 .spinner-wrapper {

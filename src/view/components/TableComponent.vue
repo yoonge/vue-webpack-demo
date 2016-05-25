@@ -24,14 +24,15 @@
               <template v-else>{{{val | isLink key table_data.linkField}}}</template>
             </td>
             <td class="manipulate" v-if="table_data.manipulate && table_data.manipulate != ''">
-              <a href="#!" v-for="(k, v) in table_data.manipulate">
+              <template v-for="(k, v) in table_data.manipulate">
                 <tooltip
                   effect="scale"
                   placement="top"
-                  content="查看">
-                    <span class="ui-icon {{v}}"></span>
+                  content="查看"
+                  v-if="k == 'lookOver'">
+                    <a href="#!"><span class="ui-icon {{v}}"></span></a>
                 </tooltip>
-              </a>
+              </template>
             </td>
           </tr>
         </tbody>
