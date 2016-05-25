@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="bd1200">
+    <section class="bd1200 clearfix">
       <div class="mytemp">
         <div class="mytemp w252 fl mr64">
           <div class="temp_top noselect clearfix">
@@ -65,7 +65,7 @@
       </div>
     </section>
 
-    <section class="bd1200">
+    <section class="bd1200 clearfix">
       <div class="mytemp w586 fl">
         <div class="temp_top noselect">
           <h3>近期任务</h3>
@@ -83,7 +83,7 @@
       </div>
     </section>
 
-    <section class="bd1200">
+    <section class="bd1200 clearfix">
       <div class="mytemp w586 fl">
         <div class="temp_top noselect">
           <h3>动态</h3>
@@ -245,15 +245,15 @@ export default {
         loading: false,
         selectAble: false,
         pagination: false,
-        linkField: [
-          'target'
-        ],
         cols: [
           'id',
           'target',
           'type',
           'time'
         ],
+        linkField: {
+          'target': ''
+        },
         theadData: {
           '风险 ID': '96',
           '目标地址': '',

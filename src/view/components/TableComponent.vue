@@ -23,6 +23,16 @@
               </div>
               <template v-else>{{{val | isLink key table_data.linkField}}}</template>
             </td>
+            <td class="manipulate" v-if="table_data.manipulate && table_data.manipulate != ''">
+              <a href="#!" v-for="(k, v) in table_data.manipulate">
+                <tooltip
+                  effect="scale"
+                  placement="top"
+                  content="查看">
+                    <span class="ui-icon {{v}}"></span>
+                </tooltip>
+              </a>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -47,11 +57,13 @@
 
 <script lang="babel">
 import 'src/view/filters.js'
+import { tooltip } from 'vue-strap'
 import ClipLoader from 'vue-spinner/src/ClipLoader.vue'
 
 export default {
   name: 'TableComponent',
   components: {
+    tooltip,
     ClipLoader
   },
   props: {

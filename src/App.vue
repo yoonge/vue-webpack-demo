@@ -23,7 +23,8 @@ export default {
 
 <style>
 @import 'styles/bootstrap.min.css?v=201605111407';
-@import 'styles/comm.css?v=201605231531';
+@import 'assets/fonts/icons.css';
+@import 'styles/comm.css?v=201605251533';
 
 h1 {
   font-size: 48px;

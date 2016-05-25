@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "ae7c30d42b57c5dbcae61ab802f27ac292adedcba6e29cb3613bb2325a36a8ab",
-    "current": "ae7c30d42b57c5dbcae61ab802f27ac292adedcba6e29cb3613bb2325a36a8ab"
+    "previous": "a350444216a87b28ec8bf50577e367d1c88a621a01d8d596178367c56204aa49",
+    "current": "a350444216a87b28ec8bf50577e367d1c88a621a01d8d596178367c56204aa49"
   },
   "fonts": [
     "./icons.ttf",
@@ -58,9 +58,17 @@
       "codepoint": 61700,
       "source": "./svg/info.svg"
     },
+    "loop": {
+      "codepoint": 61721,
+      "source": "./svg/loop.svg"
+    },
     "map": {
       "codepoint": 61701,
       "source": "./svg/map.svg"
+    },
+    "menu": {
+      "codepoint": 61722,
+      "source": "./svg/menu.svg"
     },
     "plus": {
       "codepoint": 61712,
@@ -69,6 +77,10 @@
     "reply": {
       "codepoint": 61713,
       "source": "./svg/reply.svg"
+    },
+    "save": {
+      "codepoint": 61723,
+      "source": "./svg/save.svg"
     },
     "search": {
       "codepoint": 61709,
@@ -81,6 +93,10 @@
     "stack": {
       "codepoint": 61703,
       "source": "./svg/stack.svg"
+    },
+    "stop": {
+      "codepoint": 61720,
+      "source": "./svg/stop.svg"
     },
     "tags": {
       "codepoint": 61714,

@@ -967,15 +967,6 @@ ol.upsp li.upsp_in {
   margin-bottom: 10px;
 }
 
-.searchbtn {
-  display: inline-block;
-  width: 28px;
-  height: 28px;
-  border: 0;
-  background: #1171A7 url(../assets/img/search.png) no-repeat;
-  margin-top: -3px;
-}
-
 .pd6 dl dd {
   position: relative;
 }
@@ -1331,8 +1322,6 @@ dl.ddmb15 > dd {
 .bd1200 {
   width: 1200px;
   margin: 0 auto;
-  clear: both;
-  zoom: 1;
 }
 
 .wp100 {
@@ -1647,9 +1636,9 @@ dl.ddmb15 > dd {
   background-color: rgba(0, 0, 0, .1);
 }
 
-.ui-table table td, .ui-table table th {
-  min-height: 2.5em;
-  padding: 1em;
+.ui-table table th,
+.ui-table table td {
+  padding: 8px 1em;
 }
 
 .ui-table table th {
@@ -1657,13 +1646,15 @@ dl.ddmb15 > dd {
   font-weight: 400;
 }
 
-.ui-table--strip table td, .ui-table--strip table th {
-  overflow: hidden;
+.ui-table--strip table th,
+.ui-table--strip table td {
+  overflow-x: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.ui-table table td:first-child, .ui-table table th:first-child {
+.ui-table table th:first-child,
+.ui-table table td:first-child {
   padding-left: 2em;
 }
 
@@ -1674,6 +1665,13 @@ dl.ddmb15 > dd {
 
 .ui-table input[type=checkbox] {
   vertical-align: -2px;
+}
+
+.ui-table--strip table td.manipulate {
+  font-size: 1.2em;
+  overflow: visible;
+  position: relative;
+  z-index: 9999;
 }
 
 .ui-pagination {
@@ -1755,6 +1753,7 @@ dl.ddmb15 > dd {
   margin-left: 5%;
   white-space: normal;
 }
+
 
 /* Add By Yoonge
 ------------------------------------------------------------*/
@@ -1858,5 +1857,73 @@ dl.ddmb15 > dd {
 
 .show {
   display: block !important;
+}
+
+
+/* Search Form
+------------------------------------------------------------*/
+.form-horizontal .col-xs-1,
+.form-horizontal .col-xs-2 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.search-wrapper {
+  font-size: 12px;
+  min-height: 72px;
+  line-height: 24px;
+  background: rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  padding: 16px 20px 1px;
+}
+
+.search-wrapper > .form-horizontal {
+  display: block;
+}
+
+.search-wrapper .col-xs-2 {
+  width: 21%;
+}
+
+.search-wrapper .col-xs-5 {
+  width: 32%;
+}
+
+.search-wrapper .control-label {
+  padding-top: 1px;
+}
+
+.search-wrapper .form-control {
+  float: left;
+  width: 240px;
+  margin-right: 12px;
+}
+
+select.form-control {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  width: 220px;
+  height: 28px;
+  line-height: 28px;
+  border: 0;
+  background: rgba(0, 0, 0, 0.2);
+  margin-right: 40px;
+  padding: 0 8px;
+}
+
+select.form-control:hover,
+select.form-control:focus {
+  color: #fff;
+  background: #122638;
+}
+
+.search-btn {
+  float: left;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  background-color: #1171A7;
+  margin-top: 1px;
 }
 

@@ -35,12 +35,16 @@
 .ui-icon--globe:before,
 .ui-icon--grid:before,
 .ui-icon--info:before,
+.ui-icon--loop:before,
 .ui-icon--map:before,
+.ui-icon--menu:before,
 .ui-icon--plus:before,
 .ui-icon--reply:before,
+.ui-icon--save:before,
 .ui-icon--search:before,
 .ui-icon--settings:before,
 .ui-icon--stack:before,
+.ui-icon--stop:before,
 .ui-icon--tags:before,
 .ui-icon--tools:before,
 .ui-icon--trash:before,
@@ -72,12 +76,16 @@
 .ui-icon--globe:before { content: "\f117"; }
 .ui-icon--grid:before { content: "\f103"; }
 .ui-icon--info:before { content: "\f104"; }
+.ui-icon--loop:before { content: "\f119"; }
 .ui-icon--map:before { content: "\f105"; }
+.ui-icon--menu:before { content: "\f11a"; }
 .ui-icon--plus:before { content: "\f110"; }
 .ui-icon--reply:before { content: "\f111"; }
+.ui-icon--save:before { content: "\f11b"; }
 .ui-icon--search:before { content: "\f10d"; }
 .ui-icon--settings:before { content: "\f106"; }
 .ui-icon--stack:before { content: "\f107"; }
+.ui-icon--stop:before { content: "\f118"; }
 .ui-icon--tags:before { content: "\f112"; }
 .ui-icon--tools:before { content: "\f108"; }
 .ui-icon--trash:before { content: "\f113"; }

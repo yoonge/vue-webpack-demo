@@ -28,15 +28,15 @@ export default {
         loading: false,
         selectAble: true,
         pagination: true,
-        linkField: [
-          'target'
-        ],
         cols: [
           'id',
           'target',
           'type',
           'count'
         ],
+        linkField: {
+          'target': ''
+        },
         theadData: {
           '项目 ID': '96',
           '项目目标': '48%',
