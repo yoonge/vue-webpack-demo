@@ -29,8 +29,22 @@
                   effect="scale"
                   placement="top"
                   content="查看"
-                  v-if="k == 'lookOver'">
-                    <a href="#!"><span class="ui-icon {{v}}"></span></a>
+                  v-if="k == '查看'">
+                    <a href="{{v}}"><span class="ui-icon ui-icon--eye"></span></a>
+                </tooltip>
+                <tooltip
+                  effect="scale"
+                  placement="top"
+                  content="编辑"
+                  v-if="k == '编辑'">
+                  <a href="{{v}}"><span class="ui-icon ui-icon--edit"></span></a>
+                </tooltip>
+                <tooltip
+                  effect="scale"
+                  placement="top"
+                  content="删除"
+                  v-if="k == '删除'">
+                  <a href="{{v}}"><span class="ui-icon ui-icon--trash"></span></a>
                 </tooltip>
               </template>
             </td>

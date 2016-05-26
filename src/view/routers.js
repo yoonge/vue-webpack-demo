@@ -8,13 +8,22 @@ import ProjectAdd from 'pages/ProjectAdd.vue'
 
 import Task from 'pages/Task.vue'
 import TaskList from 'pages/TaskList.vue'
-import RegressionTest from 'pages/RegressionTest.vue'
-import RiskRetrieval from 'pages/RiskRetrieval.vue'
+import TaskRegressionTest from 'pages/TaskRegressionTest.vue'
+import TaskRiskRetrieval from 'pages/TaskRiskRetrieval.vue'
 
 import Tools from 'pages/Tools.vue'
 import ToolsDebug from 'pages/ToolsDebug.vue'
 
 import System from 'pages/System.vue'
+import SystemUsers from 'pages/SystemUsers.vue'
+import SystemWiFi from 'pages/SystemWiFi.vue'
+import SystemServer from 'pages/SystemServer.vue'
+import SystemLogs from 'pages/SystemLogs.vue'
+import SystemSettings from 'pages/SystemSettings.vue'
+import SystemStatus from 'pages/SystemStatus.vue'
+import SystemNetwork from 'pages/SystemNetwork.vue'
+import SystemBlock from 'pages/SystemBlock.vue'
+import SystemPassword from 'pages/SystemPassword.vue'
 
 import Admin from 'pages/Admin.vue'
 
@@ -67,11 +76,11 @@ const Routers = function (router) {
         },
         '/regression': {
           name: 'task.regression',
-          component: RegressionTest
+          component: TaskRegressionTest
         },
         '/bug': {
           name: 'task.bug',
-          component: RiskRetrieval
+          component: TaskRiskRetrieval
         }
       }
     },
@@ -91,39 +100,39 @@ const Routers = function (router) {
       subRoutes: {
         '/users': {
           name: 'system.users',
-          component: System
+          component: SystemUsers
         },
         '/wifi': {
           name: 'system.wifi',
-          component: System
+          component: SystemWiFi
         },
         '/server': {
           name: 'system.server',
-          component: System
+          component: SystemServer
         },
         '/logs': {
           name: 'system.logs',
-          component: System
+          component: SystemLogs
         },
         '/settings': {
           name: 'system.settings',
-          component: System
+          component: SystemSettings
         },
         '/status': {
           name: 'system.status',
-          component: System
+          component: SystemStatus
         },
         '/network': {
           name: 'system.network',
-          component: System
+          component: SystemNetwork
         },
         '/block': {
           name: 'system.block',
-          component: System
+          component: SystemBlock
         },
         '/password': {
           name: 'system.password',
-          component: System
+          component: SystemPassword
         }
       }
     },

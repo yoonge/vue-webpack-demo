@@ -8,7 +8,7 @@
             <input type="search" class="search-query" placeholder="在下列任务中搜索" v-model="searchText">
           </form>
         </div>
-        <div class="my_rwlb">
+        <div class="my_rwlb" id="slimScroll">
           <div class="spinner-wrapper" :class="{'show': loading}">
             <clip-loader></clip-loader>
           </div>
@@ -333,6 +333,7 @@
 </template>
 
 <script lang="babel">
+import $ from 'jquery'
 import * as api from 'src/api.js'
 import { tooltip } from 'vue-strap'
 import ClipLoader from 'vue-spinner/src/ClipLoader.vue'
@@ -365,6 +366,7 @@ export default {
         }
       }).then(res => {
         this.$set('tasks', res.data)
+        $('#slimScroll').slimScroll({ height: '600px' })
         this.$set('loading', false)
       }).catch(err => {
         console.error(err.data)

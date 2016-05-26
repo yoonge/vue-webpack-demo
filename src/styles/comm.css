@@ -750,10 +750,11 @@ button.green {
 }
 
 .mytextarea {
+  color: #fff;
+  font-family: -apple-system, "Segoe UI", "Roboto", "Helvetica Neue", "Helvetica", "Arial", "PingFang SC", "PingFang TC", "Hiragino Sans GB", "Microsoft YaHei", "Microsoft JhengHei", sans-serif;
   width: 100% !important;
   border: 0;
   vertical-align: middle;
-  color: #fff;
 }
 
 /* 服务器管理 css */
@@ -1656,6 +1657,9 @@ dl.ddmb15 > dd {
   overflow: visible;
   position: relative;
   z-index: 9999;
+}
+.ui-table--strip table td.manipulate a {
+  margin-right: 6px;
 }
 
 .ui-pagination {

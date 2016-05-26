@@ -3,7 +3,7 @@
     <sub-nav :item="items[5]"></sub-nav>
     <router-view
       class="main"
-      :transition="effect"
+      transition
       transition-mode="out-in">
     </router-view>
     <h1>Admin</h1>

@@ -1,14 +1,15 @@
 <template>
-  <div>
-    <section class="bd1200 clearfix">
-      <div class="temp_top noselect">
-        <h3>任务列表</h3>
+  <section class="bd1200">
+    <div class="temp_top noselect">
+      <h3>用户列表</h3>
+      <div class="rightWrap">
+        <a class="mybtn" href="javascript:;">新增用户</a>
       </div>
-      <div class="temp_content">
-        <table-component :table_data="table_data"></table-component>
-      </div>
-    </section>
-  </div>
+    </div>
+    <div class="temp_content">
+      <table-component :table_data="table_data"></table-component>
+    </div>
+  </section>
 </template>
 
 <script lang="babel">
@@ -16,7 +17,7 @@ import * as api from 'src/api.js'
 import TableComponent from 'components/TableComponent.vue'
 
 export default {
-  name: 'RegressionTest',
+  name: 'SystemUsers',
   components: {
     TableComponent
   },
@@ -25,28 +26,31 @@ export default {
       table_data: {
         limit: [10, 0],
         loading: false,
-        selectAble: false,
+        selectAble: true,
         pagination: true,
         cols: [
           'id',
-          'target',
-          'mode',
-          'createTime',
-          'status',
+          'username',
+          'email',
+          'userLevel',
+          'department',
+          'mobile',
           'manipulate'
         ],
         linkField: {
-          'target': ''
+          'email': 'mailto:'
         },
         manipulate: {
-          'lookOver': 'ui-icon--eye'
+          '编辑': '#!',
+          '删除': '#!'
         },
         theadData: {
-          '漏洞 ID': '96',
-          '漏洞地址': '',
-          '漏洞类型': '180',
-          '启动时间': '96',
-          '检测状态': '80',
+          '用户 ID': '96',
+          '用户姓名': '',
+          '用户邮箱': '',
+          '用户级别': '',
+          '所属部门': '',
+          '联系电话': '',
           '操作': '96'
         },
         tbodyData: []
@@ -54,17 +58,18 @@ export default {
     }
   },
   ready () {
-    this.fetchTaskListAll()
+    this.fetchUserList()
   },
   methods: {
-    fetchTaskListAll () {
+    fetchUserList () {
       this.$http({
-        url: api.taskListAll,
+        url: api.userList,
         method: 'GET',
         beforeSend: function () {
           this.$set('table_data.loading', true)
         }
       }).then(res => {
+        console.info(res.data)
         this.$set('table_data.tbodyData', res.data)
         this.$set('table_data.loading', false)
       }).catch(err => {

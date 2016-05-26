@@ -6,7 +6,14 @@ var projectRoot = path.resolve(__dirname, '../')
 
 module.exports = {
   entry: {
-    app: ['babel-polyfill', './src/main.js']
+    vendor: [
+      'jquery',
+      'jquery-slimscroll/jquery.slimscroll.min.js'
+    ],
+    app: [
+      'babel-polyfill/lib/index.js',
+      'src/main.js'
+    ]
   },
   output: {
     path: config.build.assetsRoot,
@@ -29,11 +36,11 @@ module.exports = {
     fallback: [path.join(__dirname, '../node_modules')]
   },
   plugins: [
-    // new webpack.ProvidePlugin({
-    //   jQuery: 'jquery',
-    //   $: 'jquery',
-    //   'window.jQuery': 'jquery'
-    // }),
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery',
+      $: 'jquery',
+      'window.jQuery': 'jquery'
+    }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: Infinity
