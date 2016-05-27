@@ -7,7 +7,7 @@
         track-by="$index">
         <a v-link="'/' + item.name">
           <div class="imgwrap">
-            <i class="icons icon-{{item.icon}}"></i>
+            <i class="ui-icon ui-icon--{{item.icon}}"></i>
           </div>
           <span>{{item.text}}</span>
         </a>

@@ -42,7 +42,7 @@
                 placement="top"
                 content="搜索">
                 <button class="search-btn" type="button">
-                  <span class="ui-icon ui-icon--search"></span>
+                  <i class="ui-icon ui-icon--search"></i>
                 </button>
               </tooltip>
             </div>

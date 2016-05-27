@@ -4,12 +4,10 @@
       <div class="temp_con pd7">
         <div class="linewrap1 noselect">
           <div class="jieru_tag" :class="{'cur': current==0}" @click="switchTab">
-            <div class="tag_in"></div>
-            <div>WiFi 接入</div>
+            <i class="ui-icon ui-icon--wifi"></i><br>WiFi 接入
           </div>
           <div class="jieru_tag" :class="{'cur': current==1}" @click="switchTab">
-            <div class="tag_in tag_in1"></div>
-            <div>代理 接入</div>
+            <i class="ui-icon ui-icon--users"></i><br>代理 接入
           </div>
         </div>
 

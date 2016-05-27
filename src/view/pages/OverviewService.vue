@@ -7,14 +7,14 @@
           <tooltip
             effect="scale"
             placement="top"
-            content="设置">
-            <a class="mybtnpic mybtnpic3" href="javascript:;"></a>
+            content="新增">
+            <a class="mybtnpic" href="javascript:;"><i class="ui-icon ui-icon--settings"></i></a>
           </tooltip>
           <tooltip
             effect="scale"
             placement="top"
-            content="新增">
-            <a class="mybtnpic mybtnpic2" href="javascript:;"></a>
+            content="设置">
+            <a class="mybtnpic" href="javascript:;"><i class="ui-icon ui-icon--plus"></i></a>
           </tooltip>
         </div>
         <div class="temp_con">
@@ -29,7 +29,7 @@
             effect="scale"
             placement="top"
             content="新增">
-            <a class="mybtnpic mybtnpic2" href="javascript:;"></a>
+            <a class="mybtnpic" href="javascript:;"><i class="ui-icon ui-icon--plus"></i></a>
           </tooltip>
         </div>
         <div class="temp_con">
@@ -53,7 +53,7 @@
             effect="scale"
             placement="top"
             content="设置">
-            <a class="mybtnpic mybtnpic3" href="javascript:;"></a>
+            <a class="mybtnpic" href="javascript:;"><i class="ui-icon ui-icon--settings"></i></a>
           </tooltip>
         </div>
         <div class="temp_con">
@@ -232,7 +232,7 @@ export default {
         theadData: {
           '任务 ID': '80',
           '任务目标': '',
-          '漏洞数': '144',
+          '漏洞数': '160',
           '启动时间': '88',
           '状态': '72'
         },

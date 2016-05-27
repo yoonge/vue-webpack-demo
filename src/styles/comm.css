@@ -309,20 +309,22 @@ form {
   text-align: center;
 }
 
-.b-nav li a .imgwrap img {
-}
-
 .b-nav li a span {
   display: block;
-  text-align: center;
-  height: 25px;
   width: 100%;
+  height: 25px;
   line-height: 25px;
+  text-align: center;
 }
 
 .b-nav li a.cur {
   background: rgba(0, 0, 0, 0.2);
   width: 72px;
+}
+
+.b-nav .ui-icon {
+  color: hsla(0, 0%, 100%, .7);
+  font-size: 22px;
 }
 
 .snav-main {
@@ -546,39 +548,20 @@ textarea.form-control {
 }
 
 .mybtnpic {
+  color: hsla(176, 96%, 87%, .6);
+  font-size: 1.2em;
   float: right;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  background: url(../assets/img/btnpic.png) no-repeat;
   margin-left: 6px;
 }
 
-.mybtnpic1 {
-  background: url(../assets/img/btnpic1.png) no-repeat;
-}
-
-.mybtnpic2 {
-  background: url(../assets/img/btnpic2.png) no-repeat;
-}
-
-.mybtnpic3 {
-  background: url(../assets/img/btnpic3.png) no-repeat;
-}
-
-.mybtnpic4 {
-  background: url(../assets/img/btnpic4.png) no-repeat;
-}
-
 .temp_con {
-  margin-bottom: 30px;
-  background: rgba(0, 0, 0, 0.2);
-  min-height: 72px;
-  padding: 16px 20px;
   font-size: 12px;
+  min-height: 72px;
   line-height: 24px;
+  background: rgba(0, 0, 0, 0.2);
   word-break: break-all;
+  margin-bottom: 30px;
+  padding: 16px 20px;
   clear: both;
   zoom: 1;
 }
@@ -588,7 +571,7 @@ textarea.form-control {
   min-height: 185px;
   line-height: 24px;
   word-break: break-all;
-  background: rgba(0, 0, 0, 0.2);
+  background-color: transparent;
   margin-bottom: 30px;
   padding: 0px;
   clear: both;
@@ -979,28 +962,22 @@ ol.upsp li.upsp_in {
 }
 
 .jieru_tag {
+  font-size: 16px;
+  display: inline-block;
   width: 206px;
   height: 95px;
-  cursor: pointer;
-  display: inline-block;
-  margin: 0 15px;
-  background: rgba(22, 160, 232, 0.1);
-  font-size: 16px;
   text-align: center;
+  background-color: rgba(22, 160, 232, 0.1);
+  margin: 0 15px;
+  padding-top: 20px;
+  cursor: pointer;
 }
-
-.tag_in {
-  height: 55px;
-  width: 100%;
-  background: url(../assets/img/in.png) center 20px no-repeat;
+.jieru_tag .ui-icon {
+  color: hsla(0, 0%, 100%, .8);
+  font-size: 36px;
 }
-
-.tag_in1 {
-  background: url(../assets/img/in1.png) center 15px no-repeat;
-}
-
 .jieru_tag.cur {
-  background: rgba(22, 160, 232, 0.4);
+  background-color: rgba(22, 160, 232, 0.4);
 }
 
 .linewrap1 dl dt {
@@ -1202,10 +1179,6 @@ dl.ddmb15 > dd {
   padding: 0 8px;
   border-radius: 3px;
   margin-right: 5px;
-}
-
-.my_rwlb .my_rwmarks div span {
-  margin-right: 4px;
 }
 
 .ic_bug {
@@ -1477,11 +1450,11 @@ dl.ddmb15 > dd {
 }
 
 .ic_demo {
-  width: 60px;
-  height: 48px;
   font-size: 48px;
   color: hsla(0, 0%, 100%, .5);
   display: inline-block;
+  width: 60px;
+  height: 48px;
   vertical-align: middle;
 }
 
@@ -1652,6 +1625,15 @@ dl.ddmb15 > dd {
   vertical-align: -2px;
 }
 
+.bugs > span {
+  display: inline-block;
+  min-width: 28px;
+  margin-right: 2px;
+}
+.bugs > span > .ui-icon {
+  margin-right: 2px;
+}
+
 .ui-table--strip table td.manipulate {
   font-size: 1.2em;
   overflow: visible;
@@ -1745,6 +1727,11 @@ dl.ddmb15 > dd {
 
 /* Add By Yoonge
 ------------------------------------------------------------*/
+.text-red { color: #dc2520; }
+.text-orange { color: #f25c28; }
+.text-beige { color: #fcb294; }
+.text-grey { color: #959595; }
+
 .icons {
   display: inline-block;
   width: 30px;
@@ -1753,37 +1740,14 @@ dl.ddmb15 > dd {
   margin: 0 auto;
 }
 
-.icon-grid {
-  background-image: url(../assets/img/icon-grid.png);
-}
-
-.icon-stack {
-  background-image: url(../assets/img/icon-stack.png);
-}
-
-.icon-map {
-  background-image: url(../assets/img/icon-map.png);
-}
-
-.icon-tools {
-  background-image: url(../assets/img/icon-tools.png);
-}
-
-.icon-settings {
-  background-image: url(../assets/img/icon-settings.png);
-}
-
-.icon-folder {
-  background-image: url(../assets/img/icon-folder.png);
-}
-
-.icon-file {
-  background-image: url(../assets/img/icon-file.png);
-}
-
-.icon-info {
-  background-image: url(../assets/img/icon-info.png);
-}
+.icon-grid { background-image: url(../assets/img/icon-grid.png); }
+.icon-stack { background-image: url(../assets/img/icon-stack.png); }
+.icon-map { background-image: url(../assets/img/icon-map.png); }
+.icon-tools { background-image: url(../assets/img/icon-tools.png); }
+.icon-settings { background-image: url(../assets/img/icon-settings.png); }
+.icon-folder { background-image: url(../assets/img/icon-folder.png); }
+.icon-file { background-image: url(../assets/img/icon-file.png); }
+.icon-info { background-image: url(../assets/img/icon-info.png); }
 
 .fade-transition {
   opacity: 1;
@@ -1849,6 +1813,10 @@ dl.ddmb15 > dd {
   display: block !important;
 }
 
+.tooltip-innder {
+  font-family: -apple-system, "Segoe UI", "Roboto", "Helvetica Neue", "Helvetica", "Arial", "PingFang SC", "PingFang TC", "Hiragino Sans GB", "Microsoft YaHei", "Microsoft JhengHei", sans-serif;
+}
+
 
 /* Search Form
 ------------------------------------------------------------*/
@@ -1908,6 +1876,7 @@ select.form-control:focus {
 }
 
 .search-btn {
+  font-size: 1.2em;
   float: left;
   display: inline-block;
   width: 28px;
@@ -1915,5 +1884,9 @@ select.form-control:focus {
   border: 0;
   background-color: #1171A7;
   margin-top: 1px;
+}
+
+.wifi-info > dd {
+  line-height: 30px;
 }
 

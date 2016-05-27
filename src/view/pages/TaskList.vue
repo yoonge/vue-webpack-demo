@@ -3,7 +3,7 @@
     <section class="bd1200 clearfix">
       <div class="w400 mytemplist fl noselect">
         <div class="temp_top">
-          <a v-link="'/project/add'" class="mybtn">+ 新增任务</a>
+          <a v-link="'/project/add'" class="mybtn"><i class="ui-icon ui-icon--plus"></i> 新增任务</a>
           <form id="search-form1" class="navbar-form fr list_search" role="search">
             <input type="search" class="search-query" placeholder="在下列任务中搜索" v-model="searchText">
           </form>
@@ -19,11 +19,11 @@
               <div class="my_rwmarks">
                 <div>{{task.date}}</div>
                 <div class="rwmark-n">{{task.department}} - {{task.user}}</div>
-                <div class="rwmark-mk">
-                  <span><i class="ic_bug "></i>{{task.high}}</span>
-                  <span><i class="ic_bug ic_bug1"></i>{{task.middle}}</span>
-                  <span><i class="ic_bug ic_bug2"></i>{{task.low}}</span>
-                  <span><i class="ic_bug ic_bug3"></i>{{task.hint}}</span>
+                <div class="rwmark-mk bugs">
+                  <span><i class="ui-icon ui-icon--bug text-red"></i>{{task.high}}</span>
+                  <span><i class="ui-icon ui-icon--bug text-orange"></i>{{task.middle}}</span>
+                  <span><i class="ui-icon ui-icon--bug text-beige"></i>{{task.low}}</span>
+                  <span><i class="ui-icon ui-icon--bug text-grey"></i>{{task.hint}}</span>
                 </div>
               </div>
             </dd>
@@ -56,16 +56,16 @@
             <dd>
               开始时间：{{taskBasicInfo.startTime}}
               <div class="my_rwmarks fr">
-                <div>
-                  <span><i class="ic_bug "></i>{{taskBasicInfo.high}}</span>&nbsp;
-                  <span><i class="ic_bug ic_bug1"></i>{{taskBasicInfo.middle}}</span>&nbsp;
-                  <span><i class="ic_bug ic_bug2"></i>{{taskBasicInfo.low}}</span>&nbsp;
-                  <span><i class="ic_bug ic_bug3"></i>{{taskBasicInfo.hint}}</span>
+                <div class="bugs">
+                  <span><i class="ui-icon ui-icon--bug text-red"></i>{{taskBasicInfo.high}}</span>
+                  <span><i class="ui-icon ui-icon--bug text-orange"></i>{{taskBasicInfo.middle}}</span>
+                  <span><i class="ui-icon ui-icon--bug text-beige"></i>{{taskBasicInfo.low}}</span>
+                  <span><i class="ui-icon ui-icon--bug text-grey"></i>{{taskBasicInfo.hint}}</span>
                 </div>
               </div>
             </dd>
           </dl>
-          <div class="ld_notice mycolor-warning w775"><i class="ic_bug ic_bug1"></i>中危！一定条件下攻击者通过这些漏洞可能会攻击 到你的数据中心</div>
+          <div class="ld_notice w775 text-orange"><i class="ui-icon ui-icon--bug text-orange"></i> 中危！一定条件下攻击者通过这些漏洞可能会攻击 到你的数据中心</div>
         </div>
 
         <div class="mywrap clearfix">

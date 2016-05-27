@@ -69,7 +69,6 @@ export default {
           this.$set('table_data.loading', true)
         }
       }).then(res => {
-        console.info(res.data)
         this.$set('table_data.tbodyData', res.data)
         this.$set('table_data.loading', false)
       }).catch(err => {

@@ -53,7 +53,7 @@
             <span class="tmp-colname">选择插件</span>
             <span class="mycheckwrap">
               <label><input type="checkbox" v-model="checkAll">全选</label>
-              <label v-for="checkBox in checkBoxes"><input type="checkbox" v-model="checkBox.checked">{{checkBox.name}}</label>
+              <label v-for="checkBox in checkBoxes"><input type="checkbox" v-model="checkBox.checked">{{checkBox.label}}</label>
             </span>
           </dd>
           <dd class="zdy_wrap fl ld clearfix">
@@ -63,7 +63,7 @@
                 <input type="text" class="form-control" placeholder="字段名" v-model="header.name"><span class="zdy_mh">:</span><input type="text" class="form-control" placeholder="内容" v-model="header.content">
               </dd>
             </dl>
-            <a href="javascript:;" class="mybtn" @click="addHeader">+ 新增一项</a>
+            <a href="javascript:;" class="mybtn" @click="addHeader"><i class="ui-icon ui-icon--plus"></i> 新增一项</a>
           </dd>
         </dl>
       </div>
@@ -90,51 +90,51 @@ export default {
       },
       checkBoxes: [
         {
-          name: 'SQL 注入检测',
+          label: 'SQL 注入检测',
           checked: true
         },
         {
-          name: 'XSS 漏洞检测',
+          label: 'XSS 漏洞检测',
           checked: true
         },
         {
-          name: '命令执行漏洞',
+          label: '命令执行漏洞',
           checked: true
         },
         {
-          name: '其他第三方漏洞',
+          label: '其他第三方漏洞',
           checked: true
         },
         {
-          name: 'SQL 注入检测',
+          label: 'SQL 注入检测',
           checked: true
         },
         {
-          name: 'XSS 漏洞检测',
+          label: 'XSS 漏洞检测',
           checked: true
         },
         {
-          name: '命令执行漏洞',
+          label: '命令执行漏洞',
           checked: true
         },
         {
-          name: '其他第三方漏洞',
+          label: '其他第三方漏洞',
           checked: true
         },
         {
-          name: 'SQL 注入检测',
+          label: 'SQL 注入检测',
           checked: true
         },
         {
-          name: 'XSS 漏洞检测',
+          label: 'XSS 漏洞检测',
           checked: true
         },
         {
-          name: '命令执行漏洞',
+          label: '命令执行漏洞',
           checked: true
         },
         {
-          name: '其他第三方漏洞',
+          label: '其他第三方漏洞',
           checked: true
         }
       ],
