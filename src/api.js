@@ -10,3 +10,4 @@ export const riskRetrieval = config.apiPrefix + '/riskRetrieval'
 
 export const userList = config.apiPrefix + '/userList'
 export const wifiList = config.apiPrefix + '/wifiList'
+export const logList = config.apiPrefix + '/logList'
