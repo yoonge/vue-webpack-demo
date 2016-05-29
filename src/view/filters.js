@@ -36,7 +36,7 @@ Vue.filter('colFilter', function (val, ks) {
 })
 
 Vue.filter('isLink', function (val, key, ks) {
-  if (ks.length > 0) {
+  if (ks) {
     for (const k in ks) {
       if (k === key) {
         return '<a href="' + val + '" target="_blank">' + val + '</a>'

@@ -65,7 +65,7 @@ export default {
       this.$http({
         url: api.userList,
         method: 'GET',
-        beforeSend: function () {
+        beforeSend () {
           this.$set('table_data.loading', true)
         }
       }).then(res => {

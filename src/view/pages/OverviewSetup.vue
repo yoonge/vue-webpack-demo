@@ -105,7 +105,7 @@ export default {
     }
   },
   methods: {
-    switchTab: function () {
+    switchTab () {
       if (this.current === 0) this.current = 1
       else this.current = 0
     }

@@ -148,10 +148,10 @@ export default {
   },
   computed: {
     checkAll: {
-      get: function () {
+      get () {
         return this.checkedCount === this.checkBoxes.length
       },
-      set: function (val) {
+      set (val) {
         this.checkBoxes.forEach(function (item) {
           item.checked = val
         })
@@ -159,7 +159,7 @@ export default {
       }
     },
     checkedCount: {
-      get: function () {
+      get () {
         let i = 0
         this.checkBoxes.forEach(function (item) {
           if (item.checked === true) i++
@@ -169,7 +169,7 @@ export default {
     }
   },
   methods: {
-    addHeader: function () {
+    addHeader () {
       const header = {name: '', content: ''}
       this.headers.push(header)
     }

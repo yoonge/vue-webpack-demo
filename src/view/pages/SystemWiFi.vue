@@ -51,7 +51,6 @@ export default {
           'devicesName',
           'ip'
         ],
-        linkField: {},
         theadData: {
           '设备 ID': '96',
           '设备名称': '',
@@ -69,7 +68,7 @@ export default {
       this.$http({
         url: api.wifiList,
         method: 'GET',
-        beforeSend: function () {
+        beforeSend () {
           this.$set('table_data.loading', true)
         }
       }).then(res => {

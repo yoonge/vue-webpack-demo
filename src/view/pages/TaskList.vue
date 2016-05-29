@@ -361,7 +361,7 @@ export default {
       this.$http({
         url: api.taskList,
         method: 'GET',
-        beforeSend: function () {
+        beforeSend () {
           this.$set('loading', true)
         }
       }).then(res => {
@@ -376,7 +376,7 @@ export default {
       this.$http({
         url: api.taskBasicInfo,
         method: 'GET',
-        beforeSend: function () {
+        beforeSend () {
           this.$set('loading', true)
         }
       }).then(res => {

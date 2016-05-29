@@ -114,7 +114,7 @@ export default {
       this.$http({
         url: api.riskRetrieval,
         method: 'GET',
-        beforeSend: function () {
+        beforeSend () {
           this.$set('table_data.loading', true)
         }
       }).then(res => {

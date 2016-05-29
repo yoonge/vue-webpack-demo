@@ -33,7 +33,6 @@ export default {
           'addTime',
           'ip'
         ],
-        linkField: {},
         theadData: {
           '日志 ID': '96',
           '用户': '',
@@ -54,7 +53,7 @@ export default {
       this.$http({
         url: api.logList,
         method: 'GET',
-        beforeSend: function () {
+        beforeSend () {
           this.$set('table_data.loading', true)
         }
       }).then(res => {

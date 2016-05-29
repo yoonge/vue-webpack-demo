@@ -301,7 +301,7 @@ export default {
       this.$http({
         url: api.taskListAll,
         method: 'GET',
-        beforeSend: function () {
+        beforeSend () {
           this.$set('table_data.loading', true)
         }
       }).then(res => {
