@@ -8,11 +8,11 @@
         <thead>
           <tr>
             <th width="48" v-if="table_data.selectAble"><input type="checkbox"></th>
-            <th v-for="(key, val) in table_data.theadData" width="{{val}}">{{key}}</th>
+            <th v-for="col in table_data.cols" width="{{col.width}}">{{col.text}}</th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="row in table_data.tbodyData | limitBy table_data.limit[0] tableData.limit[1]">
+          <tr v-for="row in table_data.rows | limitBy table_data.limit[0] tableData.limit[1]">
             <td v-if="table_data.selectAble"><input type="checkbox"></td>
             <td v-for="(key, val) in row | formatCol | colFilter table_data.cols" track-by="$index">
               <div class="bugs" v-if="key == 'bugs'">
@@ -21,7 +21,7 @@
                 <span><i class="ui-icon ui-icon--bug text-beige"></i>{{val.lowNum}}</span>
                 <span><i class="ui-icon ui-icon--bug text-grey"></i>{{val.riskNum}}</span>
               </div>
-              <template v-else>{{{val | isLink key table_data.linkField}}}</template>
+              <template v-else>{{{val | isLink key table_data.cols}}}</template>
             </td>
             <td class="manipulate" v-if="table_data.manipulate && table_data.manipulate != ''">
               <template v-for="(k, v) in table_data.manipulate">

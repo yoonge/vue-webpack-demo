@@ -220,23 +220,34 @@ export default {
         selectAble: false,
         pagination: false,
         cols: [
-          'id',
-          'target',
-          'bugs',
-          'createTime',
-          'status'
+          {
+            field: 'id',
+            width: '80',
+            text: '任务 ID'
+          },
+          {
+            field: 'target',
+            width: '',
+            text: '任务目标',
+            linkPrefix: ''
+          },
+          {
+            field: 'bugs',
+            width: '160',
+            text: '漏洞数'
+          },
+          {
+            field: 'createTime',
+            width: '88',
+            text: '启动时间'
+          },
+          {
+            field: 'status',
+            width: '72',
+            text: '状态'
+          }
         ],
-        linkField: {
-          'target': ''
-        },
-        theadData: {
-          '任务 ID': '80',
-          '任务目标': '',
-          '漏洞数': '160',
-          '启动时间': '88',
-          '状态': '72'
-        },
-        tbodyData: []
+        rows: []
       },
       table_data1: {
         limit: [5, 0],
@@ -244,21 +255,29 @@ export default {
         selectAble: false,
         pagination: false,
         cols: [
-          'id',
-          'target',
-          'type',
-          'time'
+          {
+            field: 'id',
+            width: '80',
+            text: '风险 ID'
+          },
+          {
+            field: 'target',
+            width: '',
+            text: '目标地址',
+            linkPrefix: ''
+          },
+          {
+            field: 'type',
+            width: '',
+            text: '漏洞类型'
+          },
+          {
+            field: 'time',
+            width: '96',
+            text: '发现时间'
+          }
         ],
-        linkField: {
-          'target': ''
-        },
-        theadData: {
-          '风险 ID': '96',
-          '目标地址': '',
-          '漏洞类型': '',
-          '发现时间': '96'
-        },
-        tbodyData: [
+        rows: [
           {
             id: '123456',
             target: 'http://burp.wooyun.org/#/task/bug/572c22fd1d41c8127b914a7a',
@@ -305,7 +324,7 @@ export default {
           this.$set('table_data.loading', true)
         }
       }).then(res => {
-        this.$set('table_data.tbodyData', res.data)
+        this.$set('table_data.rows', res.data)
         this.$set('table_data.loading', false)
       }).catch(err => {
         console.error(err.data)

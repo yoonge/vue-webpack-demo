@@ -24,27 +24,21 @@ Vue.filter('formatCol', function (val) {
 })
 
 Vue.filter('colFilter', function (val, ks) {
-  const l = ks.length - 1
   const newVal = {}
-  for (let i = 0; i <= l; i++) {
+  for (const k in ks) {
     for (const v in val) {
-      let j = ks.indexOf(v)
-      if (j === i) newVal[v] = val[v]
+      if (v === ks[k].field) newVal[v] = val[v]
     }
   }
   return newVal
 })
 
 Vue.filter('isLink', function (val, key, ks) {
-  if (ks) {
-    for (const k in ks) {
-      if (k === key) {
-        return '<a href="' + val + '" target="_blank">' + val + '</a>'
-      } else {
-        return val
-      }
+  for (const k in ks) {
+    if (k === key && ks[k].linkPrefix) {
+      return '<a href="' + val + '" target="_blank">' + val + '</a>'
+    } else {
+      return val
     }
-  } else {
-    return val
   }
 })
