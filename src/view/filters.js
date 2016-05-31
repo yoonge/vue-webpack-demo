@@ -23,22 +23,19 @@ Vue.filter('formatCol', function (val) {
   return val
 })
 
-Vue.filter('colFilter', function (val, ks) {
+Vue.filter('colFilter', function (val, cols) {
   const newVal = {}
-  for (const k in ks) {
+  for (const c in cols) {
     for (const v in val) {
-      if (v === ks[k].field) newVal[v] = val[v]
+      if (v === cols[c].field) newVal[v] = val[v]
     }
   }
   return newVal
 })
 
-Vue.filter('isLink', function (val, key, ks) {
-  for (const k in ks) {
-    if (k === key && ks[k].linkPrefix) {
-      return '<a href="' + val + '" target="_blank">' + val + '</a>'
-    } else {
-      return val
-    }
+Vue.filter('isLink', function (val, key, cols) {
+  for (const c in cols) {
+    if (cols[c].field === key && cols[c].linkPrefix) val = '<a href="' + cols[c].linkPrefix + val + '">' + val + '</a>'
   }
+  return val
 })

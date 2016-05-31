@@ -27,29 +27,43 @@ export default {
         loading: false,
         selectAble: false,
         pagination: true,
-        cols: [
-          'id',
-          'target',
-          'mode',
-          'createTime',
-          'status',
-          'manipulate'
-        ],
-        linkField: {
-          'target': ''
-        },
         manipulate: {
           '查看': '#!'
         },
-        theadData: {
-          '漏洞 ID': '96',
-          '漏洞地址': '',
-          '漏洞类型': '180',
-          '启动时间': '96',
-          '检测状态': '80',
-          '操作': '96'
-        },
-        tbodyData: []
+        cols: [
+          {
+            field: 'id',
+            width: '96',
+            text: '漏洞 ID'
+          },
+          {
+            field: 'target',
+            width: '',
+            text: '漏洞地址',
+            linkPrefix: '#!'
+          },
+          {
+            field: 'mode',
+            width: '180',
+            text: '漏洞类型'
+          },
+          {
+            field: 'createTime',
+            width: '96',
+            text: '启动时间'
+          },
+          {
+            field: 'status',
+            width: '80',
+            text: '检测状态'
+          },
+          {
+            field: 'manipulate',
+            width: '96',
+            text: '操作'
+          }
+        ],
+        rows: []
       }
     }
   },
@@ -65,7 +79,7 @@ export default {
           this.$set('table_data.loading', true)
         }
       }).then(res => {
-        this.$set('table_data.tbodyData', res.data)
+        this.$set('table_data.rows', res.data)
         this.$set('table_data.loading', false)
       }).catch(err => {
         console.error(err.data)

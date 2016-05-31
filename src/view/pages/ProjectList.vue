@@ -29,21 +29,29 @@ export default {
         selectAble: true,
         pagination: true,
         cols: [
-          'id',
-          'target',
-          'type',
-          'count'
+          {
+            field: 'id',
+            width: '96',
+            text: '项目 ID'
+          },
+          {
+            field: 'target',
+            width: '48%',
+            text: '项目目标',
+            linkPrefix: '#!'
+          },
+          {
+            field: 'type',
+            width: '',
+            text: '项目类型'
+          },
+          {
+            field: 'count',
+            width: '',
+            text: '已测试次数'
+          }
         ],
-        linkField: {
-          'target': ''
-        },
-        theadData: {
-          '项目 ID': '96',
-          '项目目标': '48%',
-          '项目类型': '',
-          '已测试次数': ''
-        },
-        tbodyData: [
+        rows: [
           {
             id: '123456',
             target: 'sangebaimao.com',

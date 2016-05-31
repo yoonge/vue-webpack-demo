@@ -84,25 +84,39 @@ export default {
         selectAble: false,
         pagination: true,
         cols: [
-          'id',
-          'url',
-          'harmlevel',
-          'vulType',
-          'addTime',
-          'taskid'
+          {
+            field: 'id',
+            width: '96',
+            text: '漏洞 ID'
+          },
+          {
+            field: 'url',
+            width: '45%',
+            text: '风险地址',
+            linkPrefix: '#!'
+          },
+          {
+            field: 'harmlevel',
+            width: '80',
+            text: '风险级别'
+          },
+          {
+            field: 'vulType',
+            width: '',
+            text: '风险类型'
+          },
+          {
+            field: 'addTime',
+            width: '180',
+            text: '发现时间'
+          },
+          {
+            field: 'taskid',
+            width: '96',
+            text: '任务 ID'
+          }
         ],
-        linkField: {
-          'url': ''
-        },
-        theadData: {
-          '漏洞 ID': '96',
-          '风险地址': '45%',
-          '风险级别': '80',
-          '风险类型': '',
-          '发现时间': '180',
-          '任务 ID': '96'
-        },
-        tbodyData: []
+        rows: []
       }
     }
   },
@@ -118,7 +132,7 @@ export default {
           this.$set('table_data.loading', true)
         }
       }).then(res => {
-        this.$set('table_data.tbodyData', res.data)
+        this.$set('table_data.rows', res.data)
         this.$set('table_data.loading', false)
       }).catch(err => {
         console.error(err.data)

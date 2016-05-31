@@ -4,7 +4,7 @@
       <dl class="ddmb15">
         <dd class="clearfix">
           <span class="tmp-colname">任务类型</span>
-          <select class="lfselect jr_select" v-model="taskType">
+          <select class="form-control" v-model="taskType">
             <option value="0" selected>域名任务</option>
             <option value="1">多域名任务</option>
             <option value="2">网站任务</option>
@@ -24,7 +24,7 @@
         </dd>
         <dd class="clearfix">
           <span class="tmp-colname">检测模式</span>
-          <select class="lfselect jr_select onmodel" v-model="scanMode">
+          <select class="form-control" v-model="scanMode">
             <option value="0" selected>默认模式</option>
             <option value="1">专家模式</option>
           </select>
@@ -42,7 +42,7 @@
           </dd>
           <dd class="clearfix">
             <span class="tmp-colname">扫描启动时间</span>
-            <select class="lfselect jr_select" v-model="startTime.status">
+            <select class="form-control" v-model="startTime.status">
               <option value="0" selected>立即启动</option>
               <option value="1">定时启动</option>
             </select>

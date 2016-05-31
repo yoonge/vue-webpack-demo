@@ -40,7 +40,7 @@
             <span class="count_percent">36%（共1234M）</span>
           </dd>
         </dl>
-        <div class="btn-div">
+        <div>
           <button class="blue">重新启动</button>
           <button class="green">关机</button>
         </div>

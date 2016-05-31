@@ -28,32 +28,49 @@ export default {
         loading: false,
         selectAble: true,
         pagination: true,
-        cols: [
-          'id',
-          'username',
-          'email',
-          'userLevel',
-          'department',
-          'mobile',
-          'manipulate'
-        ],
-        linkField: {
-          'email': 'mailto:'
-        },
         manipulate: {
           '编辑': '#!',
           '删除': '#!'
         },
-        theadData: {
-          '用户 ID': '96',
-          '用户姓名': '',
-          '用户邮箱': '',
-          '用户级别': '',
-          '所属部门': '',
-          '联系电话': '',
-          '操作': '96'
-        },
-        tbodyData: []
+        cols: [
+          {
+            field: 'id',
+            width: '96',
+            text: '用户 ID'
+          },
+          {
+            field: 'username',
+            width: '',
+            text: '用户姓名'
+          },
+          {
+            field: 'email',
+            width: '',
+            text: '用户邮箱',
+            linkPrefix: 'mailto:'
+          },
+          {
+            field: 'userLevel',
+            width: '',
+            text: '用户级别'
+          },
+          {
+            field: 'department',
+            width: '',
+            text: '所属部门'
+          },
+          {
+            field: 'mobile',
+            width: '',
+            text: '联系电话'
+          },
+          {
+            field: 'manipulate',
+            width: '96',
+            text: '操作'
+          }
+        ],
+        rows: []
       }
     }
   },
@@ -69,7 +86,7 @@ export default {
           this.$set('table_data.loading', true)
         }
       }).then(res => {
-        this.$set('table_data.tbodyData', res.data)
+        this.$set('table_data.rows', res.data)
         this.$set('table_data.loading', false)
       }).catch(err => {
         console.error(err.data)

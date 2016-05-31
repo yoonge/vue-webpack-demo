@@ -47,16 +47,23 @@ export default {
         selectAble: false,
         pagination: true,
         cols: [
-          'id',
-          'devicesName',
-          'ip'
+          {
+            field: 'id',
+            width: '96',
+            text: '设备 ID'
+          },
+          {
+            field: 'devicesName',
+            width: '',
+            text: '设备名称'
+          },
+          {
+            field: 'ip',
+            width: '',
+            text: '设备 IP'
+          }
         ],
-        theadData: {
-          '设备 ID': '96',
-          '设备名称': '',
-          '设备 IP': ''
-        },
-        tbodyData: []
+        rows: []
       }
     }
   },
@@ -72,7 +79,7 @@ export default {
           this.$set('table_data.loading', true)
         }
       }).then(res => {
-        this.$set('table_data.tbodyData', res.data)
+        this.$set('table_data.rows', res.data)
         this.$set('table_data.loading', false)
       }).catch(err => {
         console.error(err.data)

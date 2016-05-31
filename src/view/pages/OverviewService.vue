@@ -229,7 +229,7 @@ export default {
             field: 'target',
             width: '',
             text: '任务目标',
-            linkPrefix: ''
+            linkPrefix: '#!'
           },
           {
             field: 'bugs',
@@ -264,7 +264,7 @@ export default {
             field: 'target',
             width: '',
             text: '目标地址',
-            linkPrefix: ''
+            linkPrefix: '#!'
           },
           {
             field: 'type',

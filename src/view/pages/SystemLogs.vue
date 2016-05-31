@@ -26,22 +26,38 @@ export default {
         selectAble: false,
         pagination: true,
         cols: [
-          'id',
-          'userName',
-          'userLevel',
-          'action',
-          'addTime',
-          'ip'
+          {
+            field: 'id',
+            width: '96',
+            text: '日志 ID'
+          },
+          {
+            field: 'userName',
+            width: '',
+            text: '用户'
+          },
+          {
+            field: 'userLevel',
+            width: '',
+            text: '角色'
+          },
+          {
+            field: 'action',
+            width: '',
+            text: '系统行为'
+          },
+          {
+            field: 'addTime',
+            width: '',
+            text: '操作时间'
+          },
+          {
+            field: 'ip',
+            width: '',
+            text: '操作 IP'
+          }
         ],
-        theadData: {
-          '日志 ID': '96',
-          '用户': '',
-          '角色': '',
-          '系统行为': '',
-          '操作时间': '',
-          '操作 IP': ''
-        },
-        tbodyData: []
+        rows: []
       }
     }
   },
@@ -57,7 +73,7 @@ export default {
           this.$set('table_data.loading', true)
         }
       }).then(res => {
-        this.$set('table_data.tbodyData', res.data)
+        this.$set('table_data.rows', res.data)
         this.$set('table_data.loading', false)
       }).catch(err => {
         console.error(err.data)
