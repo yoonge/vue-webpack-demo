@@ -1,35 +1,70 @@
 <template>
   <section class="bd1200">
     <div class="temp_con pd1 clear">
-      <dl class="ddmb15">
-        <dd class="clearfix">
-          <span class="tmp-colname">任务类型</span>
-          <select class="form-control" v-model="taskType">
-            <option value="0" selected>域名任务</option>
-            <option value="1">多域名任务</option>
-            <option value="2">网站任务</option>
-            <option value="3">多网站任务</option>
-            <option value="4">目录模块任务</option>
-            <option value="5">多目录模块任务</option>
-          </select>
-          <span class="tmp-notice" v-if="taskType=='0' || taskType=='1'">会对该域名及该域名的子域名相关业务流量进行分析和风险检测</span>
-          <span class="tmp-notice" v-if="taskType=='2' || taskType=='3'">会对该网站相关的流量进行分析和风险检测</span>
-          <span class="tmp-notice" v-if="taskType=='4' || taskType=='5'">会对该网站的该目录及子目录进行风险检测</span>
-        </dd>
-        <dd class="clearfix">
-          <span class="tmp-colname">目标地址</span>
-          <input type="text" class="form-control" v-if="taskType=='0' || taskType=='2' || taskType=='4'" v-model="taskTarget">
-          <textarea class="form-control" rows="5" v-if="taskType=='1' || taskType=='3' || taskType=='5'" placeholder="每行一条" v-model="taskTarget"></textarea>
-          <span class="tmp-notice">与任务类型相匹配的目标地址</span>
-        </dd>
-        <dd class="clearfix">
-          <span class="tmp-colname">检测模式</span>
-          <select class="form-control" v-model="scanMode">
-            <option value="0" selected>默认模式</option>
-            <option value="1">专家模式</option>
-          </select>
-        </dd>
-      </dl>
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label class="col-xs-2 control-label">任务类型</label>
+          <div class="col-xs-10">
+            <select class="form-control" v-model="taskType">
+              <option value="0" selected>域名任务</option>
+              <option value="1">多域名任务</option>
+              <option value="2">网站任务</option>
+              <option value="3">多网站任务</option>
+              <option value="4">目录模块任务</option>
+              <option value="5">多目录模块任务</option>
+            </select>
+            <span class="tmp-notice" v-if="taskType=='0' || taskType=='1'">会对该域名及该域名的子域名相关业务流量进行分析和风险检测</span>
+            <span class="tmp-notice" v-if="taskType=='2' || taskType=='3'">会对该网站相关的流量进行分析和风险检测</span>
+            <span class="tmp-notice" v-if="taskType=='4' || taskType=='5'">会对该网站的该目录及子目录进行风险检测</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-xs-2 control-label">目标地址</label>
+          <div class="col-xs-10">
+            <input type="text" class="form-control" v-if="taskType=='0' || taskType=='2' || taskType=='4'" v-model="taskTarget">
+            <textarea class="form-control" rows="5" v-if="taskType=='1' || taskType=='3' || taskType=='5'" placeholder="每行一条" v-model="taskTarget"></textarea>
+            <span class="tmp-notice">与任务类型相匹配的目标地址</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-xs-2 control-label">检测模式</label>
+          <div class="col-xs-10">
+            <select class="form-control" v-model="scanMode">
+              <option value="0" selected>默认模式</option>
+              <option value="1">专家模式</option>
+            </select>
+          </div>
+        </div>
+      </form>
+      <!--<dl class="ddmb15">-->
+        <!--<dd class="clearfix">-->
+          <!--<span class="tmp-colname">任务类型</span>-->
+          <!--<select class="form-control" v-model="taskType">-->
+            <!--<option value="0" selected>域名任务</option>-->
+            <!--<option value="1">多域名任务</option>-->
+            <!--<option value="2">网站任务</option>-->
+            <!--<option value="3">多网站任务</option>-->
+            <!--<option value="4">目录模块任务</option>-->
+            <!--<option value="5">多目录模块任务</option>-->
+          <!--</select>-->
+          <!--<span class="tmp-notice" v-if="taskType=='0' || taskType=='1'">会对该域名及该域名的子域名相关业务流量进行分析和风险检测</span>-->
+          <!--<span class="tmp-notice" v-if="taskType=='2' || taskType=='3'">会对该网站相关的流量进行分析和风险检测</span>-->
+          <!--<span class="tmp-notice" v-if="taskType=='4' || taskType=='5'">会对该网站的该目录及子目录进行风险检测</span>-->
+        <!--</dd>-->
+        <!--<dd class="clearfix">-->
+          <!--<span class="tmp-colname">目标地址</span>-->
+          <!--<input type="text" class="form-control" v-if="taskType=='0' || taskType=='2' || taskType=='4'" v-model="taskTarget">-->
+          <!--<textarea class="form-control" rows="5" v-if="taskType=='1' || taskType=='3' || taskType=='5'" placeholder="每行一条" v-model="taskTarget"></textarea>-->
+          <!--<span class="tmp-notice">与任务类型相匹配的目标地址</span>-->
+        <!--</dd>-->
+        <!--<dd class="clearfix">-->
+          <!--<span class="tmp-colname">检测模式</span>-->
+          <!--<select class="form-control" v-model="scanMode">-->
+            <!--<option value="0" selected>默认模式</option>-->
+            <!--<option value="1">专家模式</option>-->
+          <!--</select>-->
+        <!--</dd>-->
+      <!--</dl>-->
 
       <div class="linewrap2" v-if="scanMode=='1'">
         <dl class="ddmb15">
