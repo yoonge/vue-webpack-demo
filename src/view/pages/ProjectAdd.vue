@@ -1,10 +1,10 @@
 <template>
-  <section class="bd1200">
-    <div class="temp_con pd1 clear">
-      <form class="form-horizontal">
+  <section class="main-wrapper">
+    <form class="form-horizontal">
+      <div class="option-basic clearfix">
         <div class="form-group">
-          <label class="col-xs-2 control-label">任务类型</label>
-          <div class="col-xs-10">
+          <label class="col-xs-1 control-label">任务类型</label>
+          <div class="col-xs-11">
             <select class="form-control" v-model="taskType">
               <option value="0" selected>域名任务</option>
               <option value="1">多域名任务</option>
@@ -19,23 +19,23 @@
           </div>
         </div>
         <div class="form-group">
-          <label class="col-xs-2 control-label">目标地址</label>
-          <div class="col-xs-10">
+          <label class="col-xs-1 control-label">目标地址</label>
+          <div class="col-xs-11">
             <input type="text" class="form-control" v-if="taskType=='0' || taskType=='2' || taskType=='4'" v-model="taskTarget">
             <textarea class="form-control" rows="5" v-if="taskType=='1' || taskType=='3' || taskType=='5'" placeholder="每行一条" v-model="taskTarget"></textarea>
             <span class="tmp-notice">与任务类型相匹配的目标地址</span>
           </div>
         </div>
         <div class="form-group">
-          <label class="col-xs-2 control-label">检测模式</label>
-          <div class="col-xs-10">
+          <label class="col-xs-1 control-label">检测模式</label>
+          <div class="col-xs-11">
             <select class="form-control" v-model="scanMode">
               <option value="0" selected>默认模式</option>
               <option value="1">专家模式</option>
             </select>
           </div>
         </div>
-      </form>
+      </div>
       <!--<dl class="ddmb15">-->
         <!--<dd class="clearfix">-->
           <!--<span class="tmp-colname">任务类型</span>-->
@@ -66,48 +66,87 @@
         <!--</dd>-->
       <!--</dl>-->
 
-      <div class="linewrap2" v-if="scanMode=='1'">
-        <dl class="ddmb15">
-          <dd class="clearfix">
-            <span class="tmp-colname">开启 COOKIE</span>
-            <span class="myrediowrap">
-              <label><input type="radio" name="cookie" value="0" checked>是</label>
-              <label><input type="radio" name="cookie" value="1">否</label>
-            </span>
-          </dd>
-          <dd class="clearfix">
-            <span class="tmp-colname">扫描启动时间</span>
+      <div class="option-expert clearfix" v-if="scanMode=='1'">
+        <div class="form-group">
+          <label class="col-xs-1 control-label">开启 COOKIE</label>
+          <div class="col-xs-11">
+            <label><input type="radio" name="cookie" value="0" checked>是</label>
+            <label><input type="radio" name="cookie" value="1">否</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-xs-1 control-label">扫描启动时间</label>
+          <div class="col-xs-11">
             <select class="form-control" v-model="startTime.status">
               <option value="0" selected>立即启动</option>
               <option value="1">定时启动</option>
             </select>
             <input type="text" class="form-control" placeholder="2016-03-14 05:45:37" v-if="startTime.status=='1'" v-model="startTime.time">
             <span class="tmp-notice">您可以先启动任务来记录流量，基于流量的风险检测会在设置的时间开始进行检测</span>
-          </dd>
-          <dd class="clearfix">
-            <span class="tmp-colname">选择插件</span>
-            <span class="mycheckwrap">
-              <label><input type="checkbox" v-model="checkAll">全选</label>
-              <label v-for="checkBox in checkBoxes"><input type="checkbox" v-model="checkBox.checked">{{checkBox.label}}</label>
-            </span>
-          </dd>
-          <dd class="zdy_wrap fl ld clearfix">
-            <span class="tmp-colname fl">自定义请求头</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-xs-1 control-label">选择插件</label>
+          <div class="col-xs-11">
+            <label><input type="checkbox" v-model="checkAll">全选</label>
+            <label v-for="checkBox in checkBoxes"><input type="checkbox" v-model="checkBox.checked">{{checkBox.label}}</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-xs-1 control-label">自定义请求头</label>
+          <div class="col-xs-11">
             <dl class="fl">
               <dd class="zdy_linehead clearfix" v-for="header in headers">
                 <input type="text" class="form-control" placeholder="字段名" v-model="header.name"><span class="zdy_mh">:</span><input type="text" class="form-control" placeholder="内容" v-model="header.content">
               </dd>
             </dl>
             <a href="javascript:;" class="mybtn" @click="addHeader"><i class="ui-icon ui-icon--plus"></i> 新增一项</a>
-          </dd>
-        </dl>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-11 col-xs-offset-1">
+            <button class="blue">提交</button>
+          </div>
+        </div>
+        <!--<dl class="ddmb15">-->
+          <!--<dd class="clearfix">-->
+            <!--<span class="tmp-colname">开启 COOKIE</span>-->
+            <!--<span class="myrediowrap">-->
+              <!--<label><input type="radio" name="cookie" value="0" checked>是</label>-->
+              <!--<label><input type="radio" name="cookie" value="1">否</label>-->
+            <!--</span>-->
+          <!--</dd>-->
+          <!--<dd class="clearfix">-->
+            <!--<span class="tmp-colname">扫描启动时间</span>-->
+            <!--<select class="form-control" v-model="startTime.status">-->
+              <!--<option value="0" selected>立即启动</option>-->
+              <!--<option value="1">定时启动</option>-->
+            <!--</select>-->
+            <!--<input type="text" class="form-control" placeholder="2016-03-14 05:45:37" v-if="startTime.status=='1'" v-model="startTime.time">-->
+            <!--<span class="tmp-notice">您可以先启动任务来记录流量，基于流量的风险检测会在设置的时间开始进行检测</span>-->
+          <!--</dd>-->
+          <!--<dd class="clearfix">-->
+            <!--<span class="tmp-colname">选择插件</span>-->
+            <!--<span class="mycheckwrap">-->
+              <!--<label><input type="checkbox" v-model="checkAll">全选</label>-->
+              <!--<label v-for="checkBox in checkBoxes"><input type="checkbox" v-model="checkBox.checked">{{checkBox.label}}</label>-->
+            <!--</span>-->
+          <!--</dd>-->
+          <!--<dd class="zdy_wrap fl ld clearfix">-->
+            <!--<span class="tmp-colname fl">自定义请求头</span>-->
+            <!--<dl class="fl">-->
+              <!--<dd class="zdy_linehead clearfix" v-for="header in headers">-->
+                <!--<input type="text" class="form-control" placeholder="字段名" v-model="header.name"><span class="zdy_mh">:</span><input type="text" class="form-control" placeholder="内容" v-model="header.content">-->
+              <!--</dd>-->
+            <!--</dl>-->
+            <!--<a href="javascript:;" class="mybtn" @click="addHeader"><i class="ui-icon ui-icon&#45;&#45;plus"></i> 新增一项</a>-->
+          <!--</dd>-->
+        <!--</dl>-->
       </div>
-
-      <div class="btn-div">
-        <button class="blue">提交</button>
-      </div>
-
-    </div>
+      <!--<div class="btn-div">-->
+        <!--<button class="blue">提交</button>-->
+      <!--</div>-->
+    </form>
   </section>
 </template>
 

@@ -24,12 +24,9 @@ body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset,
   padding: 0;
 }
 
-fieldset, img {
+fieldset,
+img {
   border: 0 none
-}
-
-a, img {
-  vertical-align: top
 }
 
 a {
@@ -40,7 +37,9 @@ a {
   outline: none;
 }
 
-a:active, a:focus, a:hover {
+a:active,
+a:focus,
+a:hover {
   color: #09ddce;
   text-decoration: none;
   outline: 0 none;
@@ -444,7 +443,6 @@ textarea.form-control {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
-/* 树状记录样式 */
 .update_log {
   position: relative;
 }
@@ -522,7 +520,6 @@ textarea.form-control {
   border-radius: 50%;
 }
 
-/*通用的样式类型*/
 .temp_top {
   font-size: 12px;
   height: 42px;
@@ -633,33 +630,6 @@ button.green {
   background-color: #00B682;
 }
 
-.temp_con .tmp-colname {
-  font-size: 14px;
-  float: left;
-  display: inline-block;
-  width: 96px;
-  line-height: 30px;
-  text-align: right;
-  vertical-align: middle;
-  margin-right: 12px;
-}
-
-.inputControl {
-  color: #fff;
-  font-size: 12px;
-  width: 175px;
-  height: 30px;
-  border: 0;
-  background: rgba(0, 0, 0, 0.2);
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-.temp_con .form-control {
-  width: 240px;
-  margin-right: 12px;
-}
-
 .linewrap {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 20px 0;
@@ -669,20 +639,18 @@ button.green {
 }
 
 .linewrap1 {
+  font-size: 12px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 15px 0;
   clear: both;
   zoom: 1;
-  font-size: 12px;
 }
 
-.linewrap2 {
+.option-expert {
   font-size: 12px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: 24px;
-  padding: 24px 0 0 0;
-  clear: both;
-  zoom: 1;
+  padding-top: 24px;
 }
 
 .noborder {
@@ -847,7 +815,6 @@ button.green {
   color: #ee5327;
 }
 
-/*个别样式处理*/
 ol.upsp li {
   list-style: inside url(../assets/img/li.png);
   cursor: pointer;
@@ -863,72 +830,12 @@ ol.upsp li.upsp_in {
   zoom: 1;
 }
 
-.init_page {
-  text-align: center;
-}
-
-.init_page h1 {
-  margin: 100px 0 40px 0;
-  font-size: 40px;
-}
-
-.pd3 .tmp-colname {
-  width: 170px;
-  line-height: 30px;
-  vertical-align: middle;
-}
-
-.pd3 .inputControl {
-  width: 275px;
-}
-
-.ic_edit {
-  width: 15px;
-  height: 19px;
-  vertical-align: middle;
-  display: inline-block;
-  background: url(../assets/img/edit.png) no-repeat;
-  cursor: pointer;
-}
-
 .ic_pwd {
   width: 80px;
   height: 19px;
   vertical-align: middle;
   display: inline-block;
   background: url(../assets/img/pwd.png) no-repeat;
-}
-
-.my_bugs {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-.my_bugs a {
-  font-size: 10px;
-  color: rgba(255, 255, 255, .8);
-  padding: 3px 6px;
-  background: rgba(255, 255, 255, 0.06);
-  margin: 0 3px;
-}
-
-.lfname {
-  margin-right: 12px;
-  font-size: 14px;
-  line-height: 28px;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.lfinput {
-  width: 200px;
-  background: rgba(0, 0, 0, 0.2);
-  padding: 0 6px;
-  margin-right: 40px;
-}
-
-.pd5 dl dd {
-  margin-bottom: 10px;
 }
 
 .pd6 dl dd {
@@ -968,18 +875,6 @@ ol.upsp li.upsp_in {
 .linewrap1 dl dd {
   padding: 0 24px;
   line-height: 28px;
-}
-
-.btnstyle1 {
-  line-height: 18px;
-  margin: 0 10px;
-}
-
-.btnstyle2 {
-  font-size: 10px;
-  color: rgba(255, 255, 255, .8);
-  margin: 0 10px;
-  line-height: 18px;
 }
 
 .my_rwlb {
@@ -1042,24 +937,6 @@ dl.ddmb15 > dd {
   cursor: pointer;
 }
 
-.ddmb15 dd label > input[type="radio"],
-.ddmb15 dd label > input[type="checkbox"] {
-  vertical-align: -2px;
-  margin-right: 6px;
-}
-
-.ddmb15 .mybtn {
-  margin-top: 3px;
-}
-
-.inputstyle {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.inputstyle:focus {
-  color: rgba(255, 255, 255, 1);
-}
-
 .my_rwlb .my_rwmarks .rwmark-mk {
   margin-right: 0;
   float: right;
@@ -1071,12 +948,6 @@ dl.ddmb15 > dd {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.show_scroll1 {
-  overflow: hidden;
-  width: auto;
-  height: 300px;
 }
 
 .mytemplist .temp_top .mybtn {
@@ -1141,26 +1012,6 @@ dl.ddmb15 > dd {
   margin-right: 5px;
 }
 
-.ic_bug {
-  width: 12px;
-  height: 10px;
-  display: inline-block;
-  vertical-align: -1px;
-  background: url(../assets/img/bug.png) -3px -3px no-repeat;
-}
-
-.ic_bug1 {
-  background-position: -39px -3px;
-}
-
-.ic_bug2 {
-  background-position: -74px -3px;
-}
-
-.ic_bug3 {
-  background-position: -109px -3px;
-}
-
 .my_rwlb dl {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -1219,25 +1070,6 @@ dl.ddmb15 > dd {
   float: right !important;
 }
 
-.hidden {
-  display: none !important;
-}
-
-.clear {
-  zoom: 1;
-}
-
-.clear:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.lh {
-  overflow: hidden;
-  zoom: 1;
-}
-
 .ld {
   position: relative;
   zoom: 1;
@@ -1258,18 +1090,6 @@ dl.ddmb15 > dd {
   margin: 0 auto;
 }
 
-.wp100 {
-  width: 100%;
-}
-
-.w85 {
-  width: 85px;
-}
-
-.w160 {
-  width: 160px !important;
-}
-
 .w244 {
   width: 244px;
 }
@@ -1283,16 +1103,8 @@ dl.ddmb15 > dd {
   width: 586px;
 }
 
-.w270 {
-  width: 275px;
-}
-
 .w252 {
   width: 252px;
-}
-
-.w380 {
-  width: 380px;
 }
 
 .w400 {
@@ -1312,28 +1124,12 @@ dl.ddmb15 > dd {
   margin-bottom: 15px;
 }
 
-.ml127 {
-  margin-left: 127px;
-}
-
-.ml187 {
-  margin-left: 187px;
-}
-
 .mb30 {
   margin-bottom: 30px;
 }
 
-.mt50 {
-  margin-top: 50px;
-}
-
 .mr64 {
   margin-right: 64px;
-}
-
-.mr31 {
-  margin-right: 31px;
 }
 
 .mr20 {
@@ -1344,23 +1140,8 @@ dl.ddmb15 > dd {
   padding: 30px 24px !important;
 }
 
-/*面板缩进样式1*/
 .pd2 {
   padding: 10px 43px !important;
-}
-
-/*面板缩进样式2*/
-.pd3 {
-  padding: 35px 65px !important;
-}
-
-.pd4 {
-  padding: 0 11px !important;
-  line-height: 77px;
-}
-
-.pd5 {
-  padding: 30px 75px 20px 75px !important;
 }
 
 .pd6 {
@@ -1375,15 +1156,6 @@ dl.ddmb15 > dd {
   color: #09ddce;
 }
 
-.pd4 span {
-  font-size: 38px;
-  width: 158px;
-  line-height: 48px;
-  text-align: right;
-  display: inline-block;
-  vertical-align: middle;
-}
-
 .color1 {
   color: #27b8ff;
 }
@@ -1391,10 +1163,6 @@ dl.ddmb15 > dd {
 /*面板内字体颜色1*/
 .color2 {
   color: #09ddce;
-}
-
-.color3 {
-  color: #00d8c9;
 }
 
 .color4 {
@@ -1416,14 +1184,6 @@ dl.ddmb15 > dd {
   width: 60px;
   height: 48px;
   vertical-align: middle;
-}
-
-.ic_demo5 {
-  background: url(../assets/img/ic_demo5.png) no-repeat;
-}
-
-.bold {
-  font-weight: bold;
 }
 
 .ui-list__footer {
@@ -1780,10 +1540,29 @@ dl.ddmb15 > dd {
 
 /* Search Form
 ------------------------------------------------------------*/
+.form-horizontal {
+  width: 100%;
+}
+
+.form-horizontal input[type="radio"],
+.form-horizontal input[type="checkbox"] {
+  vertical-align: -2px;
+  margin-right: 6px;
+}
+
 .form-horizontal .col-xs-1,
 .form-horizontal .col-xs-2 {
   padding-left: 8px;
   padding-right: 8px;
+}
+
+.form-horizontal .control-label {
+  padding-top: 0;
+}
+
+.form-horizontal .form-control {
+  width: 240px;
+  margin-right: 12px;
 }
 
 .search-wrapper {
@@ -1847,5 +1626,19 @@ select.form-control:focus {
 
 .wifi-info > dd {
   line-height: 30px;
+}
+
+
+/* Main Wrapper
+------------------------------------------------------------*/
+.main-wrapper {
+  font-size: 12px;
+  width: 1200px;
+  min-height: 72px;
+  line-height: 24px;
+  background-color: rgba(0, 0, 0, 0.2);
+  word-break: break-all;
+  margin: 0 auto 30px;
+  padding: 30px 24px;
 }
 
