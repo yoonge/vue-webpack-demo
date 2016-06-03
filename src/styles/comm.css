@@ -1551,7 +1551,17 @@ dl.ddmb15 > dd {
 }
 
 .form-horizontal .col-xs-1,
-.form-horizontal .col-xs-2 {
+.form-horizontal .col-xs-2,
+.form-horizontal .col-xs-3,
+.form-horizontal .col-xs-4,
+.form-horizontal .col-xs-5,
+.form-horizontal .col-xs-6,
+.form-horizontal .col-xs-7,
+.form-horizontal .col-xs-8,
+.form-horizontal .col-xs-9,
+.form-horizontal .col-xs-10,
+.form-horizontal .col-xs-11,
+.form-horizontal .col-xs-12 {
   padding-left: 8px;
   padding-right: 8px;
 }
