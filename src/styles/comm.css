@@ -659,9 +659,8 @@ button.green {
 
 .tmp-notice {
   color: rgba(255, 255, 255, 0.5);
-  line-height: 30px;
-  vertical-align: middle;
   display: inline-block;
+  line-height: 30px;
 }
 
 .temp_con a {
@@ -925,18 +924,6 @@ ol.upsp li.upsp_in {
   min-height: 120px;
 }
 
-dl.ddmb15 > dd {
-  margin-bottom: 15px;
-}
-
-.ddmb15 dd label {
-  font-weight: normal;
-  margin-right: 16px;
-  margin-bottom: 0;
-  padding-top: 5px;
-  cursor: pointer;
-}
-
 .my_rwlb .my_rwmarks .rwmark-mk {
   margin-right: 0;
   float: right;
@@ -1031,7 +1018,7 @@ dl.ddmb15 > dd {
 }
 
 .zdy_wrap {
-  padding-right: 81px;
+  width: 612px;
   position: relative;
 }
 
@@ -1544,12 +1531,6 @@ dl.ddmb15 > dd {
   width: 100%;
 }
 
-.form-horizontal input[type="radio"],
-.form-horizontal input[type="checkbox"] {
-  vertical-align: -2px;
-  margin-right: 6px;
-}
-
 .form-horizontal .col-xs-1,
 .form-horizontal .col-xs-2,
 .form-horizontal .col-xs-3,
@@ -1566,13 +1547,21 @@ dl.ddmb15 > dd {
   padding-right: 8px;
 }
 
-.form-horizontal .control-label {
-  padding-top: 0;
-}
-
 .form-horizontal .form-control {
   width: 240px;
   margin-right: 12px;
+}
+
+.form-horizontal .radio-inline,
+.form-horizontal .checkbox-inline {
+  margin-left: 0;
+  margin-right: 16px;
+}
+
+.radio-inline input[type="radio"],
+.checkbox-inline input[type="checkbox"] {
+  margin-top: 3px;
+  margin-top: 3px \9;
 }
 
 .search-wrapper {
@@ -1645,7 +1634,6 @@ select.form-control:focus {
   font-size: 12px;
   width: 1200px;
   min-height: 72px;
-  line-height: 24px;
   background-color: rgba(0, 0, 0, 0.2);
   word-break: break-all;
   margin: 0 auto 30px;
