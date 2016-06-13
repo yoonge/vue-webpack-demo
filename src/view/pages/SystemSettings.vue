@@ -7,7 +7,7 @@
       <div class="pd1 temp_con clear">
         <ol class="upsp">
           <li>关闭自动升级，选用手动升级</li>
-          <li class="upsp_in">开启自动升级(每3个小时获取一次系统更新)</li>
+          <li class="upsp_in">开启自动升级（每 3 个小时获取一次系统更新）</li>
         </ol>
         <div>
           <button class="blue">确定修改</button>
