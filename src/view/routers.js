@@ -26,6 +26,7 @@ import SystemBlock from 'pages/SystemBlock.vue'
 import SystemPassword from 'pages/SystemPassword.vue'
 
 import Admin from 'pages/Admin.vue'
+import AdminProject from 'pages/AdminProject.vue'
 
 import Documents from 'pages/Documents.vue'
 
@@ -142,7 +143,7 @@ const Routers = function (router) {
       subRoutes: {
         '/project': {
           name: 'admin.project',
-          component: Admin
+          component: AdminProject
         },
         '/task': {
           name: 'admin.task',

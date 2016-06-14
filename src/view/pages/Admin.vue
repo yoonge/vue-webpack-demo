@@ -6,7 +6,6 @@
       transition
       transition-mode="out-in">
     </router-view>
-    <h1>Admin</h1>
   </div>
 </template>
 

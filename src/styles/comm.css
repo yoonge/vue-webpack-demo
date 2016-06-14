@@ -1287,7 +1287,7 @@ ol.upsp li.upsp_in {
 }
 
 .ui-table__content {
-  min-height: 240px;
+  min-height: 200px;
   background-color: rgba(0, 0, 0, .1);
 }
 
