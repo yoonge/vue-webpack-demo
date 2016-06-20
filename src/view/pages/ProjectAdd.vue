@@ -41,8 +41,8 @@
         <div class="form-group form-group-sm">
           <label class="col-xs-1 control-label">开启 COOKIE</label>
           <div class="col-xs-11">
-            <label class="radio-inline"><input type="radio" name="cookie" value="0" checked>是</label>
-            <label class="radio-inline"><input type="radio" name="cookie" value="1">否</label>
+            <label class="radio-inline"><input type="radio" name="cookie" value="1" v-model="cookieSwitch">是</label>
+            <label class="radio-inline"><input type="radio" name="cookie" value="0" v-model="cookieSwitch">否</label>
           </div>
         </div>
         <div class="form-group form-group-sm">
@@ -92,6 +92,7 @@ export default {
       taskType: '0',
       taskTarget: '',
       scanMode: '0',
+      cookieSwitch: '0',
       startTime: {
         status: '0',
         time: ''

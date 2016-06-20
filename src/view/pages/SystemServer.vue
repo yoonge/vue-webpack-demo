@@ -1,7 +1,7 @@
 <template>
   <section class="bd1200">
     <div class="mytemp">
-      <div class="temp_con pd6 clear">
+      <div class="temp_con system-server">
         <dl>
           <dd>
             <div class="ft14">CPU使用</div>
@@ -10,7 +10,7 @@
                 <div class="animatebar"></div>
               </div>
             </div>
-            <span class="count_percent">12%</span>
+            <span class="progress-percent">12%</span>
           </dd>
           <dd>
             <div class="ft14">内存使用</div>
@@ -19,7 +19,7 @@
                 <div class="animatebar myprogress-bar-safe"></div>
               </div>
             </div>
-            <span class="count_percent">16%（共1234M）</span>
+            <span class="progress-percent">16%（共 1234M）</span>
           </dd>
           <dd>
             <div class="ft14">系统储存</div>
@@ -28,7 +28,7 @@
                 <div class="animatebar color5"></div>
               </div>
             </div>
-            <span class="count_percent">60%（共1234M）</span>
+            <span class="progress-percent">60%（共 1234M）</span>
           </dd>
           <dd>
             <div class="ft14">数据储存使用</div>
@@ -37,10 +37,10 @@
                 <div class="animatebar color6"></div>
               </div>
             </div>
-            <span class="count_percent">36%（共1234M）</span>
+            <span class="progress-percent">36%（共 1234M）</span>
           </dd>
         </dl>
-        <div>
+        <div class="btn-wrapper">
           <button class="blue">重新启动</button>
           <button class="green">关机</button>
         </div>

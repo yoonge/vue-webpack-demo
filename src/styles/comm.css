@@ -462,7 +462,7 @@ textarea.form-control {
 }
 
 .update_log dl dd {
-  padding: 0 10px 20px 40px;
+  padding: 3px 10px 20px 40px;
   position: relative;
 }
 
@@ -837,16 +837,6 @@ ol.upsp li.upsp_in {
   background: url(../assets/img/pwd.png) no-repeat;
 }
 
-.pd6 dl dd {
-  position: relative;
-}
-
-.pd6 dl dd .count_percent {
-  position: absolute;
-  top: 12px;
-  left: 410px;
-}
-
 .jieru_tag {
   font-size: 16px;
   display: inline-block;
@@ -1129,10 +1119,6 @@ ol.upsp li.upsp_in {
 
 .pd2 {
   padding: 10px 43px !important;
-}
-
-.pd6 {
-  padding: 40px 77px !important;
 }
 
 .pd7 {
@@ -1638,5 +1624,21 @@ select.form-control:focus {
   word-break: break-all;
   margin: 0 auto 30px;
   padding: 30px 24px;
+}
+
+
+.info-list { margin-bottom: 20px; }
+.info-list li { margin-bottom: 0; }
+.info-list .radio { margin-top: 0; }
+.info-list .radio input[type="radio"] { margin-top: 6px; }
+
+
+.system-server { padding: 36px 72px 48px; }
+.system-server > dl { margin-bottom: 24px; }
+.system-server > dl > dd { position: relative; }
+.system-server .progress-percent {
+  position: absolute;
+  top: 12px;
+  left: 410px;
 }
 
