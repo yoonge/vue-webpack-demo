@@ -1,18 +1,30 @@
 <template>
-  <section class="bd1200">
-    <div class="mytemp">
-      <div class="temp_con pd1 clear">
-        <dl class="ddmb15 form-horizontal">
-          <dd><span class="tmp-colname">原密码</span><input type="password" class="form-control" placeholder="" value=""><span class="tmp-notice"></span></dd>
-          <dd><span class="tmp-colname">新密码</span><input type="password" class="form-control" placeholder="" value=""><span class="tmp-notice"></span></dd>
-          <dd><span class="tmp-colname">确认密码</span><input type="password" class="form-control" placeholder="" value=""><span class="tmp-notice"></span></dd>
-        </dl>
-        <div class="btn-div">
-          <button class="blue ml127">确定</button>
-
+  <section class="main-wrapper">
+    <form class="form-horizontal">
+      <div class="form-group form-group-sm">
+        <label class="col-xs-1 control-label">原密码</label>
+        <div class="col-xs-11">
+          <input type="password" class="form-control">
         </div>
       </div>
-    </div>
+      <div class="form-group form-group-sm">
+        <label class="col-xs-1 control-label">新密码</label>
+        <div class="col-xs-11">
+          <input type="password" class="form-control">
+        </div>
+      </div>
+      <div class="form-group form-group-sm">
+        <label class="col-xs-1 control-label">确认密码</label>
+        <div class="col-xs-11">
+          <input type="password" class="form-control">
+        </div>
+      </div>
+      <div class="form-group form-group-sm">
+        <div class="col-xs-11 col-xs-offset-1">
+          <button class="blue">确定</button>
+        </div>
+      </div>
+    </form>
   </section>
 </template>
 

@@ -1,64 +1,77 @@
 <template>
   <div>
-    <section class="bd1200 clearfix">
-      <div class="w252 fl mr64">
-        <div class="temp_top noselect clearfix">
-          <h3>总项目配置</h3>
-          <tooltip
-            effect="scale"
-            placement="top"
-            content="新增">
-            <a class="mybtnpic" href="javascript:;"><i class="ui-icon ui-icon--settings"></i></a>
-          </tooltip>
-          <tooltip
-            effect="scale"
-            placement="top"
-            content="设置">
-            <a class="mybtnpic" href="javascript:;"><i class="ui-icon ui-icon--plus"></i></a>
-          </tooltip>
+    <section class="bd1200">
+      <div class="row">
+        <div class="col-xs-3">
+          <div class="dashboard-pannel">
+            <div class="pannel-header">
+              <h3>总项目配置</h3>
+              <tooltip
+                effect="scale"
+                placement="top"
+                content="配置">
+                <a class="mybtnpic" href="javascript:;"><i class="ui-icon ui-icon--settings"></i></a>
+              </tooltip>
+              <tooltip
+                effect="scale"
+                placement="top"
+                content="新增">
+                <a class="mybtnpic" href="javascript:;"><i class="ui-icon ui-icon--plus"></i></a>
+              </tooltip>
+            </div>
+            <div class="pannel-content clearfix">
+              <i class="ui-icon-lg ui-icon--stack"></i>
+              <span class="dashboard-data">86</span>
+            </div>
+          </div>
         </div>
-        <div class="temp_con">
-          <i class="ic_demo ui-icon--stack"></i>
-          <span class="fz36">86</span>
+
+        <div class="col-xs-3">
+          <div class="dashboard-pannel">
+            <div class="pannel-header">
+              <h3>总任务数</h3>
+              <tooltip
+                effect="scale"
+                placement="top"
+                content="新增">
+                <a class="mybtnpic" href="javascript:;"><i class="ui-icon ui-icon--plus"></i></a>
+              </tooltip>
+            </div>
+            <div class="pannel-content clearfix">
+              <i class="ui-icon-lg ui-icon--map"></i>
+              <span class="dashboard-data">86</span>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="w252 fl mr64">
-        <div class="temp_top noselect clearfix">
-          <h3>总任务数</h3>
-          <tooltip
-            effect="scale"
-            placement="top"
-            content="新增">
-            <a class="mybtnpic" href="javascript:;"><i class="ui-icon ui-icon--plus"></i></a>
-          </tooltip>
+
+        <div class="col-xs-3">
+          <div class="dashboard-pannel">
+            <div class="pannel-header">
+              <h3>总测试请求数</h3>
+            </div>
+            <div class="pannel-content clearfix">
+              <i class="ui-icon-lg ui-icon--globe"></i>
+              <span class="dashboard-data">2023</span>
+            </div>
+          </div>
         </div>
-        <div class="temp_con">
-          <i class="ic_demo ui-icon--map"></i>
-          <span class="fz36">86</span>
-        </div>
-      </div>
-      <div class="w252 fl">
-        <div class="temp_top noselect clearfix">
-          <h3>总测试请求数</h3>
-        </div>
-        <div class="temp_con">
-          <i class="ic_demo ui-icon--globe"></i>
-          <span class="fz36">86</span>
-        </div>
-      </div>
-      <div class="w252 fr">
-        <div class="temp_top noselect clearfix">
-          <h3>总发现问题数</h3>
-          <tooltip
-            effect="scale"
-            placement="top"
-            content="设置">
-            <a class="mybtnpic" href="javascript:;"><i class="ui-icon ui-icon--settings"></i></a>
-          </tooltip>
-        </div>
-        <div class="temp_con">
-          <i class="ic_demo ui-icon--bug"></i>
-          <span class="fz36">86</span>
+
+        <div class="col-xs-3">
+          <div class="dashboard-pannel">
+            <div class="pannel-header">
+              <h3>总发现问题数</h3>
+              <tooltip
+                effect="scale"
+                placement="top"
+                content="设置">
+                <a class="mybtnpic" href="javascript:;"><i class="ui-icon ui-icon--settings"></i></a>
+              </tooltip>
+            </div>
+            <div class="pannel-content clearfix">
+              <i class="ui-icon-lg ui-icon--bug"></i>
+              <span class="dashboard-data">86</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>

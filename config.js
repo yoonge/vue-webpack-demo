@@ -2,6 +2,7 @@
 var path = require('path')
 
 module.exports = {
+  // apiPrefix: 'http://burp.wooyun.org',
   apiPrefix: 'http://192.168.40.131:3000',
   // apiPrefix: 'http://192.168.129.128:3000',
   build: {

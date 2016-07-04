@@ -1,199 +1,216 @@
 <template>
   <div>
-    <section class="bd1200 clearfix">
-      <div class="w252 fl mr64">
-        <div class="temp_top noselect clearfix">
-          <h3>项目配置</h3>
-          <tooltip
-            effect="scale"
-            placement="top"
-            content="新增">
-            <a class="mybtnpic" href="javascript:;"><i class="ui-icon ui-icon--settings"></i></a>
-          </tooltip>
-          <tooltip
-            effect="scale"
-            placement="top"
-            content="设置">
-            <a class="mybtnpic" href="javascript:;"><i class="ui-icon ui-icon--plus"></i></a>
-          </tooltip>
+    <section class="bd1200">
+      <div class="row">
+        <div class="col-xs-3">
+          <div class="dashboard-pannel">
+            <div class="pannel-header">
+              <h3>项目配置</h3>
+              <tooltip
+                effect="scale"
+                placement="top"
+                content="配置">
+                <a class="mybtnpic" href="javascript:;"><i class="ui-icon ui-icon--settings"></i></a>
+              </tooltip>
+              <tooltip
+                effect="scale"
+                placement="top"
+                content="新增">
+                <a class="mybtnpic" href="javascript:;"><i class="ui-icon ui-icon--plus"></i></a>
+              </tooltip>
+            </div>
+            <div class="pannel-content clearfix">
+              <i class="ui-icon-lg ui-icon--stack"></i>
+              <span class="dashboard-data">86</span>
+            </div>
+          </div>
         </div>
-        <div class="temp_con">
-          <i class="ic_demo ui-icon--stack"></i>
-          <span class="fz36">86</span>
+
+        <div class="col-xs-3">
+          <div class="dashboard-pannel">
+            <div class="pannel-header">
+              <h3>任务数</h3>
+              <tooltip
+                effect="scale"
+                placement="top"
+                content="新增">
+                <a class="mybtnpic" href="javascript:;"><i class="ui-icon ui-icon--plus"></i></a>
+              </tooltip>
+            </div>
+            <div class="pannel-content clearfix">
+              <i class="ui-icon-lg ui-icon--map"></i>
+              <span class="dashboard-data">86</span>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="w252 fl mr64">
-        <div class="temp_top noselect clearfix">
-          <h3>任务数</h3>
-          <tooltip
-            effect="scale"
-            placement="top"
-            content="新增">
-            <a class="mybtnpic" href="javascript:;"><i class="ui-icon ui-icon--plus"></i></a>
-          </tooltip>
+
+        <div class="col-xs-3">
+          <div class="dashboard-pannel">
+            <div class="pannel-header">
+              <h3>测试请求数</h3>
+            </div>
+            <div class="pannel-content clearfix">
+              <i class="ui-icon-lg ui-icon--globe"></i>
+              <span class="dashboard-data">2023</span>
+            </div>
+          </div>
         </div>
-        <div class="temp_con">
-          <i class="ic_demo ui-icon--map"></i>
-          <span class="fz36">86</span>
-        </div>
-      </div>
-      <div class="w252 fl">
-        <div class="temp_top noselect clearfix">
-          <h3>测试请求数</h3>
-        </div>
-        <div class="temp_con">
-          <i class="ic_demo ui-icon--globe"></i>
-          <span class="fz36">86</span>
-        </div>
-      </div>
-      <div class="w252 fr">
-        <div class="temp_top noselect clearfix">
-          <h3>发现问题数</h3>
-          <tooltip
-            effect="scale"
-            placement="top"
-            content="设置">
-            <a class="mybtnpic" href="javascript:;"><i class="ui-icon ui-icon--settings"></i></a>
-          </tooltip>
-        </div>
-        <div class="temp_con">
-          <i class="ic_demo ui-icon--bug"></i>
-          <span class="fz36">86</span>
+
+        <div class="col-xs-3">
+          <div class="dashboard-pannel">
+            <div class="pannel-header">
+              <h3>发现问题数</h3>
+              <tooltip
+                effect="scale"
+                placement="top"
+                content="设置">
+                <a class="mybtnpic" href="javascript:;"><i class="ui-icon ui-icon--settings"></i></a>
+              </tooltip>
+            </div>
+            <div class="pannel-content clearfix">
+              <i class="ui-icon-lg ui-icon--bug"></i>
+              <span class="dashboard-data">86</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="bd1200 mb30 clearfix">
-      <div class="w586 fl">
-        <div class="temp_top noselect">
-          <h3>近期任务</h3>
-          <div class="rightWrap">
-            <a class="mybtn" href="javascript:;">任务管理</a>
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="temp_top">
+            <h3>近期任务</h3>
+            <div class="rightWrap">
+              <a class="mybtn" href="javascript:;">任务管理</a>
+            </div>
           </div>
+          <table-component :table_data="table_data"></table-component>
         </div>
-        <table-component :table_data="table_data"></table-component>
-      </div>
-      <div class="w586 fr">
-        <div class="temp_top noselect">
-          <h3>风险动态</h3>
+        <div class="col-xs-6">
+          <div class="temp_top">
+            <h3>风险动态</h3>
+          </div>
+          <table-component :table_data="table_data1"></table-component>
         </div>
-        <table-component :table_data="table_data1"></table-component>
       </div>
     </section>
 
     <section class="bd1200 clearfix">
-      <div class="w586 fl">
-        <div class="temp_top noselect">
-          <h3>动态</h3>
-        </div>
-        <div class="pd1 temp_con clear ht420">
-          <div class="update_log">
-            <span class="linetop"></span>
-            <dl>
-              <dd>
-                <span>2015-01-02 16:22</span>
-                <ul>
-                  <li>任务 http://www.qq.com 发现 <a href="javascript:;">sql注入安全问题</a></li>
-                </ul>
-                <span class="line"></span>
-                <span class="icon_quan"><span class="quan_quan"></span></span>
-              </dd>
-              <dd>
-                <span>2015-01-02 16:22</span>
-                <ul>
-                  <li>新建一个网站测试项目 <a href="javascript:;">http://www.test.com</a></li>
-                </ul>
-                <span class="line"></span>
-                <span class="icon_quan"><span class="quan_quan"></span></span>
-              </dd>
-              <dd>
-                <span>2015-01-02 16:22</span>
-                <ul>
-                  <li>启动一个测试项目 <a href="javascript:;">http://www.aa.com</a></li>
-                </ul>
-                <span class="line"></span>
-                <span class="icon_quan"><span class="quan_quan"></span></span>
-              </dd>
-              <dd>
-                <span>2015-01-02 16:22</span>
-                <ul>
-                  <li>新建一个网站测试项目 <a href="javascript:;">http://www.test.com</a></li>
-                </ul>
-                <span class="line"></span>
-                <span class="icon_quan"><span class="quan_quan"></span></span>
-              </dd>
-              <dd>
-                <span>2015-01-02 16:22</span>
-                <ul>
-                  <li>启动一个测试项目 <a href="javascript:;">http://www.aa.com</a></li>
-                </ul>
-                <span class="line"></span>
-                <span class="icon_quan"><span class="quan_quan"></span></span>
-              </dd>
-              <dd>
-                <span>2015-01-02 16:22</span>
-                <ul>
-                  <li>启动一个测试项目 <a href="javascript:;">http://www.aa.com</a></li>
-                </ul>
-                <span class="line"></span>
-                <span class="icon_quan"><span class="quan_quan"></span></span>
-              </dd>
-            </dl>
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="temp_top">
+            <h3>动态</h3>
+          </div>
+          <div class="pd1 temp_con clear ht420">
+            <div class="update_log">
+              <span class="linetop"></span>
+              <dl>
+                <dd>
+                  <span>2015-01-02 16:22</span>
+                  <ul>
+                    <li>任务 http://www.qq.com 发现 <a href="javascript:;">sql注入安全问题</a></li>
+                  </ul>
+                  <span class="line"></span>
+                  <span class="icon_quan"><span class="quan_quan"></span></span>
+                </dd>
+                <dd>
+                  <span>2015-01-02 16:22</span>
+                  <ul>
+                    <li>新建一个网站测试项目 <a href="javascript:;">http://www.test.com</a></li>
+                  </ul>
+                  <span class="line"></span>
+                  <span class="icon_quan"><span class="quan_quan"></span></span>
+                </dd>
+                <dd>
+                  <span>2015-01-02 16:22</span>
+                  <ul>
+                    <li>启动一个测试项目 <a href="javascript:;">http://www.aa.com</a></li>
+                  </ul>
+                  <span class="line"></span>
+                  <span class="icon_quan"><span class="quan_quan"></span></span>
+                </dd>
+                <dd>
+                  <span>2015-01-02 16:22</span>
+                  <ul>
+                    <li>新建一个网站测试项目 <a href="javascript:;">http://www.test.com</a></li>
+                  </ul>
+                  <span class="line"></span>
+                  <span class="icon_quan"><span class="quan_quan"></span></span>
+                </dd>
+                <dd>
+                  <span>2015-01-02 16:22</span>
+                  <ul>
+                    <li>启动一个测试项目 <a href="javascript:;">http://www.aa.com</a></li>
+                  </ul>
+                  <span class="line"></span>
+                  <span class="icon_quan"><span class="quan_quan"></span></span>
+                </dd>
+                <dd>
+                  <span>2015-01-02 16:22</span>
+                  <ul>
+                    <li>启动一个测试项目 <a href="javascript:;">http://www.aa.com</a></li>
+                  </ul>
+                  <span class="line"></span>
+                  <span class="icon_quan"><span class="quan_quan"></span></span>
+                </dd>
+              </dl>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="w586 fr">
-        <div class="temp_top noselect">
-          <h3>产品更新</h3>
-          <div class="rightWrap">
-            <a class="mybtn" href="javascript:;">查看所有</a>
+        <div class="col-xs-6">
+          <div class="temp_top">
+            <h3>产品更新</h3>
+            <div class="rightWrap">
+              <a class="mybtn" href="javascript:;">查看所有</a>
+            </div>
           </div>
-        </div>
-        <div class="pd1 temp_con clear ht420">
-          <div class="update_log">
-            <span class="linetop"></span>
-            <dl>
-              <dd>
-                <span>2015-12-11 16:22:22</span>
-                <ul>
-                  <li>1.0.1 版本升级更新</li>
-                  <li>修复一个操作日志的bug</li>
-                  <li>升级策略库，支持SQL注入检测</li>
-                </ul>
-                <span class="line"></span>
-                <span class="icon_quan"><span class="quan_quan"></span></span>
-              </dd>
-              <dd>
-                <span>2015-12-11 16:22:22</span>
-                <ul>
-                  <li>1.0.1 版本升级更新</li>
-                  <li>修复一个操作日志的bug</li>
-                  <li>升级策略库，支持SQL注入检测</li>
-                </ul>
-                <span class="line"></span>
-                <span class="icon_quan"><span class="quan_quan"></span></span>
-              </dd>
-              <dd>
-                <span>2015-12-11 16:22:22</span>
-                <ul>
-                  <li>1.0.1 版本升级更新</li>
-                  <li>修复一个操作日志的bug</li>
-                  <li>升级策略库，支持SQL注入检测</li>
-                </ul>
-                <span class="line"></span>
-                <span class="icon_quan"><span class="quan_quan"></span></span>
-              </dd>
-              <dd>
-                <span>2015-12-11 16:22:22</span>
-                <ul>
-                  <li>1.0.1 版本升级更新</li>
-                  <li>修复一个操作日志的bug</li>
-                  <li>升级策略库，支持SQL注入检测</li>
-                </ul>
-                <span class="line"></span>
-                <span class="icon_quan"><span class="quan_quan"></span></span>
-              </dd>
-            </dl>
+          <div class="pd1 temp_con clear ht420">
+            <div class="update_log">
+              <span class="linetop"></span>
+              <dl>
+                <dd>
+                  <span>2015-12-11 16:22:22</span>
+                  <ul>
+                    <li>1.0.1 版本升级更新</li>
+                    <li>修复一个操作日志的bug</li>
+                    <li>升级策略库，支持SQL注入检测</li>
+                  </ul>
+                  <span class="line"></span>
+                  <span class="icon_quan"><span class="quan_quan"></span></span>
+                </dd>
+                <dd>
+                  <span>2015-12-11 16:22:22</span>
+                  <ul>
+                    <li>1.0.1 版本升级更新</li>
+                    <li>修复一个操作日志的bug</li>
+                    <li>升级策略库，支持SQL注入检测</li>
+                  </ul>
+                  <span class="line"></span>
+                  <span class="icon_quan"><span class="quan_quan"></span></span>
+                </dd>
+                <dd>
+                  <span>2015-12-11 16:22:22</span>
+                  <ul>
+                    <li>1.0.1 版本升级更新</li>
+                    <li>修复一个操作日志的bug</li>
+                    <li>升级策略库，支持SQL注入检测</li>
+                  </ul>
+                  <span class="line"></span>
+                  <span class="icon_quan"><span class="quan_quan"></span></span>
+                </dd>
+                <dd>
+                  <span>2015-12-11 16:22:22</span>
+                  <ul>
+                    <li>1.0.1 版本升级更新</li>
+                    <li>修复一个操作日志的bug</li>
+                    <li>升级策略库，支持SQL注入检测</li>
+                  </ul>
+                  <span class="line"></span>
+                  <span class="icon_quan"><span class="quan_quan"></span></span>
+                </dd>
+              </dl>
+            </div>
           </div>
         </div>
       </div>

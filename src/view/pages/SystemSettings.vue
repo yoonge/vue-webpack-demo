@@ -53,7 +53,7 @@
             <ul>
               <li>1.0.1 版本升级更新</li>
               <li>修复一个操作日志的bug</li>
-              <li>升级策略库，支持SQL注入检测</li>
+              <li>升级策略库，支持SQL注入检测</li>k
             </ul>
             <span class="line"></span>
             <span class="icon_quan"><span class="quan_quan"></span></span>
