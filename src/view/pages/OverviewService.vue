@@ -76,10 +76,10 @@
       </div>
     </section>
 
-    <section class="bd1200 mb30 clearfix">
+    <section class="bd1200 mb30">
       <div class="row">
         <div class="col-xs-6">
-          <div class="temp_top">
+          <div class="pannel-header">
             <h3>近期任务</h3>
             <div class="rightWrap">
               <a class="mybtn" href="javascript:;">任务管理</a>
@@ -88,7 +88,7 @@
           <table-component :table_data="table_data"></table-component>
         </div>
         <div class="col-xs-6">
-          <div class="temp_top">
+          <div class="pannel-header">
             <h3>风险动态</h3>
           </div>
           <table-component :table_data="table_data1"></table-component>
@@ -96,13 +96,13 @@
       </div>
     </section>
 
-    <section class="bd1200 clearfix">
+    <section class="bd1200">
       <div class="row">
         <div class="col-xs-6">
-          <div class="temp_top">
+          <div class="pannel-header">
             <h3>动态</h3>
           </div>
-          <div class="pd1 temp_con clear ht420">
+          <div class="pd1 temp_con">
             <div class="update_log">
               <span class="linetop"></span>
               <dl>
@@ -159,13 +159,13 @@
           </div>
         </div>
         <div class="col-xs-6">
-          <div class="temp_top">
+          <div class="pannel-header">
             <h3>产品更新</h3>
             <div class="rightWrap">
               <a class="mybtn" href="javascript:;">查看所有</a>
             </div>
           </div>
-          <div class="pd1 temp_con clear ht420">
+          <div class="pd1 temp_con">
             <div class="update_log">
               <span class="linetop"></span>
               <dl>
