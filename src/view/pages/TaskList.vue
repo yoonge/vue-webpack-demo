@@ -70,51 +70,75 @@
 
         <div class="mywrap clearfix">
           <div class="w244 mr20 fl">
-            <div class="temp_top noselect">
+            <div class="temp_top">
               <h3>检测状态分布图</h3>
             </div>
             <div class="temp_content">
-              柱状图示1
+              <doughnut-chart
+                :labels="labels1"
+                :datasets="datasets1"
+                :options="options"
+              ></doughnut-chart>
             </div>
           </div>
           <div class="w244 fl">
-            <div class="temp_top noselect">
+            <div class="temp_top">
               <h3>请求类型分布图</h3>
             </div>
             <div class="temp_content">
-              柱状图示2
+              <doughnut-chart
+                :labels="labels2"
+                :datasets="datasets2"
+                :options="options"
+              ></doughnut-chart>
             </div>
           </div>
           <div class="w244 fr">
-            <div class="temp_top noselect">
+            <div class="temp_top">
               <h3>请求文件类型分布图</h3>
             </div>
             <div class="temp_content">
-              柱状图示3
+              <doughnut-chart
+                :labels="labels3"
+                :datasets="datasets3"
+                :options="options"
+              ></doughnut-chart>
             </div>
           </div>
           <div class="w244 mr20 fl">
-            <div class="temp_top noselect">
+            <div class="temp_top">
               <h3>请求状态分布</h3>
             </div>
             <div class="temp_content">
-              柱状图示4
+              <doughnut-chart
+                :labels="labels4"
+                :datasets="datasets4"
+                :options="options"
+              ></doughnut-chart>
             </div>
           </div>
           <div class="w244 fl">
-            <div class="temp_top noselect">
+            <div class="temp_top">
               <h3>风险状态分布图</h3>
             </div>
             <div class="temp_content">
-              柱状图示5
+              <doughnut-chart
+                :labels="labels5"
+                :datasets="datasets5"
+                :options="options"
+              ></doughnut-chart>
             </div>
           </div>
           <div class="w244 fr">
-            <div class="temp_top noselect">
+            <div class="temp_top">
               <h3>请求数量/时间分布图</h3>
             </div>
             <div class="temp_content">
-              横纵分布图示6
+              <line-chart
+                :labels="labels6"
+                :datasets="datasets6"
+                :options="options"
+              ></line-chart>
             </div>
           </div>
         </div>
@@ -335,6 +359,7 @@
 <script lang="babel">
 import $ from 'jquery'
 import * as api from 'src/api.js'
+import { LineChart, DoughnutChart } from 'vue-chart.js'
 import { tooltip } from 'vue-strap'
 import ClipLoader from 'vue-spinner/src/ClipLoader.vue'
 
@@ -342,14 +367,62 @@ export default {
   name: 'TaskList',
   components: {
     tooltip,
-    ClipLoader
+    ClipLoader,
+    LineChart,
+    DoughnutChart
   },
   data () {
     return {
       searchText: '',
       loading: false,
       tasks: [],
-      taskBasicInfo: {}
+      taskBasicInfo: {},
+      options: {
+        legend: {
+          display: false
+        },
+        elements: {
+          line: {
+            borderWidth: 1,
+            borderColor: 'white'
+          }
+        }
+      },
+      labels1: ['已检测'],
+      datasets1: [{
+        borderWidth: 0,
+        backgroundColor: ['#6e84d6'],
+        data: [27]
+      }],
+      labels2: ['GET'],
+      datasets2: [{
+        borderWidth: 0,
+        backgroundColor: ['#60d4ae'],
+        data: [27]
+      }],
+      labels3: ['Other'],
+      datasets3: [{
+        borderWidth: 0,
+        backgroundColor: ['#669fd2'],
+        data: [27]
+      }],
+      labels4: ['Null'],
+      datasets4: [{
+        borderWidth: 0,
+        backgroundColor: ['#ffe073'],
+        data: [27]
+      }],
+      labels5: ['低危'],
+      datasets5: [{
+        borderWidth: 0,
+        backgroundColor: ['#ffb440'],
+        data: [9]
+      }],
+      labels6: ['', '051814'],
+      datasets6: [{
+        label: '请求数量 / 时间分布',
+        data: [0, 160]
+      }]
     }
   },
   ready () {
@@ -389,3 +462,10 @@ export default {
   }
 }
 </script>
+
+<style>
+.temp_content {
+  background-color: rgba(0, 0, 0, .3);
+  padding: 20px 0;
+}
+</style>
